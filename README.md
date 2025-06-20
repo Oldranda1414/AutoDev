@@ -25,6 +25,6 @@ ad path/to/project/root
 To start the development environment run the following command
 
 ```bash
-nix-shell
+nix develop
 ```
 
