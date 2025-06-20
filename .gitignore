@@ -8,3 +8,10 @@ wheels/
 
 # Virtual environments
 .venv
+
+# nix flake lock
+flake.lock
+
+# direnv
+.direnv
+
