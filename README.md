@@ -21,7 +21,7 @@ AutoDev uses [nix](https://nixos.org/download/) to configure the development env
 The following command will generate the dev environment specification:
 
 ```bash
-ad path/to/project/root
+AutoDev path/to/project/root
 ```
 
 To start the development environment run the following command:
