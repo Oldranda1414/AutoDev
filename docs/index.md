@@ -1,6 +1,6 @@
 ---
 layout: home
-title: AutoDocs report
+title: Report
 ---
 
 entry point for docs
