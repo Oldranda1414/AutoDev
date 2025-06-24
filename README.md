@@ -6,6 +6,8 @@ The project name is AutoDev.
 
 AutoDev is a command line tool that uses an LLM to generate a dev environment for a given project.
 
+Documentation is deployed through [github pages](https://oldranda1414.github.io/AutoDev/)
+
 ## Installation
 
 TODO
