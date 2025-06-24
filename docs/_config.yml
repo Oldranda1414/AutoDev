@@ -15,5 +15,10 @@ minima:
   hide_site_feed_link: true
   nav_pages:
     - introduction.md
+    - requirements.md
+    - architectural-design.md
+    - detailed-design.md
+    - implementation.md
+    - testing.md
     - conclusion.md
 
