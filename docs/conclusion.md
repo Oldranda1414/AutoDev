@@ -1,7 +1,6 @@
 ---
 layout: page
+title: Conclusion
 ---
-
-## Conclusion
 
 Placeholder for conclusion

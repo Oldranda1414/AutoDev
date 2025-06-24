@@ -1,7 +1,6 @@
 ---
 layout: page
+title: Implementation
 ---
-
-# Implementation
 
 Placeholder for implementation

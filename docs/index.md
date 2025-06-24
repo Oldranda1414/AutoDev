@@ -1,10 +1,7 @@
 ---
 layout: home
+title: Index
 ---
-
-# Index
-
-## Index
 
 - [Introduction](introduction.md)
 - [Requirements](requirements.md)
