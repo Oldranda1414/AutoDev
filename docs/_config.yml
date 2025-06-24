@@ -8,7 +8,7 @@ author:
   email: "leonardorandacio@gmail.com"
 
 minima:
-  skin: auto
+  skin: solarized
   social_links:
     - title: AutoDev repository on Github
       icon: github
