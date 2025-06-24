@@ -10,8 +10,8 @@ author:
 minima:
   skin: auto
   social_links:
-      icon: github
-      url: "https://github.com/Oldranda1414/AutoDev"
+    icon: github
+    url: "https://github.com/Oldranda1414/AutoDev"
   hide_site_feed_link: true
   nav_pages:
     - introduction.md
