@@ -3,5 +3,14 @@ plugins:
 
 remote_theme: jekyll/minima
 
+author: 
+  name: Leonardo Randacio
+  email: "leonardorandacio@gmail.com"
+
 minima:
   skin: auto
+  social_links:
+    - title: AutoDev repository on Github
+      icon: github
+      url: "https://github.com/Oldranda1414/AutoDev"
+
