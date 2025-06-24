@@ -7,7 +7,7 @@ AutoDev is a 'development enviroment configration' generation tool.
 
 AutoDev poses to exploit Large Language Models (LLMs) to let users generate [Nix](https://nixos.org/) configuration files by simply passing the path to a project, as so:
 
-```none
+```sh
 $ autodev /path/to/project
 ```
 
@@ -23,8 +23,7 @@ The user will now be in a temporary development shell set up specifically for th
 
 Once the user has stopped working on the project, they can exit the development shell running the following command:
 
-<!-- set code to none to not have exit be highlighted -->
-```none
+```sh
 $ exit
 ```
 
