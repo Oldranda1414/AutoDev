@@ -1,6 +1,5 @@
 ---
-layout: base
-title: Introduction
+layout: page
 ---
 
 Placeholder for introduction

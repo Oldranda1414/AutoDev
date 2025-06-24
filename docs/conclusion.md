@@ -1,6 +1,7 @@
 ---
-layout: home
-title: Conclusion
+layout: page
 ---
+
+## Conclusion
 
 Placeholder for conclusion

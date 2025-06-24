@@ -1,6 +1,5 @@
 ---
-layout: base
-title: Detailed Design
+layout: page
 ---
 
 Placeholder for detailed design

@@ -1,6 +1,5 @@
 ---
-layout: base
-title: Requirements
+layout: page
 ---
 
 Placeholder for requirements

@@ -10,7 +10,6 @@ author:
 minima:
   skin: auto
   social_links:
-    - title: AutoDev repository on Github
       icon: github
       url: "https://github.com/Oldranda1414/AutoDev"
   hide_site_feed_link: true

@@ -1,6 +1,5 @@
 ---
-layout: base
-title: Architectural Design
+layout: page
 ---
 
 Placeholder for architectural design
