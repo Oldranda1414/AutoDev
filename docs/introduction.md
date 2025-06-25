@@ -48,4 +48,4 @@ Despite the power of Nix defined development enviroments, writing such configura
 AutoDev looks to solve this problem by leveraging the capacity of LLMs to understand natural language.
 
 [Back to index](./index.md) |
-[Next Chapter](./requirements.md)
+[Next Chapter](./requirements.md) |
