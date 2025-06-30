@@ -47,5 +47,18 @@ Despite the power of Nix defined development enviroments, writing such configura
 
 AutoDev looks to solve this problem by leveraging the capacity of LLMs to understand natural language.
 
+## Models
+
+The core part of the project is in testing the capabilities of various LLMs to perform as dev env configuration generators.
+
+The following models have been tested during the projects development:
+
+<!-- TODO add the models used here -->
+
+- temp
+- temp
+- temp
+- temp
+
 [Back to index](./index.md) |
 [Next Chapter](./requirements.md) |
