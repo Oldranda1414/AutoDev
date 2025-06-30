@@ -63,38 +63,29 @@ This requires that a compatible version of ollama is installed in the user syste
 
 ## Modules
 
-The source code is modularized as follows:
+The source code organized in the following modules:
 
-<!-- check if requests is really used -->
+- Interface: responsible for defining command api and related command parsing, similar to a View in MVC architecture;
+- Dispatcher: responsible for linking the command arguments to the correct execution of handler functions;
+- Handlers: responsible for handling high level command operations;
+- Services: responsible for defining business logic common to multiple handlers;
+- Generator: responsible for generating dev env config;
+- Prompt: responsible for defining prompt formats to be passed to LLMs;
+- Model: responsible for wrapping the LLM service;
+- Output: responsible for generating output, be it in file or cli print format.
 
 ```mermaid
-classDiagram
-    class Interface {
-        +__main__()
-    }
-    
-    class Handlers {
-        +generate_flake_file(path: str)
-        +generate_envrc()
-    }
-    
-    class Model {
-        +__init__(model_name: str, timeout: int)
-        +ask(prompt: str) str
-    }
-    
-    class litellm {
-        <<library>>
-    }
-
-    class requests {
-        <<library>>
-    }
-    
-    Model --> litellm : uses for completions
-    Model --> requests : API calls
-    Handlers --> Model : uses
-    Interface --> Handlers : calls
+---
+title: AutoDev Architecture
+---
+flowchart TD
+    Interface-->|calls|Dispatcher
+    Dispatcher-->|calls|Handler
+    Handler-->|uses|Service
+    Service-->|uses|Generator
+    Service-->|uses|Output
+    Generator-->|uses|Prompt
+    Generator-->|uses|Model
 ```
 
 [Back to index](./index.md) |
