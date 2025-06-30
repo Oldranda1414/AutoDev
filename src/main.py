@@ -1,5 +1,5 @@
 def main():
-    print("Hello from progetto!")
+    print("Hello from AutoDev!")
 
 
 if __name__ == "__main__":
