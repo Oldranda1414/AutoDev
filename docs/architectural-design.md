@@ -35,6 +35,8 @@ Synonymous short and long options can be defined on the same line, separated by 
 
 Two spaces can be used to separate an option from it's informal description, e.g.: `-o  Informal description.`
 
+Default values for arguments can be defined with the following form: `[default: value]`
+
 ### AutoDev usage definiton
 
 The usage of AutoDev's command `autodev` is defined as follows, using [docopt](https://github.com/jazzband/docopt-ng) command definition language:
@@ -44,13 +46,16 @@ The usage of AutoDev's command `autodev` is defined as follows, using [docopt](h
 
 Usage: autodev.py [PATH-TO-PROJECT]
 
-Generates development environment configuration for project located at PATH-TO-PROJECT.
+Generates development environment configuration for a project.
 
-Generates for current directory if PATH-TO-PROJECT is not passed.
+Use `nix develop` to start development enviroment.
 
 Options:
-  -h, --help
-  -d, --direnv  Generate .envrc file also.
+  PATH-TO-PROJECT                    Path to the project the dev env is for. [default: ./]
+  -h, --help                         Display help message.
+  -q, --quiet                        Disable prints.
+  -d, --direnv                       Generate .envrc file also.
+  -m=MODEL-NAME, --model=MODEL-NAME  Model to use to generate the config. One of: temp temp temp [default: llama3] 
 
 """
 ```
