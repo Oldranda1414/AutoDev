@@ -38,33 +38,3 @@ mv "$TEMPLATE_FILE" "$HOOK_FILE"
 # Make the commit-msg hook executable
 chmod +x "$HOOK_FILE"
 
-echo "✅ Git commit-msg hook has been installed successfully!"
-
-# Define the hook directory and filenames
-HOOKS_DIR=".git/hooks"
-TEMPLATE_FILE="$HOOKS_DIR/prepare-commit-msg.sample"
-HOOK_FILE="$HOOKS_DIR/prepare-commit-msg"
-
-# Write the prepare commit message hook template
-cat > "$TEMPLATE_FILE" << 'EOF'
-#!/bin/bash
-
-if [ "$2" == "merge" ]; then
-    # Get the current branch name
-    current_branch=$(git rev-parse --abbrev-ref HEAD)
-
-    # Get the branch being merged
-    merged_branch=$(git name-rev --name-only $(git rev-parse MERGE_HEAD))
-
-    # Write the custom commit message
-    echo "chore: merge $current_branch with $merged_branch" > "$1"
-fi
-EOF
-
-# Rename the file to prepare-commit-msg
-mv "$TEMPLATE_FILE" "$HOOK_FILE"
-
-# Make the prepare-commit-msg hook executable
-chmod +x "$HOOK_FILE"
-
-echo "✅ Git prepare-commit-msg hook has been installed successfully!"
