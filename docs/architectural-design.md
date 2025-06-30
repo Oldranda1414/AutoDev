@@ -3,8 +3,6 @@ layout: page
 title: Architectural Design
 ---
 
-The project's complexity lies in it's usage of LLMs.
-
 ## Usage
 
 ### Docopt language
@@ -57,11 +55,30 @@ Options:
 """
 ```
 
-### LLM interface
+## LLM interface
 
 AutoDev uses [Ollama](https://ollama.com/) to call upon local LLM models.
 
 This requires that a compatible version of ollama is installed in the user system before running AutoDev.
+
+## Modules
+
+The source code is modularized as follows
+
+```mermaid
+architecture-beta
+    group api(cloud)[API]
+
+    service db(database)[Database] in api
+    service disk1(disk)[Storage] in api
+    service disk2(disk)[Storage] in api
+    service server(server)[Server] in api
+
+    db:L -- R:server
+    disk1:T -- B:server
+    disk2:T -- B:db
+
+```
 
 [Back to index](./index.md) |
 [Previous Chapter](./requirements.md) |
