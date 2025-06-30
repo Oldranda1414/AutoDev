@@ -66,8 +66,9 @@ This requires that a compatible version of ollama is installed in the user syste
 The source code is modularized as follows
 
 ```mermaid
-flowchart LR
-    A-- This is the text! ---B
+    flowchart LR
+        Interface-- Calls ---Handlers
+        Handlers-- Uses ---Model
 ```
 
 [Back to index](./index.md) |
