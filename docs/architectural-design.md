@@ -3,6 +3,8 @@ layout: page
 title: Architectural Design
 ---
 
+{% include mermaid.html %}
+
 ## Usage
 
 ### Docopt language
