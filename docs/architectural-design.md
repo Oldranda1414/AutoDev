@@ -67,8 +67,8 @@ The source code is modularized as follows
 
 ```mermaid
     flowchart LR
-        Interface-- Calls ---Handlers
-        Handlers-- Uses ---Model
+        Interface-->|Calls|Handlers
+        Handlers-->|Uses|Model
 ```
 
 [Back to index](./index.md) |
