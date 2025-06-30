@@ -59,18 +59,44 @@ Options:
 
 ## LLM interface
 
-AutoDev uses [Ollama](https://ollama.com/) to call upon local LLM models.
+AutoDev uses [Ollama](https://ollama.com/) to call upon local LLM models. <!-- TODO Really? maybe use litellm -->
 
 This requires that a compatible version of ollama is installed in the user system before running AutoDev.
 
 ## Modules
 
-The source code is modularized as follows
+The source code is modularized as follows:
+
+<!-- check if requests is really used -->
 
 ```mermaid
-    flowchart LR
-        Interface-->|Calls|Handlers
-        Handlers-->|Uses|Model
+classDiagram
+    class Interface {
+        +__main__()
+    }
+    
+    class Handlers {
+        +generate_flake_file(path: str)
+        +generate_envrc()
+    }
+    
+    class Model {
+        +__init__(model_name: str, timeout: int)
+        +ask(prompt: str) str
+    }
+    
+    class litellm {
+        <<library>>
+    }
+
+    class requests {
+        <<library>>
+    }
+    
+    Model --> litellm : uses for completions
+    Model --> requests : API calls
+    Handlers --> Model : uses
+    Interface --> Handlers : calls
 ```
 
 [Back to index](./index.md) |
