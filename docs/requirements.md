@@ -21,6 +21,7 @@ During project analysis the following requirements have been identified.
         1. Users should be able to list all available models on their machine.
         1. Users should be able to download an available model on their machine if it is not present.
         1. Users should be able to define the model to be used by AutoDev for a given run of the tool.
+        1. Users should be able to define custom prompts to be used by AutoDev when prompting the LLM model.
     1. **System Functional Requirements**
         1. AutoDev should use an LLM model to generate the `flake.nix` file.
         1. AutoDev should define a base prompt engeneering approach applicable to all LLMs.
