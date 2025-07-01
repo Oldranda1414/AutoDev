@@ -15,7 +15,7 @@ The docopt language defines the 'help message' of a command to define it's usage
 
 Usage pattern is a substring of the help message that starts with 'usage:' (case insensitive) and ends with a visibly empty line.
 
-The first word after usage: is interpreted as the command's name, e.g.: 
+The first word after `usage:` is interpreted as the command's name, e.g.: 
 
 ```py
 """
