@@ -78,7 +78,7 @@ The source code organized in the following modules:
 - Model: responsible for wrapping the LLM service;
 - Output: responsible for generating output, be it in file or cli print format.
 
-![AutoDev Architecture](./assets/build/AutoDev_architecture.png)
+![AutoDev Architecture](./assets/build/architecture.png)
 
 [Back to index](./index.md) |
 [Previous Chapter](./requirements.md) |

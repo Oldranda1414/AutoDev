@@ -1,0 +1,20 @@
+---
+title: Output Design
+---
+classDiagram
+    class Output {
+        init(quiet: bool = false)
+        createFile(name: str, contents: str, path: str = "./.")
+        print(message: str)
+    }
+
+    class os {
+        <<builtin package>>
+    }
+
+    class rich {
+        <<package>>
+    }
+
+    Output ..> os
+    Output ..> rich

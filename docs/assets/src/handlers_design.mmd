@@ -1,0 +1,15 @@
+---
+title: Handlers Design
+---
+classDiagram
+    class ConfigGeneratorHandler {
+        generateConfig(project_path: str = "./.", model: str = None, prompt_path: str = None, quiet: bool = false)
+    }
+
+    class DirenvGeneratorHandler {
+        generateDirenv(project_path: str = "./.")
+    }
+
+    ConfigGeneratorHandler  ..> Services
+    DirenvGeneratorHandler  ..> Services
+
