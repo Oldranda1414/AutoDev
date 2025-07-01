@@ -19,9 +19,38 @@ The [docopt](https://github.com/jazzband/docopt-ng) package is used to define th
 
 The Interface module simply calls the dispatch function exposed by the Dispatcher with the cli arguments provided by the user as arguments.
 
+```mermaid
+---
+title: Interface Design
+---
+classDiagram
+    class Interface {
+        __main__()
+    }
+
+    class docopt {
+        <<package>>
+    }
+
+    Interface ..> docopt
+    Interface ..> Dispatcher
+```
+
 ### Dispatcher
 
 Similar to a router in a web application, the Dispatcher calls the correct handlers with correct arguments depending on argments passed through the cli.
+
+```mermaid
+---
+title: Dispatcher Design
+---
+classDiagram
+    class Dispatcher {
+        dispatch(args: Dict[str, str])
+    }
+
+    Dispatcher ..> Handlers
+```
 
 ### Handlers
 
@@ -41,6 +70,8 @@ classDiagram
     class DirenvGeneratorHandler {
         generateDirenv(project_path: str = "./.")
     }
+
+    Handlers ..> Services
 ```
 
 ### Services
@@ -53,20 +84,44 @@ title: Services Design
 ---
 classDiagram
 
-    class ConfigurationGenerator {
-        generateConfig(project_path: str = "./.", model: str = None, prompt_path: str = None, quiet: bool = false)
+    class Configuration {
+        addConfig(model: str = None, project_path: str = "./.", prompt_path: str = None) 
+<!-- 
+pseudo code: 
+    def addConfig(model, project_path, prompt_path):
+        contents = Generator.generateConfig(model, project_path, prompt_path)
+        Output.createFile("flake.nix", contents)
+-->
     }
 
-    class DirenvGenerator {
-        generateDirenv(project_path: str = "./.")
+    class Direnv {
+        addDirenv(project_path: str = "./.")
+    }
+
+    class Generator {
+        generateConfig(model_name: str, project_path: str = "./.", prompt_path: str = None) -> str
+<!-- 
+pseudo code: 
+    def generateConfig(model_name, project_path, prompt_path):
+        model = Model(model)
+        message = Prompt.getPrompt(project_path, prompt_path)
+        return model.ask(message)
+-->
+    }
+
+    class Model {
+        __init__(name: str, timeout: int = 5000) -> Model
+        ask(message: str) -> str
     }
 
     class Prompt {
-        getPrompt(project_path: str = "./.")
+        getPrompt(project_path: str = "./.", prompt_path: str = None) -> str
     }
 
     class Output {
+        init(quiet: bool = false)
         createFile(name: str, contents: str, path: str = "./.")
+        print(message: str)
     }
 
     class Reader {
@@ -74,13 +129,15 @@ classDiagram
         readDir(path: str = "./.") -> FileSystemNode
     }
 
-    DirenvGenerator ..> Output
-    ConfigGenerator ..> Output
+    Direnv ..> Output
+    Config ..> Output
+    Generator ..> Model
+    Generator ..> Prompt
 ```
 
-#### Generator
-
 #### Prompt
+
+<!-- TODO add how custom prompt parsing works -->
 
 #### Model
 
@@ -90,9 +147,26 @@ This wrapper serves as an anti-corruption layer, ensuring if the underlying pack
 
 Also the Model interface only exposes the needed methods for AutoDev, hiding additional functionalities the underlying package provides.
 
+```mermaid
+classDiagram
+
+    class Model {
+        __init__(name: str, timeout: int = 5000) -> Model
+        ask(message: str) -> str
+    }
+
+    class litellm {
+        <<package>>
+    }
+
+    Model ..> litellm
+```
+
 #### Output
 
-The output service is reponsible for the outputs of the project.
+The Output service is reponsible for the outputs of the project.
+
+The Output service must be initialized before use. The initialization is necessary to specify if the output should be quiet for this run.
 
 For terminal based outputs the [rich](https://github.com/Textualize/rich) package.
 
@@ -101,7 +175,9 @@ For file creation the os python built package is used.
 ```mermaid
 classDiagram
     class Output {
-        generateDirenv(project_path: str = "./.")
+        init(quiet: bool = false)
+        createFile(name: str, contents: str, path: str = "./.")
+        print(message: str)
     }
 
     class os {

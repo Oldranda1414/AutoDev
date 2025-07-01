@@ -63,6 +63,7 @@ Options:
 ## Custom Prompt
 
 <!-- TODO add here the structure of the custom prompt -->
+<!-- probably json I guess -->
 
 ## Modules
 
