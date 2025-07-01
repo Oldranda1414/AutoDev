@@ -14,7 +14,9 @@
       };
     in pkgs.mkShell {
       packages = with pkgs; [
+        # modern python package manager
         uv
+        # cli to turn mmd files into mermaid graph pngs
         mermaid-cli
       ];
 
