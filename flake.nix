@@ -15,6 +15,7 @@
     in pkgs.mkShell {
       packages = with pkgs; [
         uv
+        mermaid-cli
       ];
 
       # shellHook = ''
