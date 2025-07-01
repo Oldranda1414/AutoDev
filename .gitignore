@@ -13,3 +13,5 @@ wheels/
 .direnv
 .envrc
 
+# set-hooks script
+set-hooks.sh
