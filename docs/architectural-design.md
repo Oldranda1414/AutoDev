@@ -60,11 +60,9 @@ Options:
 """
 ```
 
-## LLM interface
+## Custom Prompt
 
-AutoDev uses [Ollama](https://ollama.com/) to call upon local LLM models. <!-- TODO Really? maybe use litellm -->
-
-This requires that a compatible version of ollama is installed in the user system before running AutoDev.
+<!-- TODO add here the structure of the custom prompt -->
 
 ## Modules
 
@@ -87,8 +85,10 @@ flowchart TD
     Interface-->|calls|Dispatcher
     Dispatcher-->|calls|Handler
     Handler-->|uses|Service
-    Service-->|uses|Generator
-    Service-->|uses|Output
+    Service-->|comprehends|Generator
+    Service-->|comprehends|Output
+    Service-->|comprehends|Prompt
+    Service-->|comprehends|Model
     Generator-->|uses|Prompt
     Generator-->|uses|Model
 ```
