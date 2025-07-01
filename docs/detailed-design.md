@@ -25,7 +25,7 @@ title: Interface Design
 ---
 classDiagram
     class Interface {
-        __main__()
+        \_\_main\_\_()
     }
 
     class docopt {
@@ -71,7 +71,8 @@ classDiagram
         generateDirenv(project_path: str = "./.")
     }
 
-    Handlers ..> Services
+    ConfigGeneratorHandler  ..> Services
+    DirenvGeneratorHandler  ..> Services
 ```
 
 ### Services
@@ -86,12 +87,10 @@ classDiagram
 
     class Configuration {
         addConfig(model: str = None, project_path: str = "./.", prompt_path: str = None) 
-<!-- 
-pseudo code: 
-    def addConfig(model, project_path, prompt_path):
-        contents = Generator.generateConfig(model, project_path, prompt_path)
-        Output.createFile("flake.nix", contents)
--->
+%% pseudo code: 
+%%     def addConfig(model, project_path, prompt_path):
+%%         contents = Generator.generateConfig(model, project_path, prompt_path)
+%%         Output.createFile("flake.nix", contents)
     }
 
     class Direnv {
@@ -100,13 +99,11 @@ pseudo code:
 
     class Generator {
         generateConfig(model_name: str, project_path: str = "./.", prompt_path: str = None) -> str
-<!-- 
-pseudo code: 
-    def generateConfig(model_name, project_path, prompt_path):
-        model = Model(model)
-        message = Prompt.getPrompt(project_path, prompt_path)
-        return model.ask(message)
--->
+%% pseudo code: 
+%%     def generateConfig(model_name, project_path, prompt_path):
+%%         model = Model(model)
+%%         message = Prompt.getPrompt(project_path, prompt_path)
+%%         return model.ask(message)
     }
 
     class Model {
@@ -130,9 +127,11 @@ pseudo code:
     }
 
     Direnv ..> Output
-    Config ..> Output
+    Configuration ..> Output
+    Configuration ..> Generator
     Generator ..> Model
     Generator ..> Prompt
+    Prompt ..> Reader
 ```
 
 #### Prompt
