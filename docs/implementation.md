@@ -3,7 +3,6 @@ layout: page
 title: Implementation
 ---
 
-Placeholder for implementation
 ## FileSystemNode class
 
 The FileSystemNode class is used to rappresent directory structures.
