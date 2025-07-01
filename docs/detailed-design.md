@@ -19,13 +19,13 @@ The [docopt](https://github.com/jazzband/docopt-ng) package is used to define th
 
 The Interface module simply calls the dispatch function exposed by the Dispatcher with the cli arguments provided by the user as arguments.
 
-![Interface Design](./assets/build/interface_design.png)
+![Interface Design](./assets/mermaid/interface_design.png)
 
 ### Dispatcher
 
 Similar to a router in a web application, the Dispatcher calls the correct handlers with correct arguments depending on argments passed through the cli.
 
-![Dispatcher Design](./assets/build/dispatcher_design.png)
+![Dispatcher Design](./assets/mermaid/dispatcher_design.png)
 
 ### Handlers
 
@@ -33,13 +33,13 @@ The handlers expose the high level functionalities of AutoDev.
 
 They call services to execute the actual business logic.
 
-![Handlers Design](./assets/build/handlers_design.png)
+![Handlers Design](./assets/mermaid/handlers_design.png)
 
 ### Services
 
 The services define business logic for AutoDev's functionalities.
 
-![Services Design](./assets/build/services_design.png)
+![Services Design](./assets/mermaid/services_design.png)
 
 #### Prompt
 
@@ -53,7 +53,7 @@ This wrapper serves as an anti-corruption layer, ensuring if the underlying pack
 
 Also the Model interface only exposes the needed methods for AutoDev, hiding additional functionalities the underlying package provides.
 
-![Model Design](./assets/build/model_design.png)
+![Model Design](./assets/mermaid/model_design.png)
 
 #### Output
 
@@ -65,7 +65,7 @@ For terminal based outputs the [rich](https://github.com/Textualize/rich) packag
 
 For file creation the os python built package is used.
 
-![Output Design](./assets/build/output_design.png)
+![Output Design](./assets/mermaid/output_design.png)
 
 [Back to index](./index.md) |
 [Previous Chapter](./architectural-design.md) |

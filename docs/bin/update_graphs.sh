@@ -6,7 +6,7 @@ SCRIPT_PATH=$(dirname "$TEMP")
 
 ASSETS_FOLDER="$SCRIPT_PATH/../assets"
 SRC_FOLDER="$ASSETS_FOLDER/src"
-OUT_FOLDER="$ASSETS_FOLDER/build"
+OUT_FOLDER="$ASSETS_FOLDER/mermaid"
 
 if [[ ! -d "$ASSETS_FOLDER" ]]; then
   echo "❌ assets folder not found"
