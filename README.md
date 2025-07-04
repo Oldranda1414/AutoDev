@@ -28,6 +28,16 @@ To start the development environment run `nix develop`
 
 [Mermaid cli](https://github.com/mermaid-js/mermaid-cli) is used to generate png graphs from [mermaid](https://mermaid.js.org/) syntax.
 
+### Just
+
+[Just](https://github.com/casey/just) is a modern command runner.
+
+To see the available commands run:
+
+```sh
+just
+```
+
 ## Usage
 
 The following command will generate the dev environment specification:
