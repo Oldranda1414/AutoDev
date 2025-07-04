@@ -57,7 +57,24 @@ Options:
   -d, --direnv                                    Generate .envrc file also.
   -m=MODEL-NAME, --model=MODEL-NAME               Model to use to generate the config. One of: temp temp temp [default: llama3] 
   -p=PROMPT-FILE-PATH, --prompt=PROMPT-FILE-PATH  Custom prompt file path.
+
 """
+```
+
+## Development
+
+To enter AutoDev's development enviroment:
+
+```sh
+nix develop
+```
+
+[Just](https://github.com/casey/just) is used to simplify running commands.
+
+To see available commands:
+
+```sh
+just
 ```
 
 ## Custom Prompt
