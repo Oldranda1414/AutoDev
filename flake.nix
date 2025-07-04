@@ -18,6 +18,8 @@
         uv
         # cli to turn mmd files into mermaid graph pngs
         mermaid-cli
+        # modern command runner
+        just
       ];
 
       # shellHook = ''
