@@ -47,6 +47,14 @@ The services define business logic for AutoDev's functionalities.
 
 <!-- TODO add how custom prompt parsing works -->
 
+The default prompt style used by AutoDev is the following:
+
+```json
+
+```
+
+This default prompt style was selected by using the best performing prompt style from the [test](./testing.md) portion of this project.
+
 #### Model
 
 The Model module is a wrapper around the [litellm](https://github.com/BerriAI/litellm) package.
