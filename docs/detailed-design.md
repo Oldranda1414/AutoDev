@@ -19,7 +19,7 @@ Since the project has a rather small scope, it's goals are to test and prototype
 
 The [docopt](https://github.com/jazzband/docopt-ng) package is used to define the arguments accepted by AutoDev.
 
-The Interface module simply calls the dispatch function exposed by the Dispatcher with the cli arguments provided by the user as arguments.
+The Interface module calls the dispatch function exposed by the Dispatcher with the parced cli arguments provided by the user as arguments.
 
 ![Interface Design](./assets/mermaid/interface_design.png)
 
