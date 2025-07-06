@@ -5,13 +5,14 @@ default:
   just --list --list-heading $'Available commands:\n'
 
 # Run the main application
-run:
-    uv --project src run src/main.py $@
+run *args:
+    uv --project src run src/main.py {{args}}
 
 # Run the test script
-test:
-    uv --project src run src/test/main.py $@
+test *args:
+    uv --project src run src/test/main.py {{args}}
 
 # Run uv with correct project path
-uv:
-    uv --project src $@
+[no-exit-message]
+uv *args:
+    @uv --project src {{args}}
