@@ -6,7 +6,8 @@ def generateConfig(project_path: str, model: str, prompt_path: str):
 
 def generateDirenv(project_path: str):
     add_direnv(project_path)
-    if not quiet:
-        ad_print(".envrc file created.")
-        ad_print("Run 'direnv allow' to enable direnv for this project")
-        ad_print("Don't know what direnv is? Check it out at https://direnv.net/")
+    cli_print(
+        ".envrc file created.",
+        "Run 'direnv allow' to enable direnv for this project",
+        "Don't know what direnv is? Check it out at https://direnv.net/"
+    )

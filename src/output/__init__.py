@@ -12,7 +12,8 @@ def _require_init():
     if not _initialized:
         raise RuntimeError("Prompt.init() must be called before using this method.")
 
-def cli_print(message: str):
+def cli_print(*message: str):
     _require_init()
-    print(message)
+    for line in message:
+        print(line)
 
