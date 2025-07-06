@@ -73,6 +73,9 @@ The prompt was completed with the contents of the project directory, as in direc
 
 The prompt was completed with the full contents of the project directory, as in directory structure, file names and contents.
 
+<!-- TODO checkout this for prompt engeneering: https://www.promptingguide.ai/ -->
+
 [Back to index](./index.md) |
 [Previous Chapter](./implementation.md) |
 [Next Chapter](./conclusion.md) |
+
