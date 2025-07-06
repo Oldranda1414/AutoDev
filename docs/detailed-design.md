@@ -45,9 +45,18 @@ The services define business logic for AutoDev's functionalities.
 
 #### Prompt
 
-<!-- TODO add how custom prompt parsing works -->
+The prompt is generated from a json file specification.
+
+The json file must have the following structure
+
+<!-- TODO add json prompt structure -->
+
+```json
+
+```
 
 The default prompt style used by AutoDev is the following:
+<!-- TODO add default style -->
 
 ```json
 
