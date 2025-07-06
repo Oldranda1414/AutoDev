@@ -1,4 +1,4 @@
-set positional-arguments
+set quiet
 
 # List available recipies
 default:
