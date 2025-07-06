@@ -3,7 +3,7 @@
 _initialized = False
 _quiet = False
 
-def init(quiet: bool):
+def init(quiet: bool = False):
     global _quiet, _initialized
     _quiet = quiet
     _initialized = True
