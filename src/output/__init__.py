@@ -14,6 +14,7 @@ def _require_init():
 
 def cli_print(*message: str):
     _require_init()
-    for line in message:
-        print(line)
+    if not _quiet:
+        for line in message:
+            print(line)
 
