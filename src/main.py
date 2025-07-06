@@ -1,10 +1,9 @@
+import sys
+
+import interface
+
 def main():
-    print("Hello from AutoDev!")
-
-    import sys
-
-    print("Arguments:", sys.argv)
-
+    interface.main(sys.argv[1:])
 
 if __name__ == "__main__":
     main()
