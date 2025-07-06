@@ -4,19 +4,19 @@ title: Services Design
 classDiagram
 
     class Configuration {
-        addConfig(model: str = None, project_path: str = "./.", prompt_path: str = None) 
+        add_config(model: str, project_path: str, prompt_path: str) 
 %% pseudo code: 
-%%     def addConfig(model, project_path, prompt_path):
-%%         contents = Generator.generateConfig(model, project_path, prompt_path)
-%%         Output.createFile("flake.nix", contents)
+%%     def add_config(model, project_path, prompt_path):
+%%         contents = Generator.generate_config(model, project_path, prompt_path)
+%%         Output.create_file("flake.nix", contents)
     }
 
     class Direnv {
-        addDirenv(project_path: str = "./.")
+        add_direnv(project_path: str)
     }
 
     class Generator {
-        generateConfig(model_name: str, project_path: str = "./.", prompt_path: str = None) -> str
+        generate_config(model_name: str, project_path: str, prompt_path: str) -> str
 %% pseudo code: 
 %%     def generateConfig(model_name, project_path, prompt_path):
 %%         model = Model(model)
@@ -30,18 +30,18 @@ classDiagram
     }
 
     class Prompt {
-        getPrompt(project_path: str = "./.", prompt_path: str = None) -> str
+        get_prompt(project_path: str, prompt_path: str) -> str
     }
 
     class Output {
-        init(quiet: bool = false)
-        createFile(name: str, contents: str, path: str = "./.")
+        init(quiet: bool)
+        create_file(name: str, contents: str, path: str = "./.")
         print(message: str)
     }
 
     class Reader {
-        readFile(path: str) -> str
-        readDir(path: str = "./.") -> FileSystemObject
+        read_file(path: str) -> str
+        read_dir(path: str = "./.") -> FileSystemObject
     }
 
     Direnv ..> Output
