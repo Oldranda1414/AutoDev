@@ -36,7 +36,8 @@ classDiagram
     class Output {
         init(quiet: bool)
         create_file(name: str, contents: str, path: str)
-        print(message: str)
+        cli_print(message: str)
+        cli_print_error(message: str)
     }
 
     class Reader {
