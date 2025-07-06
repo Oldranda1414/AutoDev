@@ -7,6 +7,7 @@ doc = """AutoDev
 
 Usage:
   autodev.py [PATH-TO-PROJECT] [-q | --quiet] [-d | --direnv] [-m MODEL-NAME] [-p PROMPT-FILE-PATH]
+  autodev.py -l | --list
 
 Generates development environment configuration for a project.
 
@@ -18,6 +19,7 @@ Options:
   -q, --quiet                                     Disable prints.
   -d, --direnv                                    Generate .envrc file also.
   -m MODEL-NAME, --model MODEL-NAME               Model to use to generate the config. One of: temp temp temp [default: llama3]
+  -l, --list                                      List available and installed models.
   -p PROMPT-FILE-PATH, --prompt PROMPT-FILE-PATH  Custom prompt file path.
 
 """
