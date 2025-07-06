@@ -35,13 +35,13 @@ classDiagram
 
     class Output {
         init(quiet: bool)
-        create_file(name: str, contents: str, path: str = "./.")
+        create_file(name: str, contents: str, path: str)
         print(message: str)
     }
 
     class Reader {
         read_file(path: str) -> str
-        read_dir(path: str = "./.") -> FileSystemObject
+        read_dir(path: str) -> FileSystemObject
     }
 
     Direnv ..> Output

@@ -3,9 +3,9 @@ title: Output Design
 ---
 classDiagram
     class Output {
-        init(quiet: bool = false)
-        create_file(name: str, contents: str, path: str = "./.")
-        print(message: str)
+        init(quiet: bool)
+        create_file(name: str, contents: str, path: str)
+        cli_print(message: str)
     }
 
     class os {

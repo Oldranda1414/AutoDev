@@ -3,11 +3,11 @@ title: Handlers Design
 ---
 classDiagram
     class ConfigGeneratorHandler {
-        generate_config(project_path, model, prompt_path, quiet)
+        generate_config(project_path, model, prompt_path)
     }
 
     class DirenvGeneratorHandler {
-        generate_direnv(project_path, quiet)
+        generate_direnv(project_path)
     }
 
     ConfigGeneratorHandler  ..> Services

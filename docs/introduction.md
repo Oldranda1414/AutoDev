@@ -60,5 +60,7 @@ The following models have been tested during the projects development:
 - temp
 - temp
 
+<!-- TODO check module name casing convention in mermaid graphs -->
+
 [Back to index](./index.md) |
 [Next Chapter](./requirements.md) |
