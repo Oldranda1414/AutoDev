@@ -40,6 +40,7 @@ Default values for arguments can be defined with the following form: `[default: 
 ### AutoDev usage definiton
 
 The usage of AutoDev's command `autodev` is defined as follows, using [docopt](https://github.com/jazzband/docopt-ng) command definition language:
+<!-- TODO remember to update this with final usage -->
 
 ```py
 """AutoDev
