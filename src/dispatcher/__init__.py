@@ -1,5 +1,6 @@
 from typing import Dict
 from handlers import generateConfig, generateDirenv
+from output import init
 
 def dispatch(args: Dict[str, str]):
     project_path = args["PATH-TO-PROJECT"]
@@ -8,6 +9,8 @@ def dispatch(args: Dict[str, str]):
     generate_direnv = args["--direnv"]
     model_name = args["--model"]
 
-    generateConfig(project_path, model_name, prompt_path, quiet)
+    init(quiet)
+
+    generateConfig(project_path, model_name, prompt_path)
     if generate_direnv:
-        generateDirenv(project_path, quiet)
+        generateDirenv(project_path)
