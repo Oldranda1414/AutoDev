@@ -2,14 +2,19 @@
 title: Handlers Design
 ---
 classDiagram
-    class ConfigGeneratorHandler {
+    class ConfigGenerator {
         generate_config(project_path, model, prompt_path)
     }
 
-    class DirenvGeneratorHandler {
+    class DirenvGenerator {
         generate_direnv(project_path)
     }
 
-    ConfigGeneratorHandler  ..> Services
-    DirenvGeneratorHandler  ..> Services
+    class ListModel {
+        list_models()
+    }
+
+    ConfigGenerator ..> Services
+    DirenvGenerator ..> Services
+    ListModel ..> Services
 

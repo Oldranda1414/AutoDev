@@ -18,9 +18,9 @@ classDiagram
     class Generator {
         generate_config(model_name: str, project_path: str, prompt_path: str) -> str
 %% pseudo code: 
-%%     def generateConfig(model_name, project_path, prompt_path):
+%%     def generate_config(model_name, project_path, prompt_path):
 %%         model = Model(model)
-%%         message = Prompt.getPrompt(project_path, prompt_path)
+%%         message = Prompt.get_prompt(project_path, prompt_path)
 %%         return model.ask(message)
     }
 
@@ -34,7 +34,7 @@ classDiagram
     }
 
     class Output {
-        init(quiet: bool)
+        init(quiet: bool = False)
         create_file(name: str, contents: str, path: str)
         cli_print(message: str)
         cli_print_error(message: str)
