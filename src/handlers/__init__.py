@@ -8,7 +8,7 @@ def generate_config(project_path: str, model: str, prompt_path: str):
         # TODO add spinner until this is finished
         add_config(model, project_path, prompt_path)
         cli_print(
-            "Config generated",
+            "Config generated.",
             "Run 'nix develop' in project root to enter development enviroment."
         )
     except FileExistsError:
