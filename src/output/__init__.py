@@ -1,29 +1,33 @@
 # TODO implement prettier print, maybe with rich library
+from rich.console import Console
+from enum import Enum
 
 _initialized = False
 _quiet = False
+_console: Console = None
+
+class PrintType(Enum):
+    SUCCESS = 1
+    ERROR = 2
 
 def init(quiet: bool = False):
-    global _quiet, _initialized
+    global _quiet, _initialized, _console
     _quiet = quiet
     _initialized = True
+    _console = Console()
 
 def _require_init():
     if not _initialized:
         raise RuntimeError("Prompt.init() must be called before using this method.")
 
-def cli_print(*message: str):
+def cli_print(print_type: PrintType, *message: str):
     _require_init()
     if not _quiet:
         for line in message:
-            print(line)
-
-# TODO make this different from normal print
-def cli_print_error(*message: str):
-    _require_init()
-    if not _quiet:
-        for line in message:
-            print(line)
+            if print_type == PrintType.SUCCESS:
+                _console.print(f"[bold green] {line} [/bold green]")
+            elif print_type == PrintType.ERROR:
+                _console.print(f"[bold red] {line} [/bold red]")
 
 def create_file(name: str, contents: str, path: str):
     complete_path: str
