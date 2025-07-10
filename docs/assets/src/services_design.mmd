@@ -28,6 +28,7 @@ classDiagram
         init(quiet: bool = False)
         create_file(name: str, contents: str, path: str)
         cli_print(print_type: PrintType, *message: str)
+    }
 
     class Reader {
         read_file(path: str) -> str

@@ -8,13 +8,8 @@ classDiagram
         cli_print(print_type: PrintType, *message: str)
     }
 
-    class os {
-        <<builtin package>>
-    }
-
     class rich {
         <<package>>
     }
 
-    Output ..> os
     Output ..> rich
