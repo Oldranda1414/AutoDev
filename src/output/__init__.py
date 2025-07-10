@@ -1,4 +1,3 @@
-# TODO implement prettier print, maybe with rich library
 from rich.console import Console
 from enum import Enum
 
