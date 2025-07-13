@@ -16,3 +16,4 @@ wheels/
 # util scripts
 set-hooks.sh
 update.sh
+test.sh
