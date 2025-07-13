@@ -13,7 +13,8 @@ wheels/
 .direnv
 .envrc
 
-# util scripts
+# util scripts and files
 set-hooks.sh
 update.sh
 test.sh
+default.json
