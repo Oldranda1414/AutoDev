@@ -1,4 +1,4 @@
-from configuration import add_config
+from configuration import add_config, PromptPathError, ModelNameError
 from services import add_direnv, list
 from output import cli_print, PrintType, get_spinner
 
@@ -7,7 +7,6 @@ def generate_config(project_path: str, model: str, prompt_path: str):
         cli_print(PrintType.SUCCESS,
             "Generating config with " + model + " model."
         )
-        # TODO add spinner until this is finished
         with get_spinner("generating config"):
             add_config(model, project_path, prompt_path)
         cli_print(PrintType.SUCCESS,
@@ -16,13 +15,18 @@ def generate_config(project_path: str, model: str, prompt_path: str):
         )
     except FileExistsError:
         cli_print(PrintType.ERROR,
-                  "flake.nix file already present in project root.",
-                  "Delete the 'flake.nix' file or backup it then rerun AutoDev."
-                  )
-    except ValueError:
+            "flake.nix file already present in project root.",
+            "Delete the 'flake.nix' file or backup it then rerun AutoDev."
+        )
+    except ModelNameError:
         cli_print(PrintType.ERROR,
-            f"Model name {{model}} is not a valid model name",
-            "To see all valid model names run 'ad --list"
+            f"Model name {{model}} is not a valid model name.",
+            "To see all valid model names run 'ad --list."
+        )
+    except PromptPathError:
+        cli_print(PrintType.ERROR,
+            f"Prompt path {prompt_path} is not a valid prompt path.",
+            "Provide a path of an existing json file."
         )
 
 def generate_direnv(project_path: str):
