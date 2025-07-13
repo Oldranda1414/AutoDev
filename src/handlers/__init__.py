@@ -1,6 +1,6 @@
 from configuration import add_config
 from services import add_direnv, list
-from output import cli_print, PrintType
+from output import cli_print, PrintType, get_spinner
 
 def generate_config(project_path: str, model: str, prompt_path: str):
     try:
@@ -8,7 +8,8 @@ def generate_config(project_path: str, model: str, prompt_path: str):
             "Generating config with " + model + " model."
         )
         # TODO add spinner until this is finished
-        add_config(model, project_path, prompt_path)
+        with get_spinner("generating config"):
+            add_config(model, project_path, prompt_path)
         cli_print(PrintType.SUCCESS,
             "Config generated.",
             "Run 'nix develop' in project root to enter development enviroment."

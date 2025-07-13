@@ -36,3 +36,6 @@ def create_file(name: str, contents: str, path: str):
         complete_path = name
     with open(complete_path, "x") as f:
         f.write(contents)
+
+def get_spinner(message: str):
+    return _console.status(message)
