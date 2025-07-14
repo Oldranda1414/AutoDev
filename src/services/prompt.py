@@ -1,7 +1,6 @@
 import os
 import json
-from errors import PromptPathError
-from errors.errors import MissingAttributesError
+from errors import PromptPathError, MissingAttributesError
 
 from file_system import generate_tree
 

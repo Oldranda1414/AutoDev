@@ -7,39 +7,19 @@ title: Implementation
 
 Since python is the language choosen, some decisions should be made in terms of source code organization, as there are varying approches possible when considering python standards.
 
-Although the project is of small scope, python module system is used to improve source code organization.
+Given the projects small scope, the barebones module system is used.
 
-The `__init__.py` file for every module provides only the interface of the module, by importing what should be exposed to the module user.
+A module is define by a python file.
 
-The actual module code is stored in a python file named after the module itself.
+Collection of modules can be created by grouping files in directories.
 
-Additional organization can be provided by creating submodules or additional python files, all referred by the python file named after the module itself.
+The `__init__.py` file format was considered, as it can work as an interface between modules, defining what methods are exposed to users of a module, given the limited scope of the project it has been omitted.
 
-The following is an example of a module named 'example' with a submodule named 'submodule':
+Private methods and attributes are simply identified by a starting underscore (`_`).
 
-<!-- 
-generated with https://tree.nathanfriend.com/ 
+Although this method is less 'safe' it is preffered for this project.
 
-example
-  submodule
-    __init__.py
-    submodule.py
-  __init__.py
-  example.py
-  utils.py
--->
-
-```none
-example/
-├── submodule/
-│   ├── __init__.py
-│   └── submodule.py
-├── __init__.py
-├── example.py
-└── utils.py
-```
-
-Collections of modules in an outer module that does not provide functionaties itself should omit the presence of the `__init__.py` file, as it is useless.
+Whenever the project complexity should increase a refactor of the source code organization could be considered.
 
 ## Directory tree rappresentation
 
@@ -61,22 +41,16 @@ Initially custom 'per module' exception types where employed.
 generated with https://tree.nathanfriend.com/ 
 
 module_a
-  __init__.py
-  module_a.py
-  exceptions.py
-module_b
-  __init__.py
-  module_b.py
+    module_a.py
+    exceptions.py
+module_b.py
 -->
 ```none
 .
 ├── module_a/
-│   ├── __init__.py
 │   ├── module_a.py
 │   └── exceptions.py
-└── module_b/
-    ├── __init__.py
-    └── module_b.py
+└── module_b.py
 ```
 
 If `module_b` needed to catch an exception type defined in the `module_a/exceptions.py` file, it would import them accordingly.

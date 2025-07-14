@@ -1,9 +1,8 @@
-from errors.errors import MissingAttributesError
 from services.configuration import add_config
-from errors import PromptPathError, ModelNameError
 from services.direnv import add_direnv
 from services.list import list
 from services.output import cli_print, PrintType, get_spinner
+from errors import PromptPathError, ModelNameError, MissingAttributesError
 
 def generate_config(project_path: str, model: str, prompt_path: str):
     try:
