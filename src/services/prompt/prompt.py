@@ -21,7 +21,7 @@ def get_prompt(prompt_path: str, project_path: str) -> str:
     conclusion_prompt = None
     tagged_fso_prompt = None
     if prompt_path:
-        depth, prefix_prompt, conclusion_prompt, fso_prompt = _extract_prompt(prompt_path)
+        depth, prefix_prompt, conclusion_prompt, tagged_fso_prompt = _extract_prompt(prompt_path)
     else:
         # TODO implement default prompt
         depth = DEFAULT_DEPTH
