@@ -1,4 +1,5 @@
-from services.configuration import add_config, PromptPathError, ModelNameError
+from services.configuration import add_config
+from errors import PromptPathError, ModelNameError
 from services.direnv import add_direnv
 from services.list import list
 from services.output import cli_print, PrintType, get_spinner

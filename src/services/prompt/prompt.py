@@ -1,4 +1,5 @@
 import os
+import json
 
 from file_system import generate_tree
 
@@ -37,6 +38,9 @@ def _extract_prompt(prompt_path: str) -> tuple[str, str, str]:
         raise ValueError("prompt_path must be a json type file path") 
     if not os.path.exists(prompt_path):
         raise ValueError("prompt_path provided must lead to an existing file") 
+    with open(prompt_path) as prompt_file:
+        custom_prompt = json.load(prompt_file)
+
     return "place", "holder" ,""
 
 def _generate_fso_prompt(project_path: str, tagged_fso_prompt: str):
