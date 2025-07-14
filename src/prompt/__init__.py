@@ -8,7 +8,7 @@ DEFAULT_CONCLUSION_PROMPT = """
 Some conclusion prompt
 """
 DEFAULT_FSO_PROMPT = """
-
+Some defatul FSO prompt
 """
 
 def get_prompt(prompt_path: str, project_path: str) -> str:
