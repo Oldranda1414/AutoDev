@@ -2,10 +2,10 @@ import os
 # from typing import Tuple
 
 DEFAULT_PREFIX_PROMPT = """
-
+Some prefix prompt
 """
 DEFAULT_CONCLUSION_PROMPT = """
-
+Some conclusion prompt
 """
 DEFAULT_FSO_PROMPT = """
 
