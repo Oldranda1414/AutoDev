@@ -30,9 +30,8 @@ classDiagram
         cli_print(print_type: PrintType, *message: str)
     }
 
-    class Reader {
-        read_file(path: str) -> str
-        read_dir(path: str) -> FileSystemObject
+    class FileSystem {
+        geneate_tree(path: str) -> FileSystemObject
     }
 
     Direnv ..> Output
@@ -40,4 +39,4 @@ classDiagram
     Configuration ..> Generator
     Generator ..> Model
     Generator ..> Prompt
-    Prompt ..> Reader
+    Prompt ..> FileSystem
