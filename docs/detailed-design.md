@@ -60,63 +60,63 @@ The json file must have the following structure:
 
 ##### \<depth_level\> 
 
-\<depth_level\> is the max depth level that should be reached when traversing the directory tree.
+`\<depth_level\>` is the max depth level that should be reached when traversing the directory tree.
 
-The value of \<depth_level\> must be an integer.
+The value of `\<depth_level\>` must be an integer.
 
-If \<depth_level\> is set to 0 then the project directory contents will not be considered when creating the prompt. Only the premise will compse the used prompt.
+If `\<depth_level\>` is set to 0 then the project directory contents will not be considered when creating the prompt. Only the premise will compse the used prompt.
 
-If \<depth_level\> is set to a value greater than 0 then the project directory will be traversed up to the depth indicated by the value of \<depth_level\>, and the directories and files encountered during traversal will be used to generate the prompt.
+If `\<depth_level\>` is set to a value greater than 0 then the project directory will be traversed up to the depth indicated by the value of `\<depth_level\>`, and the directories and files encountered during traversal will be used to generate the prompt.
 
 ##### \<premise_prompt\>
 
-\<premise_prompt\> is the first part of the prompt to be passed to the LLM model.
+`\<premise_prompt\>` is the first part of the prompt to be passed to the LLM model.
 
-The value of \<premise_prompt\> must be a string.
+The value of `\<premise_prompt\>` must be a string.
 
-The value of \<premise_prompt\> is used to generate the first part of the prompt passed to the LLM.
+The value of `\<premise_prompt\>` is used to generate the first part of the prompt passed to the LLM.
 
-The value of \<premise_prompt\> is expected to contain some information about the task being requested, as in the request to generate a dev env configuration using the nix language.
+The value of `\<premise_prompt\>` is expected to contain some information about the task being requested, as in the request to generate a dev env configuration using the nix language.
 
 ##### \<conclusion_prompt\>
 
-\<conclusion_prompt\> is the final part of the prompt to be passed to the LLM model.
+`\<conclusion_prompt\>` is the final part of the prompt to be passed to the LLM model.
 
-The value of \<conclusion_prompt\> must be a string.
+The value of `\<conclusion_prompt\>` must be a string.
 
-The value of \<conclusion_prompt\> is used to generate the last part of the prompt passed to the LLM.
+The value of `\<conclusion_prompt\>` is used to generate the last part of the prompt passed to the LLM.
 
-The value of \<conclusion_prompt\> is expected to contain some information about how to output the configuration, as in specifing that no text should be generated apart from the actuall nix code to be placed in the flake.nix file.
+The value of `\<conclusion_prompt\>` is expected to contain some information about how to output the configuration, as in specifing that no text should be generated apart from the actuall nix code to be placed in the flake.nix file.
 
 ##### \<file_system_object_prompt\>
 
-\<file_system_object_prompt\> is the prompt to be passed for every file system object visited.
+`\<file_system_object_prompt\>` is the prompt to be passed for every file system object visited.
 
-The value of \<file_system_object_prompt\> must be a string.
+The value of `\<file_system_object_prompt\>` must be a string.
 
-For every directory or file traversed, as per the \<depth_level\> value, the value of \<file_system_object_prompt\> will be repeated.
+For every directory or file traversed, as per the `\<depth_level\>` value, the value of `\<file_system_object_prompt\>` will be repeated.
 
-In the value of \<file_system_object_prompt\> the following tags will be filled according to the file system object being considered:
+In the value of `\<file_system_object_prompt\>` the following tags will be filled according to the file system object being considered:
 
-- \<fso_name\>: will be replaced with the file system object's name
-- \<fso_contents\>: will be replaced with the file system object's fso_contents
+- `\<fso_name\>`: will be replaced with the file system object's name
+- `\<fso_contents\>`: will be replaced with the file system object's fso_contents
 
-In the case of directories \<fso_contents\> will contain the files filled
+In the case of directories `\<fso_contents\>` will contain the files filled
 
 ##### Tags
 
-If present in the values of \<premise_prompt\> or/and \<conclusion_prompt\> the following tags will be replaced as follows:
+If present in the values of `\<premise_prompt\>` or/and `\<conclusion_prompt\>` the following tags will be replaced as follows:
 
-- \<project_tree\>: will be replaced with a project directory tree rappresenation, up to the depth specified in <depth_level>
+- `\<project_tree\>`: will be replaced with a project directory tree rappresenation, up to the depth specified in <depth_level>
 
-If present in the value of \<file_system_object_prompt\> the following tags will be replaced as follows, according to the file system object being considered at that point:
+If present in the value of `\<file_system_object_prompt\>` the following tags will be replaced as follows, according to the file system object being considered at that point:
 
-- \<fso_name\>: will be replaced with the file system object's name
-- \<fso_contents\>: will be replaced with the file system object's fso_contents
+- `\<fso_name\>`: will be replaced with the file system object's name
+- `\<fso_contents\>`: will be replaced with the file system object's fso_contents
 
-In the case of directories \<fso_contents\> will be replaced by the names of the files and directories contained in the considered directory.
+In the case of directories `\<fso_contents\>` will be replaced by the names of the files and directories contained in the considered directory.
 
-In the case of files \<fso_contents\> will contain the considered file contents.
+In the case of files `\<fso_contents\>` will contain the considered file contents.
 
 ##### Default prompt
 
