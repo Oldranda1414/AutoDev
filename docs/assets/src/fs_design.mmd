@@ -3,15 +3,15 @@ title: File System Design
 ---
 classDiagram
     class FileSystem {
-        geneate_tree(path: str) -> FileSystemObject
+        generate_tree(path: str) -> FileSystemObject
     }
 
     class FileSystemObject {
         name: str
         is_dir: bool
         contents: None | str
-        children() -> List[FileSystemObject]
-        parent() -> FileSystemObject
+        children: List[FileSystemObject]
+        parent: FileSystemObject
     }
 
     FileSystem ..> FileSystemObject

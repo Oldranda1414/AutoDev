@@ -6,7 +6,7 @@ class Model:
 
     def ask(self, message: str) -> str:
         # TODO implement this
-        return "some answer"
+        return "model was asked: " + message
 
     
 def _is_valid_name(model_name):
