@@ -51,9 +51,9 @@ The json file must have the following structure:
 
 ```json
 {
-    "depth": <depth_level>
-    "premise": <premise_prompt>
-    "conclusion": <conclusion_prompt>
+    "depth": <depth_level>,
+    "premise": <premise_prompt>,
+    "conclusion": <conclusion_prompt>,
     "fsobject": <file_system_object_prompt>
 }
 ```
