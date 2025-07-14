@@ -1,1 +1,1 @@
-from .errors import PromptPathError, ModelNameError
+from .errors import PromptPathError, ModelNameError, MissingAttributesError

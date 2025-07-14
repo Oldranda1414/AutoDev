@@ -9,5 +9,6 @@ class FileSystemObject:
         self.children: list[FileSystemObject] = []
         self.is_dir = not contents
 
-def generate_tree(path: str) -> FileSystemObject:
+def generate_tree(path: str, depth: int) -> FileSystemObject:
+    # TODO implement this
     return FileSystemObject(path, "")
