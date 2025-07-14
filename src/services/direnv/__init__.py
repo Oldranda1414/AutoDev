@@ -1,4 +1,4 @@
-from output import create_file
+from services.output import create_file
 
 def add_direnv(project_path: str):
     envrc_name = ".envrc"

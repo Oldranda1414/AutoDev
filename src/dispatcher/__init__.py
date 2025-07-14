@@ -1,6 +1,6 @@
 from typing import Dict
 from handlers import generate_config, generate_direnv, list_models
-from output import init
+from services.output import init
 
 def dispatch(args: Dict[str, str]):
     project_path = args["PATH-TO-PROJECT"]

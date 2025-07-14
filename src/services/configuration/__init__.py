@@ -1,6 +1,6 @@
-from generator import generate_config
-from output import create_file
-from generator.exceptions import PromptPathError as PE, ModelNameError as ME
+from services.generator import generate_config
+from services.output import create_file
+from services.generator.exceptions import PromptPathError as PE, ModelNameError as ME
 from .exceptions import PromptPathError, ModelNameError
 
 def add_config(model: str, project_path: str, prompt_path: str):

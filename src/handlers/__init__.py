@@ -1,6 +1,7 @@
-from configuration import add_config, PromptPathError, ModelNameError
-from services import add_direnv, list
-from output import cli_print, PrintType, get_spinner
+from services.configuration import add_config, PromptPathError, ModelNameError
+from services.direnv import add_direnv
+from services.list import list
+from services.output import cli_print, PrintType, get_spinner
 
 def generate_config(project_path: str, model: str, prompt_path: str):
     try:

@@ -1,6 +1,6 @@
 import os
 
-from file_system import FileSystemObject, generate_tree
+from file_system import generate_tree
 
 DEFAULT_PREFIX_PROMPT = """
 Some prefix prompt
