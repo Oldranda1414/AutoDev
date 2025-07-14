@@ -37,9 +37,9 @@ def generate_config(project_path: str, model: str, prompt_path: str):
             "the json file must contain the following keys"
             """
                 {
-                    "depth": <depth_level>
-                    "premise": <premise_prompt>
-                    "conclusion": <conclusion_prompt>
+                    "depth": <depth_level>,
+                    "premise": <premise_prompt>,
+                    "conclusion": <conclusion_prompt>,
                     "fsobject": <file_system_object_prompt>
                 }
             """
