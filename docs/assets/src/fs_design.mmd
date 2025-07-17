@@ -7,11 +7,11 @@ classDiagram
     }
 
     class FileSystemObject {
+        __init__(name: str, contents: Optional[str] = None):
         name: str
         is_dir: bool
-        contents: None | str
+        contents: str
         children: List[FileSystemObject]
-        parent: FileSystemObject
     }
 
     FileSystem ..> FileSystemObject

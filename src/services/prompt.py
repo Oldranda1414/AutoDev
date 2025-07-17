@@ -44,14 +44,9 @@ def _extract_prompt(prompt_path: str) -> tuple[int, str, str, str]:
         custom_prompt: dict[str, str] = json.load(prompt_file)
     return _get_prompts(custom_prompt)
 
-def _generate_fso_prompt(project_path: str, depth: int, tagged_fso_prompt: str):
-    project_fso = generate_tree(project_path, depth)
-    return tagged_fso_prompt
-    # for fso in project_fso:
-
 def _get_prompts(custom_prompt: dict[str, str]) -> tuple[int, str, str, str]:
-    required_keys = ["depth", "premise", "conclusion","fsobject"]
-    required_types = [int, str, str, str]
+    required_keys =  ["depth", "premise", "conclusion", "fsobject"]
+    required_types = [int,     str,       str,          str]
 
     missing = [key for key in required_keys if key not in custom_prompt]
     if missing:
@@ -61,9 +56,10 @@ def _get_prompts(custom_prompt: dict[str, str]) -> tuple[int, str, str, str]:
     for index, required_type in enumerate(required_types):
         if not type(prompts[index]) == required_type:
             raise JsonValueTypeError()
-        
-    
-    print(prompts)
-
     return prompts
     
+def _generate_fso_prompt(project_path: str, depth: int, tagged_fso_prompt: str):
+    project_root = generate_tree(project_path, depth)
+    return tagged_fso_prompt
+    # for fso in project_fso:
+
