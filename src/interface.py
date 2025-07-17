@@ -6,8 +6,11 @@ from dispatcher import dispatch
 doc = """AutoDev
 
 Usage:
-  just run [PATH-TO-PROJECT] [-q | --quiet] [-d | --direnv] [-m MODEL-NAME] [-p PROMPT-FILE-PATH]
-  just run -l | --list
+  autodev [PATH-TO-PROJECT] [-q | --quiet] [-d | --direnv] [-m MODEL-NAME] [-p PROMPT-FILE-PATH]
+  autodev -l | --list
+
+Replace autodev with your preferred method to run AutoDev.
+If you are in AutoDev's dev env, you can replace 'autodev' with 'just run' 
 
 Generates development environment configuration for a project.
 
@@ -25,7 +28,8 @@ Options:
 """
 
 def main(args: List[str]):
-
+    
+    print(args)
     parsed_args = docopt(doc, args)
     # Add PATH-TO-PROJECT default manually as docopt seems to not add it automatically
     if not parsed_args["PATH-TO-PROJECT"]:
