@@ -31,7 +31,6 @@ def get_prompt(prompt_path: str, project_path: str) -> str:
     prompt = _Prompt(DEFAULT_PREFIX_PROMPT, DEFAULT_CONCLUSION_PROMPT, DEFAULT_FSO_PROMPT)
     if prompt_path:
         depth, prompt = _extract_prompt(prompt_path)
-    # TODO implement this
     prompt.fso = _generate_fso_prompt(project_path, depth, prompt.fso)
     prompt = _add_project_tree(prompt, project_path, depth)
     return prompt.build()
