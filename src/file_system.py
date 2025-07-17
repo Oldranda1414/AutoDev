@@ -15,7 +15,8 @@ def generate_tree(fso_path: str, depth: int) -> FileSystemObject:
         fso = FileSystemObject(basename(fso_path))
         for current in scandir(fso_path):
             print(current.name)
-            fso.children.append(generate_tree(current.path, depth - 1))
+            if depth > 0:
+                fso.children.append(generate_tree(current.path, depth - 1))
         return fso
     else:
         with open(fso_path) as file:

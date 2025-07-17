@@ -4,7 +4,7 @@ from errors import PromptPathError, MissingAttributesError, JsonValueTypeError
 
 from file_system import generate_tree
 
-DEFAULT_DEPTH = 0
+DEFAULT_DEPTH = 1
 DEFAULT_PREFIX_PROMPT = """
 Some prefix prompt
 """
@@ -13,6 +13,8 @@ Some conclusion prompt
 """
 DEFAULT_TAGGED_FSO_PROMPT = """
 Some defatul FSO prompt
+this is the name of the file/folder: <fso_name>.
+this is it's contents if it has any: <fso_contents>
 """
 
 def get_prompt(prompt_path: str, project_path: str) -> str:

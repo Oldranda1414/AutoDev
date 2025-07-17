@@ -107,6 +107,7 @@ In the case of directories `<fso_contents>` will contain the files filled
 
 If present in the values of `<premise_prompt>` or/and `<conclusion_prompt>` the following tags will be replaced as follows:
 
+<!-- TODO implement this -->
 - `<project_tree>`: will be replaced with a project directory tree rappresenation, up to the depth specified in <depth_level>
 
 If present in the value of `<file_system_object_prompt>` the following tags will be replaced as follows, according to the file system object being considered at that point:
