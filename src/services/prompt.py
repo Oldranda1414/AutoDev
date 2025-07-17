@@ -66,7 +66,6 @@ def _generate_fso_prompt(project_path: str, depth: int, tagged_fso_prompt: str):
     for fso in fso_list:
         fso_prompt += "\n" + tagged_fso_prompt.replace(FSO_NAME_TAG, fso.name).replace(FSO_CONTENTS_TAG, fso.contents if fso.contents else "")
     return fso_prompt
-    # for fso in project_fso:
 
 def _add_project_tree(prompt: "_Prompt", project_path: str):
     # TODO implement this. should replace the tag <project_tree> with project dir tree
