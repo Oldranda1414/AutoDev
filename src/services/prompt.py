@@ -3,6 +3,7 @@ import json
 
 from errors import PromptPathError, MissingAttributesError, JsonValueTypeError
 from file_system import generate_list
+from utils.tree import generate_project_tree
 
 DEFAULT_DEPTH = 1
 # Tags
@@ -32,7 +33,7 @@ def get_prompt(prompt_path: str, project_path: str) -> str:
         depth, prompt = _extract_prompt(prompt_path)
     # TODO implement this
     prompt.fso = _generate_fso_prompt(project_path, depth, prompt.fso)
-    prompt = _add_project_tree(prompt, project_path)
+    prompt = _add_project_tree(prompt, project_path, depth)
     return prompt.build()
 
 def _extract_prompt(prompt_path: str) -> tuple[int, "_Prompt"]:
@@ -67,8 +68,12 @@ def _generate_fso_prompt(project_path: str, depth: int, tagged_fso_prompt: str):
         fso_prompt += "\n" + tagged_fso_prompt.replace(FSO_NAME_TAG, fso.name).replace(FSO_CONTENTS_TAG, fso.contents if fso.contents else "")
     return fso_prompt
 
-def _add_project_tree(prompt: "_Prompt", project_path: str):
-    # TODO implement this. should replace the tag <project_tree> with project dir tree
+def _add_project_tree(prompt: "_Prompt", project_path: str, depth):
+    tree = generate_project_tree(project_path, depth)
+    attributes = [ "prefix", "conclusion" ]
+    for attribute in attributes:
+        value: str = getattr(prompt, attribute)
+        setattr(prompt, attribute, value.replace(PROJECT_TREE_TAG, tree))
     return prompt
 
 class _Prompt:
