@@ -2,7 +2,7 @@ from services.configuration import add_config
 from services.direnv import add_direnv
 from services.list import list
 from services.output import cli_print, PrintType, get_spinner
-from errors import PromptPathError, ModelNameError, MissingAttributesError
+from errors import JsonValueTypeError, PromptPathError, ModelNameError, MissingAttributesError
 
 def generate_config(project_path: str, model: str, prompt_path: str):
     try:
@@ -32,14 +32,27 @@ def generate_config(project_path: str, model: str, prompt_path: str):
         )
     except MissingAttributesError:
         cli_print(PrintType.ERROR,
-            "prompt json file provided does not have complete prompt definition",
-            "the json file must contain the following keys"
+            f"{prompt_path} does not define complete prompt definition",
+            "The json file must contain the following keys"
             """
                 {
                     "depth": <depth_level>,
                     "premise": <premise_prompt>,
                     "conclusion": <conclusion_prompt>,
                     "fsobject": <file_system_object_prompt>
+                }
+            """
+        )
+    except JsonValueTypeError:
+        cli_print(PrintType.ERROR,
+            f"{prompt_path} does not define correct values",
+            "The json file must contain the following keys with indicated values"
+            """
+                {
+                    "depth": <integer>,
+                    "premise": <string>,
+                    "conclusion": <string>,
+                    "fsobject": <string>
                 }
             """
         )

@@ -1,6 +1,6 @@
 import os
 import json
-from errors import PromptPathError, MissingAttributesError
+from errors import PromptPathError, MissingAttributesError, JsonValueTypeError
 
 from file_system import generate_tree
 
@@ -51,12 +51,19 @@ def _generate_fso_prompt(project_path: str, depth: int, tagged_fso_prompt: str):
 
 def _get_prompts(custom_prompt: dict[str, str]) -> tuple[int, str, str, str]:
     required_keys = ["depth", "premise", "conclusion","fsobject"]
+    required_types = [int, str, str, str]
 
     missing = [key for key in required_keys if key not in custom_prompt]
     if missing:
         raise MissingAttributesError(missing)
-    
+
     prompts = tuple[int, str, str, str]([custom_prompt[key] for key in required_keys])
+    for index, required_type in enumerate(required_types):
+        if not type(prompts[index]) == required_type:
+            raise JsonValueTypeError()
+        
+    
+    print(prompts)
 
     return prompts
     

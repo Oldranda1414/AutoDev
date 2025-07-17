@@ -5,3 +5,4 @@ class MissingAttributesError(Exception):
         keys = ", ".join(missing_keys)
         super().__init__(f"Missing required JSON keys: {keys}")
         self.missing_keys = missing_keys
+class JsonValueTypeError(ValueError): pass
