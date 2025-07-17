@@ -14,6 +14,8 @@
       };
     in pkgs.mkShell {
       packages = with pkgs; [
+        # used to run LLMs locally
+        ollama
         # modern python package manager
         uv
         # cli to turn mmd files into mermaid graph pngs
