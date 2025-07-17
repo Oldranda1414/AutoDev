@@ -13,7 +13,7 @@ Python is a simple and easy to use language, often used to create simple working
 
 Since the project has a rather small scope, it's goals are to test and prototype the concept and for the good available libraries python is the chosen language for this project.
 
-# Modules
+## Modules
 
 ### Interface
 

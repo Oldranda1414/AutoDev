@@ -46,8 +46,8 @@ The usage of AutoDev's command `autodev` is defined as follows, using [docopt](h
 """AutoDev
 
 Usage:
-  autodev.py [PATH-TO-PROJECT] [-q | --quiet] [-d | --direnv] [-m MODEL-NAME] [-p PROMPT-FILE-PATH]
-  autodev.py -l | --list
+  just run [PATH-TO-PROJECT] [-q | --quiet] [-d | --direnv] [-m MODEL-NAME] [-p PROMPT-FILE-PATH]
+  just run -l | --list
 
 Generates development environment configuration for a project.
 

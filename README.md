@@ -20,6 +20,10 @@ AutoDev uses [nix](https://nixos.org/download/) to configure the development env
 
 To start the development environment run `nix develop`
 
+### Ollama
+
+[Ollama](https://ollama.com/) is used to run Large Language Models locally.
+
 ### Uv
 
 [Uv](https://github.com/astral-sh/uv) is a modern python build system.
@@ -42,10 +46,8 @@ just
 
 The following command will generate the dev environment specification:
 
-<!-- TODO check if the following command is correct -->
-
 ```bash
-AutoDev path/to/project/root
+just run path/to/project/root
 ```
 
 To start the development environment run the following command:
@@ -53,4 +55,8 @@ To start the development environment run the following command:
 ```bash
 nix develop
 ```
+
+To find out more on the usage of AutoDev, run the following command:
+
+just run --help
 

@@ -36,7 +36,6 @@ During project analysis the following requirements have been identified.
     1. AutoDev should not alter any files in the user’s environment.
 1. **Implementation Requirements**
     1. AutoDev should be implemneted as a CLI tool that can be invoked from the terminal.
-    1. AutoDev should be implemented as a python package. <!-- TODO check if this can be done or is too much of a hassle -->
 
 Placeholder for requirements
 

@@ -8,7 +8,7 @@ AutoDev is a 'development enviroment configration' generation tool.
 AutoDev poses to exploit Large Language Models (LLMs) to let users generate [Nix](https://nixos.org/) configuration files by simply passing the path to a project, as so:
 
 ```sh
-$ autodev /path/to/project
+$ just run /path/to/project
 ```
 
 AutoDev generates a `flake.nix` file containing the configuration of the development enviroment for the given project.
