@@ -1,42 +1,42 @@
 import os
 import json
-from errors import PromptPathError, MissingAttributesError, JsonValueTypeError
 
-from file_system import generate_tree
+from errors import PromptPathError, MissingAttributesError, JsonValueTypeError
+from file_system import generate_list
 
 DEFAULT_DEPTH = 1
-DEFAULT_PREFIX_PROMPT = """
+# Tags
+PROJECT_TREE_TAG = "<project_tree>"
+FSO_NAME_TAG = "<fso_name>"
+FSO_CONTENTS_TAG = "<fso_contents>"
+# TODO replace this with real default prompt
+# Default prompt
+DEFAULT_PREFIX_PROMPT = f"""
 Some prefix prompt
+this is the project tree {PROJECT_TREE_TAG}
 """
-DEFAULT_CONCLUSION_PROMPT = """
+DEFAULT_CONCLUSION_PROMPT = f"""
 Some conclusion prompt
+this is the project tree {PROJECT_TREE_TAG}
 """
-DEFAULT_TAGGED_FSO_PROMPT = """
+DEFAULT_FSO_PROMPT = f"""
 Some defatul FSO prompt
-this is the name of the file/folder: <fso_name>.
-this is it's contents if it has any: <fso_contents>
+this is the name of the file/folder: {FSO_NAME_TAG}.
+this is it's contents if it has any: {FSO_CONTENTS_TAG}
 """
 
 def get_prompt(prompt_path: str, project_path: str) -> str:
-    prefix_prompt = None
-    conclusion_prompt = None
-    tagged_fso_prompt = None
+    depth = DEFAULT_DEPTH
+    prompt = _Prompt(DEFAULT_PREFIX_PROMPT, DEFAULT_CONCLUSION_PROMPT, DEFAULT_FSO_PROMPT)
     if prompt_path:
-        depth, prefix_prompt, conclusion_prompt, tagged_fso_prompt = _extract_prompt(prompt_path)
-    else:
-        # TODO implement default prompt
-        depth = DEFAULT_DEPTH
-        prefix_prompt = DEFAULT_PREFIX_PROMPT
-        conclusion_prompt = DEFAULT_CONCLUSION_PROMPT
-        tagged_fso_prompt = DEFAULT_TAGGED_FSO_PROMPT
+        depth, prompt = _extract_prompt(prompt_path)
     # TODO implement this
-    prompt = ""
-    prompt += prefix_prompt
-    prompt += "\r" + _generate_fso_prompt(project_path, depth, tagged_fso_prompt)
-    prompt += "\r" + conclusion_prompt
-    return prompt
+    prompt.fso = _generate_fso_prompt(project_path, depth, prompt.fso)
+    prompt = _add_project_tree(prompt, project_path)
+    print(prompt.build())
+    return prompt.build()
 
-def _extract_prompt(prompt_path: str) -> tuple[int, str, str, str]:
+def _extract_prompt(prompt_path: str) -> tuple[int, "_Prompt"]:
     extension = prompt_path.split(".")[-1]
     if not extension == "json":
         raise PromptPathError("prompt_path must be a json type file path") 
@@ -44,7 +44,8 @@ def _extract_prompt(prompt_path: str) -> tuple[int, str, str, str]:
         raise PromptPathError("prompt_path provided must lead to an existing file") 
     with open(prompt_path) as prompt_file:
         custom_prompt: dict[str, str] = json.load(prompt_file)
-    return _get_prompts(custom_prompt)
+    depth, prefix, conclusion, fso = _get_prompts(custom_prompt)
+    return depth, _Prompt(prefix, conclusion, fso)
 
 def _get_prompts(custom_prompt: dict[str, str]) -> tuple[int, str, str, str]:
     required_keys =  ["depth", "premise", "conclusion", "fsobject"]
@@ -57,11 +58,27 @@ def _get_prompts(custom_prompt: dict[str, str]) -> tuple[int, str, str, str]:
     prompts = tuple[int, str, str, str]([custom_prompt[key] for key in required_keys])
     for index, required_type in enumerate(required_types):
         if not type(prompts[index]) == required_type:
-            raise JsonValueTypeError()
+            raise JsonValueTypeError(f"The key {required_keys[index]} does not have a valid value assigned")
     return prompts
     
 def _generate_fso_prompt(project_path: str, depth: int, tagged_fso_prompt: str):
-    project_root = generate_tree(project_path, depth)
-    return tagged_fso_prompt
+    fso_list = generate_list(project_path, depth)
+    fso_prompt = ""
+    for fso in fso_list:
+        fso_prompt += "\n" + tagged_fso_prompt.replace(FSO_NAME_TAG, fso.name).replace(FSO_CONTENTS_TAG, fso.contents if fso.contents else "")
+    return fso_prompt
     # for fso in project_fso:
+
+def _add_project_tree(prompt: "_Prompt", project_path: str):
+    # TODO implement this. should replace the tag <project_tree> with project dir tree
+    return prompt
+
+class _Prompt:
+    def __init__(self, prefix_prompt: str, conclusion_prompt: str, fso_prompt: str):
+        self.prefix = prefix_prompt
+        self.conclusion = conclusion_prompt
+        self.fso = fso_prompt
+
+    def build(self) -> str:
+        return self.prefix + "\n" + self.fso + "\n" + self.conclusion
 
