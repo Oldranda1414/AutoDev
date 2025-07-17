@@ -9,6 +9,7 @@ class Model:
 
     def ask(self, message: str) -> str:
         # TODO implement this
+        print("model was asked: \n" + message)
         return "model was asked: " + message
 
     
