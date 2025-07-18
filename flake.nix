@@ -24,8 +24,9 @@
         just
       ];
 
-      # shellHook = ''
-      # '';
+      shellHook = ''
+        echo Run 'just' to see available commands.
+      '';
     };
   };
 }
