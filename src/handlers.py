@@ -23,7 +23,7 @@ def generate_config(project_path: str, model: str, prompt_path: str):
     except ModelNameError:
         cli_print(PrintType.ERROR,
             f"Model name {{model}} is not a valid model name.",
-            "To see all valid model names run 'ad --list."
+            "To see all valid model names run 'just run --list'."
         )
     except PromptPathError:
         cli_print(PrintType.ERROR,
