@@ -1,4 +1,5 @@
 from litellm import completion
+from llm_server import start_llmserver, is_llmserver_running
 
 from errors import ModelNameError
 
@@ -7,7 +8,10 @@ class Model:
         if not _is_valid_name(name):
             raise ModelNameError(f"Model {{name}} is not one of the accepted model names")
         # TODO implement this model initialization (using litellm)
-        print(_testing())
+        if not is_llmserver_running():
+            start_llmserver()
+        print(is_llmserver_running())
+        # print(_testing())
 
     def ask(self, message: str) -> str:
         # TODO implement this
@@ -21,6 +25,7 @@ def _testing():
                 api_base="http://localhost:11434"
     )
     return response
+
 
     
 def _is_valid_name(model_name):
