@@ -6,3 +6,5 @@ class MissingAttributesError(Exception):
         super().__init__(f"Missing required JSON keys: {keys}")
         self.missing_keys = missing_keys
 class JsonValueTypeError(ValueError): pass
+class OllamaNotInstalledError(ValueError): pass
+

@@ -3,7 +3,10 @@ from time import sleep
 from subprocess import Popen, DEVNULL, TimeoutExpired
 import atexit
 
+from errors import OllamaNotInstalledError
+
 API_BASE = "http://localhost:11434"
+CHECK_COMMAND = ["ollama"]
 START_COMMAND = ["ollama","serve"]
 
 ollama_process = None
@@ -17,11 +20,14 @@ def is_llmserver_running() -> bool:
 
 def start_llmserver():
     global ollama_process
-    ollama_process = Popen(
-        START_COMMAND,
-        stdout=DEVNULL,
-        stderr=DEVNULL
-    )
+    try:
+        ollama_process = Popen(
+            START_COMMAND,
+            stdout=DEVNULL,
+            stderr=DEVNULL
+        )
+    except FileNotFoundError:
+        raise OllamaNotInstalledError("Ollama does not seem to be installed on the system")
     atexit.register(stop_llmserver)
 
     while not is_llmserver_running():
@@ -41,4 +47,3 @@ def get_api_base() -> str:
 
 def get_server_model_name(name: str) -> str:
     return f"ollama/{name}"
-

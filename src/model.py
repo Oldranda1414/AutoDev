@@ -12,22 +12,15 @@ class Model:
         self.name = name
         self.server_model_name = get_server_model_name(name)
         print(is_llmserver_running())
-        # print(_testing())
-        # TODO implement this model initialization (using litellm)
 
     def ask(self, message: str) -> str:
-        # TODO implement this
-        # print("model was asked: \n" + message)
-        return "model was asked: " + message
-
-    def _testing(self):
         api_base = get_api_base()
         response = completion(
                     model=self.server_model_name,
-                    messages = [{ "content": "Hello, how are you?","role": "user"}],
+                    messages = [{ "content": message,"role": "user"}],
                     api_base=api_base
         )
-        return response
+        return response.choices[0].message.content
 
 def _is_valid_name(model_name):
     return model_name in model_names

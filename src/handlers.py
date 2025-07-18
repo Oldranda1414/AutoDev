@@ -2,7 +2,7 @@ from services.configuration import add_config
 from services.direnv import add_direnv
 from services.list import list
 from services.output import cli_print, PrintType, get_spinner
-from errors import JsonValueTypeError, PromptPathError, ModelNameError, MissingAttributesError
+from errors import JsonValueTypeError, OllamaNotInstalledError, PromptPathError, ModelNameError, MissingAttributesError
 
 def generate_config(project_path: str, model: str, prompt_path: str):
     try:
@@ -55,6 +55,12 @@ def generate_config(project_path: str, model: str, prompt_path: str):
                     "fsobject": <string>
                 }
             """
+        )
+    except OllamaNotInstalledError:
+        cli_print(PrintType.ERROR,
+            f"Ollama does not seem to be installed on the system.",
+            "Run 'nix develop' to enter development shell and install ollama temporarily",
+            "or visit https://ollama.com/ to checkout how to install ollama permanently on your system."
         )
 
 def generate_direnv(project_path: str):
