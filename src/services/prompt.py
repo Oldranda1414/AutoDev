@@ -13,17 +13,59 @@ FSO_CONTENTS_TAG = "<fso_contents>"
 # TODO replace this with real default prompt
 # Default prompt
 DEFAULT_PREFIX_PROMPT = f"""
-Some prefix prompt
-this is the project tree {PROJECT_TREE_TAG}
+Generate the contents of a flake.nix file that defines the development environment for the following project.
+The development enviroment should be started with 'nix develop'.
+
+This is an example of a flake.nix file
+
+```
+{{
+  description = "Dev environment for AutoDev project";
+
+  inputs = {{
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
+  }};
+
+  outputs = {{ self , nixpkgs ,... }}: let
+    system = "x86_64-linux";
+  in {{
+    devShells."${{system}}".default = let
+      pkgs = import nixpkgs {{
+        inherit system;
+      }};
+    in pkgs.mkShell {{
+      packages = with pkgs; [
+        # used to run LLMs locally
+        ollama
+        # modern python package manager
+        uv
+        # cli to turn mmd files into mermaid graph pngs
+        mermaid-cli
+        # modern command runner
+        just
+      ];
+
+      shellHook = ''
+        echo "Run 'just' to see available commands."
+      '';
+    }};
+  }};
+}}
+```
+
+This is the project tree {PROJECT_TREE_TAG}
+
+The following are the project directory contents:
 """
 DEFAULT_CONCLUSION_PROMPT = f"""
-Some conclusion prompt
-this is the project tree {PROJECT_TREE_TAG}
+Generate only the contents of the flake.nix file, nothing more.
+I want to copy your answer directly into the file and have it working, so don't tell me anything more, please.
+Do not encapsulate the answer with ``` and don't add any final comments.
+Only output working nix code.
 """
 DEFAULT_FSO_PROMPT = f"""
-Some defatul FSO prompt
 this is the name of the file/folder: {FSO_NAME_TAG}.
-this is it's contents if it has any: {FSO_CONTENTS_TAG}
+these are it's contents if it is a file: {FSO_CONTENTS_TAG}
 """
 
 def get_prompt(prompt_path: str, project_path: str) -> str:
