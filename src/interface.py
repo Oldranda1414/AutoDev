@@ -21,7 +21,7 @@ Options:
   -h, --help                                      Display help message.
   -q, --quiet                                     Disable prints.
   -d, --direnv                                    Generate .envrc file also.
-  -m MODEL-NAME, --model MODEL-NAME               Model to use to generate the config. One of: temp temp temp [default: llama3]
+  -m MODEL-NAME, --model MODEL-NAME               Model to use to generate the config. One of: temp temp temp [default: llama2]
   -l, --list                                      List available and installed models.
   -p PROMPT-FILE-PATH, --prompt PROMPT-FILE-PATH  Custom prompt file path.
 
