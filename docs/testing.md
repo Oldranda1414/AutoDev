@@ -47,13 +47,11 @@ projects number * simulations number * models number =
 
 The following test categories where identified.
 
-### Base Case
+### Description
 
-The base case is identified in a very bare bones prompting style, with only a simple prompt describing the project's tech stack.
+The description case reppresents what a human created prompt might look like, similar to how a user would prompt [ChatGPT](https://chatgpt.com/) to generate the dev env config by simply describing his project.
 
-This is similar to what a user would prompt an LLM with if it was not using AutoDev, e.g. using [ChatGPT](https://chatgpt.com/).
-
-These tests are located at `test/base/`.
+These tests are located at `test/desc/`.
 
 ### N-shot prompting
 
