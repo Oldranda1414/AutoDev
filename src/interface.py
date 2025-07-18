@@ -28,8 +28,6 @@ Options:
 """
 
 def main(args: List[str]):
-    
-    print(args)
     parsed_args = docopt(doc, args)
     # Add PATH-TO-PROJECT default manually as docopt seems to not add it automatically
     if not parsed_args["PATH-TO-PROJECT"]:

@@ -6,13 +6,10 @@ from errors import JsonValueTypeError, OllamaNotInstalledError, PromptPathError,
 
 def generate_config(project_path: str, model: str, prompt_path: str):
     try:
-        cli_print(PrintType.SUCCESS,
-            "Generating config with " + model + " model."
-        )
-        with get_spinner("generating config"):
+        with get_spinner("Generating config"):
             add_config(model, project_path, prompt_path)
         cli_print(PrintType.SUCCESS,
-            "Config generated.",
+            "Config generated!",
             "Run 'nix develop' in project root to enter development enviroment."
         )
     except FileExistsError:

@@ -11,14 +11,14 @@ START_COMMAND = ["ollama","serve"]
 
 ollama_process = None
 
-def is_llmserver_running() -> bool:
+def is_server_running() -> bool:
     try:
         get(API_BASE)
         return True
     except:
         return False
 
-def start_llmserver():
+def start_server():
     global ollama_process
     try:
         ollama_process = Popen(
@@ -30,7 +30,7 @@ def start_llmserver():
         raise OllamaNotInstalledError("Ollama does not seem to be installed on the system")
     atexit.register(stop_llmserver)
 
-    while not is_llmserver_running():
+    while not is_server_running():
         sleep(0.5)
 
 def stop_llmserver():
