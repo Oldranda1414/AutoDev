@@ -1,1 +1,1 @@
-MODELS = [ "llama2", "dummy" ]
+MODELS = [ "llama3", "dummy" ]
