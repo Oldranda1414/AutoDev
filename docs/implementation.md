@@ -94,6 +94,8 @@ Although this could be considered bad practice, as standard language errors shou
 <!-- TODO explain what it is -->
 it is an anti-curruption layer
 
+## Add config to git
+
 [Back to index](./index.md) |
 [Previous Chapter](./detailed-design.md) |
 [Next Chapter](./testing.md) |
