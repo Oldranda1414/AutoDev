@@ -44,16 +44,14 @@ This is an example of a flake.nix file
         # modern command runner
         just
       ];
-
-      shellHook = ''
-        echo "Run 'just' to see available commands."
-      '';
     }};
   }};
 }}
 ```
 
-This is the project tree {PROJECT_TREE_TAG}
+This is the project tree: 
+
+{PROJECT_TREE_TAG}
 
 The following are the project directory contents:
 """
@@ -65,7 +63,12 @@ Only output working nix code.
 """
 DEFAULT_FSO_PROMPT = f"""
 this is the name of the file/folder: {FSO_NAME_TAG}.
-these are it's contents if it is a file: {FSO_CONTENTS_TAG}
+these are it's contents if it is a file: 
+```
+
+{FSO_CONTENTS_TAG}
+
+```
 """
 
 def get_prompt(prompt_path: str, project_path: str) -> str:
