@@ -1,5 +1,5 @@
 from services.output import PrintType, cli_print
-from model import model_names
+from llm.model import model_names
 
 def list():
     # TODO make this print better
