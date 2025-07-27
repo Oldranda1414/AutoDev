@@ -28,12 +28,12 @@ def start_server():
         )
     except FileNotFoundError:
         raise OllamaNotInstalledError("Ollama does not seem to be installed on the system")
-    atexit.register(stop_llmserver)
+    atexit.register(stop_server)
 
     while not is_server_running():
         sleep(0.5)
 
-def stop_llmserver():
+def stop_server():
     global ollama_process
     if ollama_process and ollama_process.poll() is None:
         ollama_process.terminate()
