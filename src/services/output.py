@@ -1,5 +1,7 @@
 from rich.console import Console
+from rich.table import Table as RichTable
 from enum import Enum
+from utils.table import Table
 
 _initialized = False
 _quiet = False
@@ -40,3 +42,14 @@ def create_file(name: str, contents: str, path: str):
 def get_spinner(message: str):
     return _console.status(f"[bold green] {message} [/bold green]")
 
+def print_table(table: Table):
+
+    rich_table = RichTable(show_header=True, header_style="bold magenta")
+    for header in table.headers:
+        rich_table.add_column(header)
+    for row in table.rows:
+        rich_table.add_row(
+            *row
+        )
+
+    _console.print(rich_table)

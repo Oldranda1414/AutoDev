@@ -1,10 +1,16 @@
-from services.output import PrintType, cli_print
+from services.output import PrintType, cli_print, print_table
 from llm.model import model_names
 from llm.server import is_model_installed, start_server
+from utils.table import Table
+
+TRUE_ITEM = "[bold green] Yes [/bold green]"
+FALSE_ITEM = "[bold red] No [/bold red]"
 
 def list():
-    # TODO make this print better
     start_server()
-    cli_print(PrintType.SUCCESS, "printing model names")
-    for name in model_names:
-        cli_print(PrintType.SUCCESS, f"name {name}, installed {is_model_installed(name)}")
+    table = Table(["Model", "Installed"])
+    for model_name in model_names:
+        installed = TRUE_ITEM if is_model_installed(model_name) else FALSE_ITEM
+        table.add_row([model_name, installed])
+    print_table(table)
+
