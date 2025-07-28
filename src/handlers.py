@@ -64,8 +64,11 @@ def generate_config(project_path: str, model: str, prompt_path: str):
         cli_print(PrintType.SUCCESS,
             f"{model} model is not installed yet."
         )
-        with get_spinner(f"Installing {model} model"):
+        with get_spinner(f"Installing {model} model..."):
             install_model(model)
+        cli_print(PrintType.SUCCESS,
+            f"{model} model installed."
+        )
         generate_config(project_path, model, prompt_path)
 
 def generate_direnv(project_path: str):

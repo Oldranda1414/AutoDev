@@ -1,4 +1,4 @@
-from litellm import completion, APIConnectionError
+from litellm import completion
 
 from errors import ModelNameError, ModelNotInstalledError
 
