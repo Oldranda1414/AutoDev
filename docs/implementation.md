@@ -101,6 +101,10 @@ A new module, `server.py`, has been created to expose methods that can be used t
 
 This module is an implementation of the 'anti-curruption layer' pattern relative to the ollama server dependency, while the Model module is an 'anti-curruption layer' relative to the litellm dependency.
 
+## Model not installed
+
+TODO write about how the model throws an exception if an llm model is not installed and that the handler then handles it by installing the model and rerunning the config generation. It a stinky solution but it works
+
 [Back to index](./index.md) |
 [Previous Chapter](./detailed-design.md) |
 [Next Chapter](./testing.md) |
