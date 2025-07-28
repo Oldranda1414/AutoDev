@@ -13,13 +13,13 @@ A module is define by a python file.
 
 Collection of modules can be created by grouping files in directories.
 
-The `__init__.py` file format was considered, as it can work as an interface between modules, defining what methods are exposed to users of a module, given the limited scope of the project it has been omitted.
+The `__init__.py` file format was considered, as it can work as an interface between modules, defining what methods are exposed to users of a module, but given the limited scope of the project it has been omitted.
 
 Private methods and attributes are simply identified by a starting underscore (`_`).
 
 Although this method is less 'safe' it is preffered for this project.
 
-Whenever the project complexity should increase a refactor of the source code organization could be considered.
+Whenever the project complexity should increase a refactor of the source code organization would be considered.
 
 ## Directory tree rappresentation
 
@@ -91,8 +91,15 @@ Although this could be considered bad practice, as standard language errors shou
 
 ## LLM Server Module
 
-<!-- TODO explain what it is -->
-it is an anti-curruption layer
+Although the high level LLM API used is [litellm](https://www.litellm.ai/), all models used are available to through [ollama](https://ollama.com/).
+
+To use ollama models a local ollama model should be running on the system for the litellm API to work.
+
+A new module, `server.py`, has been created to expose methods that can be used to interact with the language server.
+
+![llm server class diagram](./assets/mermaid/llm_server.png)
+
+This module is an implementation of the 'anti-curruption layer' pattern relative to the ollama server dependency, while the Model module is an 'anti-curruption layer' relative to the litellm dependency.
 
 ## Add config to git
 

@@ -1,0 +1,19 @@
+---
+title: LLM Server Module Class Diagram
+---
+classDiagram
+
+    class Server {
+        is_server_running(): bool
+        start_server()
+        get_api_base(): str
+        get_server_model_name(name: str): str
+        is_model_installed(model_name: str): bool
+        install_model(model_name: str)
+    }
+
+    class Model {
+        add_direnv(project_path: str)
+    }
+
+    Model ..> Server

@@ -3,11 +3,11 @@ title: File System Design
 ---
 classDiagram
     class FileSystem {
-        generate_tree(path: str, depth: int) -> FileSystemObject
+        generate_tree(path: str, depth: int): FileSystemObject
     }
 
     class FileSystemObject {
-        __init__(name: str, contents: Optional[str] = None):
+        __init__(name: str, contents: Optional[str] = None)
         name: str
         is_dir: bool
         contents: str
