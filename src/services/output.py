@@ -39,3 +39,4 @@ def create_file(name: str, contents: str, path: str):
 
 def get_spinner(message: str):
     return _console.status(f"[bold green] {message} [/bold green]")
+

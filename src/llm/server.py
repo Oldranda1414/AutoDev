@@ -1,13 +1,14 @@
 from requests import get
 from time import sleep
-from subprocess import Popen, DEVNULL, TimeoutExpired
+from subprocess import Popen, run
+from subprocess import DEVNULL, TimeoutExpired
 import atexit
 
 from errors import OllamaNotInstalledError
 
 API_BASE = "http://localhost:11434"
-CHECK_COMMAND = ["ollama"]
 START_COMMAND = ["ollama","serve"]
+LIST_COMMAND = "ollama list"
 
 ollama_process = None
 
@@ -28,12 +29,12 @@ def start_server():
         )
     except FileNotFoundError:
         raise OllamaNotInstalledError("Ollama does not seem to be installed on the system")
-    atexit.register(stop_server)
+    atexit.register(_stop_server)
 
     while not is_server_running():
         sleep(0.5)
 
-def stop_server():
+def _stop_server():
     global ollama_process
     if ollama_process and ollama_process.poll() is None:
         ollama_process.terminate()
@@ -47,3 +48,20 @@ def get_api_base() -> str:
 
 def get_server_model_name(name: str) -> str:
     return f"ollama/{name}"
+
+def is_model_installed(model_name: str) -> bool:
+    command = run(
+        LIST_COMMAND + f" | grep {model_name}",
+        shell=True,
+        stdout=DEVNULL,
+        stderr=DEVNULL
+    )
+    return command.returncode == 0
+
+def install_model(model_name: str):
+    run(
+        ["ollama", "pull", model_name],
+        stdout=DEVNULL,
+        stderr=DEVNULL
+    )
+

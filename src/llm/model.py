@@ -1,13 +1,18 @@
-from litellm import completion
-from llm.llm_server import start_server, is_server_running, get_api_base, get_server_model_name
+from litellm import completion, APIConnectionError
 
-from errors import ModelNameError
+from errors import ModelNameError, ModelNotInstalledError
+
+from llm.server import get_api_base, get_server_model_name
+from llm.server import start_server, is_server_running
+from llm.server import is_model_installed
 
 def ask(model_name: str, message: str) -> str:
     if not _is_valid_name(model_name):
         raise ModelNameError(f"Model {model_name} is not one of the accepted model names")
     if not is_server_running():
         start_server()
+    if not is_model_installed(model_name):
+        raise ModelNotInstalledError(f"{model_name} is not installed")
     messages = [{ "content": message,"role": "user"}]
     response = completion(
                 model = get_server_model_name(model_name),
@@ -21,5 +26,7 @@ def _is_valid_name(model_name):
 
 # TODO add model names here
 model_names = [
-            "llama3"
+            "llama3",
+            "nomic-embed-text",
+            "qwen3"
         ]

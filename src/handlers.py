@@ -1,12 +1,13 @@
+from llm.server import install_model
 from services.configuration import add_config
 from services.direnv import add_direnv
 from services.list import list
 from services.output import cli_print, PrintType, get_spinner
-from errors import JsonValueTypeError, OllamaNotInstalledError, PromptPathError, ModelNameError, MissingAttributesError
+from errors import JsonValueTypeError, ModelNotInstalledError, OllamaNotInstalledError, PromptPathError, ModelNameError, MissingAttributesError
 
 def generate_config(project_path: str, model: str, prompt_path: str):
     try:
-        with get_spinner("Generating config"):
+        with get_spinner("Generating config..."):
             add_config(model, project_path, prompt_path)
         cli_print(PrintType.SUCCESS,
             "Config generated!",
@@ -19,7 +20,7 @@ def generate_config(project_path: str, model: str, prompt_path: str):
         )
     except ModelNameError:
         cli_print(PrintType.ERROR,
-            f"Model name {{model}} is not a valid model name.",
+            f"Model name '{model}' is not a valid model name.",
             "To see all valid model names run 'just run --list'."
         )
     except PromptPathError:
@@ -59,6 +60,13 @@ def generate_config(project_path: str, model: str, prompt_path: str):
             "Run 'nix develop' to enter development shell and install ollama temporarily",
             "or visit https://ollama.com/ to checkout how to install ollama permanently on your system."
         )
+    except ModelNotInstalledError:
+        cli_print(PrintType.SUCCESS,
+            f"{model} model is not installed yet."
+        )
+        with get_spinner(f"Installing {model} model"):
+            install_model(model)
+        generate_config(project_path, model, prompt_path)
 
 def generate_direnv(project_path: str):
     try: 
