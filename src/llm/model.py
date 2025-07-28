@@ -27,6 +27,5 @@ def _is_valid_name(model_name):
 # TODO add model names here
 model_names = [
             "llama3",
-            "nomic-embed-text",
             "qwen3"
         ]
