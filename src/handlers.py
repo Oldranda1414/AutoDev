@@ -20,7 +20,7 @@ def generate_config(project_path: str, model: str, prompt_path: str):
             "Delete the 'flake.nix' file or backup it then rerun AutoDev."
         )
     except ModelNameError:
-        _print_model_name_error()
+        print_model_name_error(model)
     except PromptPathError:
         cli_print(PrintType.ERROR,
             f"Prompt path {prompt_path} is not a valid prompt path.",
