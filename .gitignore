@@ -16,8 +16,6 @@ wheels/
 # util scripts and files
 set-hooks.sh
 update.sh
-test.sh
-default.json
 
 # folder for test playground
 test_space

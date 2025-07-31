@@ -1,1 +1,1 @@
-CATEGORIES = [ "description", "dummy" ]
+CATEGORIES = [ "description" ]
