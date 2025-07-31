@@ -1,9 +1,10 @@
-from llm.server import install_model
 from services.configuration import add_config
 from services.direnv import add_direnv
+from services.install import install
+from services.uninstall import uninstall
 from services.list import list
-from services.output import cli_print, PrintType, get_spinner
-from errors import JsonValueTypeError, ModelNotInstalledError, OllamaNotInstalledError, PromptPathError, ModelNameError, MissingAttributesError
+from services.output import cli_print, PrintType, get_spinner, print_model_name_error
+from errors import JsonValueTypeError, ModelAlreadyInstalledError, ModelNotInstalledError, OllamaNotInstalledError, PromptPathError, ModelNameError, MissingAttributesError, ModelNotInstalledError
 
 def generate_config(project_path: str, model: str, prompt_path: str):
     try:
@@ -19,10 +20,7 @@ def generate_config(project_path: str, model: str, prompt_path: str):
             "Delete the 'flake.nix' file or backup it then rerun AutoDev."
         )
     except ModelNameError:
-        cli_print(PrintType.ERROR,
-            f"Model name '{model}' is not a valid model name.",
-            "To see all valid model names run 'just run --list'."
-        )
+        _print_model_name_error()
     except PromptPathError:
         cli_print(PrintType.ERROR,
             f"Prompt path {prompt_path} is not a valid prompt path.",
@@ -64,11 +62,7 @@ def generate_config(project_path: str, model: str, prompt_path: str):
         cli_print(PrintType.SUCCESS,
             f"{model} model is not installed yet."
         )
-        with get_spinner(f"Installing {model} model..."):
-            install_model(model)
-        cli_print(PrintType.SUCCESS,
-            f"{model} model installed."
-        )
+        install_model(model)
         generate_config(project_path, model, prompt_path)
 
 def generate_direnv(project_path: str):
@@ -84,6 +78,36 @@ def generate_direnv(project_path: str):
             ".envrc file already exists in project root directory.",
             "Add 'use flake' to .envrc file to load development enviroment on directory entry."
         )
+
+def install_model(model: str):
+    with get_spinner(f"Installing {model} model..."):
+        try:
+            install(model)
+            cli_print(PrintType.SUCCESS,
+                f"{model} model installed."
+            )
+        except ModelNameError:
+            print_model_name_error(model)
+        except ModelAlreadyInstalledError:
+            cli_print(PrintType.ERROR,
+                f"{model} model is already installed.",
+                "To see all installed models run 'autodev --list'."
+            )
+
+def uninstall_model(model: str):
+    with get_spinner(f"Uninstalling {model} model..."):
+        try:
+            uninstall(model)
+            cli_print(PrintType.SUCCESS,
+                f"{model} model uninstalled."
+            )
+        except ModelNameError:
+            print_model_name_error(model)
+        except ModelNotInstalledError:
+            cli_print(PrintType.ERROR,
+                f"{model} model is not installed.",
+                "To see all installed models run 'autodev --list'."
+            )
 
 def list_models():
     list()

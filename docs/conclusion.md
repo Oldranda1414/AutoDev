@@ -9,19 +9,21 @@ title: Conclusion
 
 Although the projects used are a good sample of non trivial projects, as a dataset they do lack in variety, being mainly centered on scala language projects. Other projects could be added to the dataset to test for other languages and tech stacks.
 
-### Install and uninstall models functionality
+### Remote models
 
-TODO implement this couse it kinda sucks it is not implemented.
+As of now AutoDev installs models locally.
 
-Given that the main part of the project was centered on testing the capabilities of LLMs, the installing and uninstalling of models on the user system was not prioritized.
+This means that a local download of every model is necessary before every first use.
 
-As of now the models are installed if they are requested to be used by the user.
+Also the dev env config generation is done locally so it can take a lot of time.
 
-To improve the usability of AutoDev an install and uninstall functionality might be implemented to enable the user to request the installation of a model esplicitly and to uninstall an installed model from their system.
+A feature could be implemented to enable users to actually use remote models instead of local models for the dev env config generation.
 
-As of now the only way to uninstall a model is.
+### Packaging
 
-### turn the project into a pip package
+As of now the project is run using the uv python build system and it is intended to be used through the just tool.
+
+Ideally the project could be turned into a pip package (uv actually provides a way to easily do this at [https://docs.astral.sh/uv/guides/package/]) so that it could be installed globally (e.g. with `pip install AutoDev`)
 
 [Back to index](./index.md) |
 [Previous Chapter](./testing.md) |

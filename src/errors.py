@@ -7,5 +7,6 @@ class MissingAttributesError(Exception):
         self.missing_keys = missing_keys
 class JsonValueTypeError(ValueError): pass
 class OllamaNotInstalledError(ValueError): pass
+class ModelAlreadyInstalledError(ValueError): pass
 class ModelNotInstalledError(ValueError): pass
 

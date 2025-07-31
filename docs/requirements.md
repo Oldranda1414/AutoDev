@@ -19,9 +19,9 @@ During project analysis the following requirements have been identified.
         1. Base usage
             1. Users should be able to run the command `<autodev> /path/to/project` to generate a development environment configuration, where `<autodev>` is a command or list of commands to run AutoDev.
             1. Users should be able to enter the generated environment running the command `nix develop`.
-            1. If no LLM model is locally present on the user machine, the user should be able to select the model to be downloaded and used by AutoDev.
             1. Users should be able to list all available models on their machine.
             1. Users should be able to download an available model on their machine if it is not present.
+            1. Users should be able to remove an available model on their machine if it is present.
         1. Customization
             1. Users should be able to define the model to be used by AutoDev for a given run of the tool.
             1. Users should be able to define custom prompts to be used by AutoDev when prompting the LLM model.

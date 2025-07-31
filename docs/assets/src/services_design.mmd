@@ -11,6 +11,14 @@ classDiagram
         add_direnv(project_path: str)
     }
 
+    class Install {
+        install(model_name: str)
+    }
+
+    class Uninstall {
+        uninstall(model_name: str)
+    }
+
     class Generator {
         generate_config(model_name: str, project_path: str, prompt_path: str) -> str
     }
@@ -35,6 +43,8 @@ classDiagram
 
     Direnv ..> Output
     Configuration ..> Output
+    Install ..> Output
+    Uninstall ..> Output
     Configuration ..> Generator
     Generator ..> Model
     Generator ..> Prompt

@@ -14,7 +14,17 @@ classDiagram
         list_models()
     }
 
+    class InstallModel {
+        install_model(model: str)
+    }
+
+    class UnInstallModel {
+        uninstall_model(model: str)
+    }
+
     ConfigGenerator ..> Services
     DirenvGenerator ..> Services
     ListModel ..> Services
+    InstallModel ..> Services
+    UnInstallModel ..> Services
 

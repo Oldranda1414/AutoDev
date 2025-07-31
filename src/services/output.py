@@ -40,6 +40,7 @@ def create_file(name: str, contents: str, path: str):
         f.write(contents)
 
 def get_spinner(message: str):
+    # TODO check how this works with quiet
     return _console.status(f"[bold green] {message} [/bold green]")
 
 def print_table(table: Table):
@@ -53,3 +54,10 @@ def print_table(table: Table):
         )
 
     _console.print(rich_table)
+
+def print_model_name_error(model: str):
+    cli_print(PrintType.ERROR,
+        f"Model name '{model}' is not a valid model name.",
+        "To see all valid model names run 'autodev --list'."
+    )
+
