@@ -1,6 +1,9 @@
+from enum import Enum
+from contextlib import nullcontext
+
 from rich.console import Console
 from rich.table import Table as RichTable
-from enum import Enum
+
 from utils.table import Table
 
 _initialized = False
@@ -40,7 +43,9 @@ def create_file(name: str, contents: str, path: str):
         f.write(contents)
 
 def get_spinner(message: str):
-    # TODO check how this works with quiet
+    _require_init()
+    if _quiet:
+        return nullcontext()
     return _console.status(f"[bold green] {message} [/bold green]")
 
 def print_table(table: Table):
