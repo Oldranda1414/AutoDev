@@ -24,9 +24,9 @@ Options:
   -q, --quiet                                     Disable prints.
   -d, --direnv                                    Generate .envrc file also.
   -p PROMPT-FILE-PATH, --prompt PROMPT-FILE-PATH  Custom prompt file path.
-  -m MODEL-NAME, --model MODEL-NAME               Model to use to generate the config. TODO complete this and following. One of: temp temp temp [default: llama3] 
-  -i MODEL-NAME, --install MODEL-NAME            Locally install a model. One of: temp temp temp
-  -u MODEL-NAME, --uninstall MODEL-NAME          Uninstall a model. One of: temp temp temp
+  -m MODEL-NAME, --model MODEL-NAME               Model to use to generate the config. [default: llama3] 
+  -i MODEL-NAME, --install MODEL-NAME             Locally install a model.
+  -u MODEL-NAME, --uninstall MODEL-NAME           Uninstall a model.
   -l, --list                                      List available and installed models.
 
 """

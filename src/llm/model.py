@@ -26,5 +26,9 @@ def _is_valid_name(model_name):
 # TODO add model names here
 model_names = [
             "llama3",
-            "qwen3"
+            "qwen3",
+            "smollm2",
+            "phi4-mini",
+            "deepseek-r1",
+            "mistral"
         ]

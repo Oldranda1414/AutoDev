@@ -53,14 +53,14 @@ The core part of the project is in testing the capabilities of various LLMs to p
 
 The following models have been tested during the projects development:
 
-<!-- TODO add the models used here -->
+- llama3
+- qwen3
+- smollm2
+- phi4-mini
+- deepseek-r1
+- mistral
 
-- temp
-- temp
-- temp
-- temp
-
-<!-- TODO check module name casing convention in mermaid graphs -->
+Details on each of the models can be found at `https://ollama.com/library/<model_name>`, by replacing <model_name> with the desired model name.
 
 [Back to index](./index.md) |
 [Next Chapter](./requirements.md) |
