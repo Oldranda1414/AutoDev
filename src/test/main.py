@@ -2,7 +2,7 @@ import sys
 
 from categories import CATEGORIES
 from models import MODELS
-from utils import run_tests
+from run import run_tests
 
 def main():
     args = parse_args()

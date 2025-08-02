@@ -39,15 +39,18 @@ def _run_model_tests(category: str, model: str):
 def _run_simulation(category: str, model: str):
     print(f"running test for category {category} and model {model}")
     for test_space in TEST_SPACES:
-        command = run(
-            TEST_SCRIPT + f" ./test_space/{test_space} {model} {TEST_DIR_PATH}/prompts/{category}.json",
-            shell=True,
-            # stdout=DEVNULL,
-            # stderr=DEVNULL
-        )
-        test_result = Result.SUCCESS if command.returncode == 0 else Result.FAIL
-        _save_result(category, model, test_space, test_result)
+        accepted = 0
+        for _ in range(N_SIMULATION):
+            command = run(
+                TEST_SCRIPT + f" ./test_space/{test_space} {model} {TEST_DIR_PATH}/prompts/{category}.json",
+                shell=True,
+                # stdout=DEVNULL,
+                # stderr=DEVNULL
+            )
+            if command.returncode == 0:
+                accepted = accepted + 1
+        _save_result(category, model, test_space, accepted/N_SIMULATION)
 
-def _save_result(category: str, model: str, test_space: str, result: Result):
+def _save_result(category: str, model: str, test_space: str, result: float):
     result_str = "success" if result == Result.SUCCESS else "failure"
-    print(f"test for category {category}, model {model} and test_space {test_space} has resulted in {result_str}")
+    print(f"test for category {category}, model {model} and test_space {test_space} has resulted in {result_str} success rate.")
