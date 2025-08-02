@@ -11,7 +11,7 @@ TEST_SCRIPT="$WORKSPACE_DIR/test.sh"
 rm $WORKSPACE_DIR/flake.nix
 rm $WORKSPACE_DIR/flake.lock
 
-uv --project src run $SCRIPT_DIR/../../src/main.py $WORKSPACE_DIR -m $MODEL_NAME -p $PROMPT_PATH
+uv --project src run $SCRIPT_DIR/../../src/main/main.py $WORKSPACE_DIR -m $MODEL_NAME -p $PROMPT_PATH
 
 nix develop $WORKSPACE_DIR --command $TEST_SCRIPT
 

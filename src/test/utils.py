@@ -40,7 +40,7 @@ def _run_simulation(category: str, model: str):
     print(f"running test for category {category} and model {model}")
     for test_space in TEST_SPACES:
         command = run(
-            TEST_SCRIPT + f" ./test_space/{test_space} {model} {TEST_DIR_PATH}/{category}/prompt.json",
+            TEST_SCRIPT + f" ./test_space/{test_space} {model} {TEST_DIR_PATH}/prompts/{category}.json",
             shell=True,
             # stdout=DEVNULL,
             # stderr=DEVNULL
