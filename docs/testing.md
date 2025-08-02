@@ -47,29 +47,25 @@ projects number * simulations number * models number =
 
 The following test categories where identified.
 
-### Description
-
-The description case reppresents what a human created prompt might look like, similar to how a user would prompt [ChatGPT](https://chatgpt.com/) to generate the dev env config by simply describing his project.
-
-These tests are located at `test/desc/`.
-
-### N-shot prompting
-
-The prompt of the model was aided by the precence of an example of the desired result, as in an example of a functioning flake.nix file that defines the develoment shell for agiven language or tech stack.
-
-These tests are located at `test/nshot/N`
-
-where N is the number of examples present in the prompt.
-
-The executed tests have values of N in the interval 1..3.
-
 ### Project directory structure
 
 The prompt was completed with the contents of the project directory, as in directory structure and file names.
 
+These tests are located at `test/directory_structure/`.
+
 ### Project files contents
 
 The prompt was completed with the full contents of the project directory, as in directory structure, file names and contents.
+
+These tests are located at `test/file_contents/`.
+
+### 1-shot prompting
+
+The prompt of the model was aided by the precence of an example of the desired result, as in an example of a functioning flake.nix file that defines the develoment shell for simple project.
+
+The prompt also comprehends the project directory strucure and file contents, so this is one of the most verbose prompts tested.
+
+These tests are located at `test/1_shot`
 
 ### Test files provided
 
