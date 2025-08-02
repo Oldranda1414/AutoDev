@@ -7,7 +7,7 @@ default:
 # Run the main application
 [no-exit-message]
 run *args:
-    uv --project src run src/main.py {{args}}
+    uv --project src run src/main/main.py {{args}}
 
 # Run the test script
 [no-exit-message]

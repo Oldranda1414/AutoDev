@@ -5,7 +5,15 @@ title: Implementation
 
 ## Source Code Organization
 
-Since python is the language choosen, some decisions should be made in terms of source code organization, as there are varying approches possible when considering python standards.
+### Directory Structure
+
+The main AutoDev source code is located at `src/main`, with it's entry point being `src/main/main.py`
+
+The test source code is located at `src/test`, with it's entry point being `src/test/main.py`
+
+### Module Structure
+
+Since python is the language choosen, some decisions should be made in terms of module code organization, as there are varying approches possible when considering python standards.
 
 Given the projects small scope, the barebones module system is used.
 
