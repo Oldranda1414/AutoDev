@@ -1,4 +1,4 @@
-from services.output import PrintType, cli_print, print_table
+from services.output.console import print_table
 from llm.model import model_names
 from llm.server import is_model_installed, start_server
 from utils.table import Table

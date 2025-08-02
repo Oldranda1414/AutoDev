@@ -33,15 +33,6 @@ def cli_print(print_type: PrintType, *message: str):
             elif print_type == PrintType.ERROR:
                 _console.print(f"[bold red] {line} [/bold red]")
 
-def create_file(name: str, contents: str, path: str):
-    complete_path: str
-    if path:
-        complete_path = path + "/" + name
-    else:
-        complete_path = name
-    with open(complete_path, "x") as f:
-        f.write(contents)
-
 def get_spinner(message: str):
     _require_init()
     if _quiet:

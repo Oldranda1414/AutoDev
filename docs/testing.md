@@ -32,7 +32,7 @@ All test will be run with the following strategies:
 - All the models made available through AutoDev have been tested for every category and lab.
 - A test is considered passed if commands that would be run in the development workflow execute correctly in the development enviroment obtained from the configuration AutoDev generated.
 
-Since the LLM `temperature` setting can be ambiguous when assessing different LLMs, it is not considered in the test parameters and it is simply ignored.
+Since the LLM 'temperature' setting can be ambiguous when assessing different LLMs, it is not considered in the test parameters and it is simply ignored. All tested models are used with 'default settings'.
 
 Given the above considerations, for every test category the number of tests being executed:
 
@@ -70,6 +70,12 @@ The prompt was completed with the contents of the project directory, as in direc
 ### Project files contents
 
 The prompt was completed with the full contents of the project directory, as in directory structure, file names and contents.
+
+### Test files provided
+
+The prompt is composed by the contents of the `test.sh` files used to determine if the dev env works as expected.
+
+This method takes into consideration projects where end-to-end tests might be already been written, hoping that they are helpfull in generating the dev env config.
 
 <!-- TODO checkout this for prompt engeneering: https://www.promptingguide.ai/ -->
 

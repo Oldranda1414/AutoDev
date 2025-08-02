@@ -3,7 +3,7 @@ from services.direnv import add_direnv
 from services.install import install
 from services.uninstall import uninstall
 from services.list import list
-from services.output import cli_print, PrintType, get_spinner, print_model_name_error
+from services.output.console import cli_print, PrintType, get_spinner, print_model_name_error
 from errors import JsonValueTypeError, ModelAlreadyInstalledError, ModelNotInstalledError, OllamaNotInstalledError, PromptPathError, ModelNameError, MissingAttributesError, ModelNotInstalledError
 
 def generate_config(project_path: str, model: str, prompt_path: str):
