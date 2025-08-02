@@ -2,7 +2,7 @@ import os
 import json
 
 from errors import PromptPathError, MissingAttributesError, JsonValueTypeError
-from file_system import generate_list
+from file_system import generate_fso_list
 from utils.tree import generate_project_tree
 
 DEFAULT_DEPTH = 1
@@ -106,7 +106,7 @@ def _get_prompts(custom_prompt: dict[str, str]) -> tuple[int, str, str, str]:
     return prompts
     
 def _generate_fso_prompt(project_path: str, depth: int, tagged_fso_prompt: str):
-    fso_list = generate_list(project_path, depth)
+    fso_list = generate_fso_list(project_path, depth)
     fso_prompt = ""
     for fso in fso_list:
         fso_prompt += "\n" + tagged_fso_prompt.replace(FSO_NAME_TAG, fso.name).replace(FSO_CONTENTS_TAG, fso.contents if fso.contents else "")

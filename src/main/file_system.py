@@ -10,16 +10,16 @@ class FileSystemObject:
         self.children: list[FileSystemObject] = []
         self.is_dir = not contents
 
-def generate_list(fso_path: str, depth: int) -> list[FileSystemObject]:
-    return _generate_list(fso_path, depth, [])
+def generate_fso_list(fso_path: str, depth: int) -> list[FileSystemObject]:
+    return _generate_fso_list(fso_path, depth, [])
 
-def _generate_list(fso_path: str, depth: int, current_list: list[FileSystemObject]) -> list[FileSystemObject]:
+def _generate_fso_list(fso_path: str, depth: int, current_list: list[FileSystemObject]) -> list[FileSystemObject]:
     if isdir(fso_path):
         fso = FileSystemObject(basename(fso_path))
         current_list.append(fso)
         for current in scandir(fso_path):
             if depth > 0:
-                fso.children.append(_generate_list(current.path, depth - 1, current_list))
+                fso.children.append(_generate_fso_list(current.path, depth - 1, current_list))
     else:
         with open(fso_path) as file:
             try:
