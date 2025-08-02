@@ -1,1 +1,4 @@
-TEST_SPACES = ["basic" , "01"]
+TEST_SPACES = [
+            "basic",
+            "01"
+        ]
