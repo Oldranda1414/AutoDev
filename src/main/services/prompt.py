@@ -127,5 +127,6 @@ class _Prompt:
         self.fso = fso_prompt
 
     def build(self) -> str:
+        print(self.prefix + "\n" + self.fso + "\n" + self.conclusion)
         return self.prefix + "\n" + self.fso + "\n" + self.conclusion
 

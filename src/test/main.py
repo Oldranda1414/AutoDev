@@ -41,7 +41,7 @@ def get_model(args: list[str]) -> str:
 
 def print_usage():
     print("Usage:")
-    print("      just test [TEST-CATEGORY] [model_name]")
+    print("      just test [TEST-CATEGORY] [MODEL_NAME]")
     print("available categories:")
     for category in CATEGORIES:
         print(f"      {category}")
