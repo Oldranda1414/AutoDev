@@ -52,5 +52,4 @@ def _run_simulation(category: str, model: str):
         _save_result(category, model, test_space, accepted/N_SIMULATION)
 
 def _save_result(category: str, model: str, test_space: str, result: float):
-    result_str = "success" if result == Result.SUCCESS else "failure"
-    print(f"test for category {category}, model {model} and test_space {test_space} has resulted in {result_str} success rate.")
+    print(f"test for category {category}, model {model} and test_space {test_space} has resulted in {result} success rate.")
