@@ -37,3 +37,4 @@ def main(args: List[str]):
     if not parsed_args["PATH-TO-PROJECT"]:
         parsed_args["PATH-TO-PROJECT"] = "./"
     dispatch(parsed_args)
+

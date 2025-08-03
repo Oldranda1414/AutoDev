@@ -12,7 +12,8 @@ _console: Console = None
 
 class PrintType(Enum):
     SUCCESS = 1
-    ERROR = 2
+    WARNING = 2
+    ERROR = 3
 
 def init(quiet: bool = False):
     global _quiet, _initialized, _console
@@ -30,7 +31,9 @@ def cli_print(print_type: PrintType, *message: str):
         for line in message:
             if print_type == PrintType.SUCCESS:
                 _console.print(f"[bold green] {line} [/bold green]")
-            elif print_type == PrintType.ERROR:
+            elif print_type == PrintType.WARNING:
+                _console.print(f"[bold yellow] {line} [/bold yellow]")
+            else:
                 _console.print(f"[bold red] {line} [/bold red]")
 
 def get_spinner(message: str):

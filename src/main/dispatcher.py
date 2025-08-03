@@ -1,6 +1,9 @@
 from typing import Dict
+import sys
+
 from handlers import generate_config, generate_direnv, install_model, list_models, uninstall_model
-from services.output.console import init
+
+from services.output.console import init, cli_print, PrintType
 
 def dispatch(args: Dict[str, str]):
     project_path = args["PATH-TO-PROJECT"]
@@ -13,17 +16,21 @@ def dispatch(args: Dict[str, str]):
     install_mode = args["--install"]
     uninstall_mode = args["--uninstall"]
 
-    if list_mode:
-        init()
-        list_models()
-    elif install_mode:
-        init(quiet)
-        install_model(install_mode)
-    elif uninstall_mode:
-        init(quiet)
-        uninstall_model(uninstall_mode)
-    else:
-        init(quiet)
-        generate_config(project_path, model_name, prompt_path)
-        if direnv:
-            generate_direnv(project_path)
+    try:
+        if list_mode:
+            init()
+            list_models()
+        elif install_mode:
+            init(quiet)
+            install_model(install_mode)
+        elif uninstall_mode:
+            init(quiet)
+            uninstall_model(uninstall_mode)
+        else:
+            init(quiet)
+            generate_config(project_path, model_name, prompt_path)
+            if direnv:
+                generate_direnv(project_path)
+    except KeyboardInterrupt:
+        cli_print(PrintType.WARNING, "Process interrupted by user. Exiting gracefully.")
+        sys.exit(0)
