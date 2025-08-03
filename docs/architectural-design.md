@@ -86,6 +86,12 @@ just
 <!-- TODO add here the structure of the custom prompt -->
 <!-- probably json I guess -->
 
+## Generation Halting
+
+The user can halt the generation of the development environment in any moment by pressing `ctrl + C` on their keyboard.
+
+This is inline with the behaviour of most command line tools.
+
 ## Modules
 
 The source code organized in the following modules:

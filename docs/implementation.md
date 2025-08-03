@@ -109,6 +109,12 @@ A new module, `server.py`, has been created to expose methods that can be used t
 
 This module is an implementation of the 'anti-curruption layer' pattern relative to the ollama server dependency, while the Model module is an 'anti-curruption layer' relative to the litellm dependency.
 
+## Response cleaning
+
+TODO complete this
+
+The response is cleaned by removing the chain of thought block and removing the ``` code block delimiters.
+
 [Back to index](./index.md) |
 [Previous Chapter](./detailed-design.md) |
 [Next Chapter](./testing.md) |
