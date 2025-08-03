@@ -17,5 +17,3 @@ wheels/
 set-hooks.sh
 update.sh
 
-# folder for test playground
-test_space
