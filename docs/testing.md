@@ -12,16 +12,17 @@ The tests have been separated in various categories.
 Tests can be run with the following command (while being in [AutoDev's dev enviroment](./architectural-design.md#Development)):
 
 ```sh
-just test TEST-CATEGORY
+just test [TEST-CATEGORY] [MODEL]
 ```
 
-where `TEST-CATEGORY` rappresents the category of the tests to be run.
+where:
 
-If no test category is specified all tests are run.
+- `[TEST-CATEGORY]` is the category of the tests to be run.
+- `[MODEL]` is the model to run tests for.
+
+If no test category or model is specified all tests are run.
 
 Because of the nature of tests, i.e. running LLMs locally, test runtime can be quite high depending on the hardware used.
-
-Every test ran saves it's results to `test/<category>/results`, where `category` is the category of the tests.
 
 ## Common strategies
 
