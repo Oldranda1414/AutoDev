@@ -115,6 +115,12 @@ TODO complete this
 
 The response is cleaned by removing the chain of thought block and removing the ``` code block delimiters.
 
+## flake check
+
+TODO complete this
+
+Through testing it was noticed that often the llm generated wrong code. So I check if the code generated is correct or not and if it is not I re generate it.
+
 [Back to index](./index.md) |
 [Previous Chapter](./detailed-design.md) |
 [Next Chapter](./testing.md) |

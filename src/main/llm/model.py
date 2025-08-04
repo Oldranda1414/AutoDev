@@ -6,8 +6,6 @@ from llm.server import get_api_base, get_server_model_name
 from llm.server import start_server
 from llm.server import is_model_installed
 
-# TODO add system initial message
-
 COT_START_TAG = "<think>"
 COT_END_TAG = "</think>"
 
@@ -17,6 +15,7 @@ class Model:
         if not _is_valid_name(model_name):
             raise ModelNameError(f"Model {model_name} is not one of the accepted model names")
         start_server()
+        # TODO remove this start server, make it be done in llm.server
         if not is_model_installed(model_name):
             raise ModelNotInstalledError(f"{model_name} is not installed")
 
