@@ -1,0 +1,3 @@
+# nix flake stuff
+flake.nix
+flake.lock
