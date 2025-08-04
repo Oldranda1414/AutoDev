@@ -19,3 +19,5 @@ update.sh
 
 # test git repositories
 test_space/**/.git
+test_space/**/flake.nix
+test_space/**/flake.lock

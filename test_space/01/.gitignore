@@ -134,7 +134,3 @@ project/plugins/project/
 
 # End of https://www.toptal.com/developers/gitignore/api/java,sbt,intellij+all
 
-# nix flake stuff
-flake.nix
-flake.lock
-
