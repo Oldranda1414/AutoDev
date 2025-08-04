@@ -6,23 +6,35 @@ from llm.server import get_api_base, get_server_model_name
 from llm.server import start_server
 from llm.server import is_model_installed
 
+# TODO add system initial message
+
 COT_START_TAG = "<think>"
 COT_END_TAG = "</think>"
 
-def ask(model_name: str, message: str) -> str:
-    if not _is_valid_name(model_name):
-        raise ModelNameError(f"Model {model_name} is not one of the accepted model names")
-    start_server()
-    if not is_model_installed(model_name):
-        raise ModelNotInstalledError(f"{model_name} is not installed")
-    messages = [{ "content": message,"role": "user"}]
-    response = completion(
-                model = get_server_model_name(model_name),
-                messages = messages,
-                api_base = get_api_base()
-    )
-    cleaned_response = _clean_response(response.choices[0].message.content)
-    return cleaned_response
+class Model:
+    
+    def __init__(self, model_name: str):
+        if not _is_valid_name(model_name):
+            raise ModelNameError(f"Model {model_name} is not one of the accepted model names")
+        start_server()
+        if not is_model_installed(model_name):
+            raise ModelNotInstalledError(f"{model_name} is not installed")
+
+        self.model_name = model_name
+        self.chat_history: list[dict[str, str]] = [
+            {"role": "system", "content": "You are a helpful assistant."}
+        ]
+
+    def ask(self, message: str) -> str:
+        self.chat_history.append({ "content": message,"role": "user"})
+        response = completion(
+                    model = get_server_model_name(self.model_name),
+                    messages = self.chat_history,
+                    api_base = get_api_base()
+        )
+        self.chat_history.append({ "content": response,"role": "assistant"})
+        cleaned_response = _clean_response(response.choices[0].message.content)
+        return cleaned_response
 
 def _is_valid_name(model_name):
     return model_name in model_names
