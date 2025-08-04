@@ -44,11 +44,14 @@ def _run_simulation(category: str, model: str):
             command = run(
                 TEST_SCRIPT + f" ./test_space/{test_space} {model} {TEST_DIR_PATH}/prompts/{category}.json",
                 shell=True,
-                stdout=DEVNULL,
-                stderr=DEVNULL
+                # stdout=DEVNULL,
+                # stderr=DEVNULL
             )
             if command.returncode == 0:
                 accepted = accepted + 1
+                print("passed!")
+        print("accepted:", accepted)
+        print("simulation result: ", accepted/N_SIMULATION)
         _save_result(category, model, test_space, accepted/N_SIMULATION)
 
 def _save_result(category: str, model: str, test_space: str, result: float):

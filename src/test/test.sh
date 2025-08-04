@@ -16,5 +16,7 @@ git init $WORKSPACE_DIR
 uv --project src run $SCRIPT_DIR/../../src/main/main.py $WORKSPACE_DIR -m $MODEL_NAME -p $PROMPT_PATH
 
 nix develop $WORKSPACE_DIR --command $TEST_SCRIPT
+RESULT=$?
 
-exit $?
+echo $RESULT
+exit $RESULT
