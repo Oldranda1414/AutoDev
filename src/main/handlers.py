@@ -1,10 +1,10 @@
-from services.configuration import add_config
+from services.configuration import add_config, ATTEMPTS
 from services.direnv import add_direnv
 from services.install import install
 from services.uninstall import uninstall
 from services.list import list
 from services.output.console import cli_print, PrintType, get_spinner, print_model_name_error
-from errors import JsonValueTypeError, ModelAlreadyInstalledError, ModelNotInstalledError, OllamaNotInstalledError, PromptPathError, ModelNameError, MissingAttributesError, ModelNotInstalledError
+from errors import ExeededAttemptsError, JsonValueTypeError, ModelAlreadyInstalledError, ModelNotInstalledError, OllamaNotInstalledError, PromptPathError, ModelNameError, MissingAttributesError, ModelNotInstalledError
 
 def generate_config(project_path: str, model: str, prompt_path: str):
     try:
@@ -57,6 +57,11 @@ def generate_config(project_path: str, model: str, prompt_path: str):
             f"Ollama does not seem to be installed on the system.",
             "Run 'nix develop' to enter development shell and install ollama temporarily",
             "or visit https://ollama.com/ to checkout how to install ollama permanently on your system."
+        )
+    except ExeededAttemptsError:
+        cli_print(PrintType.ERROR,
+            f"Model {model} is unable to generate correct nix code in {ATTEMPTS} attempts.",
+            "Select another model or improve the provided prompt."
         )
     except ModelNotInstalledError:
         cli_print(PrintType.SUCCESS,

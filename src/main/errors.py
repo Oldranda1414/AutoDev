@@ -9,4 +9,4 @@ class JsonValueTypeError(ValueError): pass
 class OllamaNotInstalledError(ValueError): pass
 class ModelAlreadyInstalledError(ValueError): pass
 class ModelNotInstalledError(ValueError): pass
-
+class ExeededAttemptsError(ValueError): pass
