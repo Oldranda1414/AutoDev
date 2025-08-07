@@ -7,7 +7,7 @@ class CheckResult:
 
 def check_flake(flake_path: str) -> CheckResult:
     command = run(
-        f"nix flake check {flake_path}/flake.nix",
+        f"nix flake check {flake_path}",
         shell=True,
         capture_output=True,
         text=True 
