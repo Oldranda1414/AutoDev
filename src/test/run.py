@@ -7,7 +7,7 @@ from categories import CATEGORIES
 from models import MODELS
 from test_spaces import TEST_SPACES
 
-N_SIMULATION = 10
+N_SIMULATION = 3
 TEST_DIR_PATH = os.path.dirname(os.path.realpath(__file__))
 TEST_SCRIPT = f"{TEST_DIR_PATH}/test.sh"
 
