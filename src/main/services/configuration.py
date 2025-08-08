@@ -24,7 +24,6 @@ def add_config(model_name: str, project_path: str, prompt_path: str):
         if current_attempts == ATTEMPTS:
             raise ExeededAttemptsError(f"After {ATTEMPTS} attempts the model was unable to generate working nix code")
         new_contents = model.ask(_get_fix_prompt(check_result.error))
-        print(f"new contents generated: \n\n {new_contents}")
         write_file("flake.nix", new_contents, project_path)
         check_result = check_flake(project_path)
         current_attempts = current_attempts + 1
