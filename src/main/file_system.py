@@ -17,9 +17,10 @@ def _generate_fso_list(fso_path: str, depth: int, current_list: list[FileSystemO
     if isdir(fso_path):
         fso = FileSystemObject(basename(fso_path))
         current_list.append(fso)
-        for current in scandir(fso_path):
-            if depth > 0:
-                fso.children.append(_generate_fso_list(current.path, depth - 1, current_list))
+        if not fso.name == ".git":
+            for current in scandir(fso_path):
+                if depth > 0:
+                    fso.children.append(_generate_fso_list(current.path, depth - 1, current_list))
     else:
         with open(fso_path) as file:
             try:
