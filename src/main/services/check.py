@@ -15,6 +15,5 @@ def check_flake(flake_path: str) -> CheckResult:
     if command.returncode == 0:
         return CheckResult(True, "")
     else:
-        print(f"flake check resulted in error {command.stderr}")
         return CheckResult(False, command.stderr)
 
