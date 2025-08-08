@@ -25,6 +25,8 @@ class Model:
         ]
 
     def ask(self, message: str) -> str:
+        print("model was asked:")
+        print(message)
         self.chat_history.append({ "content": message,"role": "user"})
         response = completion(
                     model = get_server_model_name(self.model_name),
