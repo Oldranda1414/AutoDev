@@ -2,6 +2,7 @@ import os
 from typing import Optional
 from subprocess import run, DEVNULL
 from enum import Enum
+from datetime import datetime
 
 from categories import CATEGORIES
 from models import MODELS
@@ -11,12 +12,17 @@ from file import move_and_rename, add_line_to_file
 N_SIMULATION = 3
 TEST_DIR_PATH = os.path.dirname(os.path.realpath(__file__))
 TEST_SCRIPT = f"{TEST_DIR_PATH}/test.sh"
+RESULTS_PATH = "./test_results/results.txt"
 
 class Result(Enum):
     SUCCESS = 1
     FAIL = 2
 
 def run_tests(category: Optional[str] = None, model: Optional[str] = None):
+    now = datetime.today().strftime('%Y-%m-%d %H:%M:%S')
+    add_line_to_file(RESULTS_PATH, "---------------------------------------------")
+    add_line_to_file(RESULTS_PATH, f"TESTS STARTED ON {now}")
+    add_line_to_file(RESULTS_PATH, "---------------------------------------------")
     if category:
         if model:
             _run_model_tests(category, model)
@@ -24,6 +30,10 @@ def run_tests(category: Optional[str] = None, model: Optional[str] = None):
             _run_category_tests(category)
     else:
         _run_all_tests()
+    now = datetime.today().strftime('%Y-%m-%d %H:%M:%S')
+    add_line_to_file(RESULTS_PATH, "---------------------------------------------")
+    add_line_to_file(RESULTS_PATH, f"TESTS FINISHED ON {now}")
+    add_line_to_file(RESULTS_PATH, "---------------------------------------------")
 
 def _run_all_tests():
     for category in CATEGORIES:
@@ -53,8 +63,7 @@ def _run_simulation(category: str, model: str):
                 print("passed!")
             _save_result(category, model, test_space, simulation_index)
         simulation_summary = f"test for category {category}, model {model} and test_space {test_space} has resulted in {accepted/N_SIMULATION} success rate."
-        results_path = "./test_results/results.txt"
-        add_line_to_file(results_path, simulation_summary)
+        add_line_to_file(RESULTS_PATH, simulation_summary)
 
 def _save_result(category: str, model: str, test_space: str, index: int):
     move_and_rename(f"./test_space/{test_space}/flake.nix", f"test_results/{model}/{category}/flake_{index}.nix", "file was not generated")
