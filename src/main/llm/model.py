@@ -2,9 +2,8 @@ from litellm import completion
 
 from errors import ModelNameError, ModelNotInstalledError
 
-from llm.server import get_api_base, get_server_model_name
-from llm.server import start_server
-from llm.server import is_model_installed
+from llm.server import get_api_base, get_server_model_name, is_model_installed 
+from llm.server import start as start_server
 
 COT_START_TAG = "<think>"
 COT_END_TAG = "</think>"
@@ -14,8 +13,6 @@ class Model:
     def __init__(self, model_name: str):
         if not _is_valid_name(model_name):
             raise ModelNameError(f"Model {model_name} is not one of the accepted model names")
-        start_server()
-        # TODO remove this start server, make it be done in llm.server
         if not is_model_installed(model_name):
             raise ModelNotInstalledError(f"{model_name} is not installed")
 
@@ -25,6 +22,7 @@ class Model:
         ]
 
     def ask(self, message: str) -> str:
+        start_server()
         self.chat_history.append({ "content": message,"role": "user"})
         response = completion(
                     model = get_server_model_name(self.model_name),
@@ -62,7 +60,6 @@ def _remove_cot(response: str):
         return response
     return response[:start_cot_index] + response[end_cot_index:]
 
-# TODO add model names here
 model_names = [
             "llama3",
             "qwen3",

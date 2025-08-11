@@ -13,10 +13,13 @@ Also when in the tests where the file contents where provided in the prompt, a `
 
 ### Improve prompt customization
 
+The prompt customization functionality is very simple and it might be expanded on to provide customization options to the user.
+
 Some nice features to add would be:
 
 - The possibility of defining different prompts for folder and file listings, maybe by adding two tags specific to the file system object type.
 - The possiblity of blacklisting certain folders or files, so as to not 
+- The possiblity of providing a value for the number of 'attempts' the model should be given to generate valid nix code, before giving up.
 
 ### Remote models
 

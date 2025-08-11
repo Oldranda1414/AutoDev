@@ -32,7 +32,7 @@ def cli_print(print_type: PrintType, *message: str):
             _console.print(f"[bold green] {line} [/bold green]")
         elif print_type == PrintType.WARNING:
             _console.print(f"[bold yellow] {line} [/bold yellow]")
-        else:
+        elif print_type == PrintType.ERROR:
             _console.print(f"[bold red] {line} [/bold red]")
 
 def get_spinner(message: str):

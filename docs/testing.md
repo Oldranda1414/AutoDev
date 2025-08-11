@@ -70,11 +70,31 @@ These tests are located at `test/1_shot`
 
 ### Test files provided
 
+TODO implement this?
+
 The prompt is composed by the contents of the `test.sh` files used to determine if the dev env works as expected.
 
 This method takes into consideration projects where end-to-end tests might be already been written, hoping that they are helpfull in generating the dev env config.
 
 <!-- TODO checkout this for prompt engeneering: https://www.promptingguide.ai/ -->
+
+## Improvements
+
+During testing the following improvements where implemented.
+
+### Response cleaning
+
+Even if specifically 'told' to not use triple backtick code block delimiters (```) many models still provided nix code delimited by them. To ensure models that struggle to remove the code block delimiters are not penalized they are 'manually' removed from the generated code.
+
+Some models provide a 'thought block' in the generated code, showing the Chain-of-Tought process employed, even if prompted to remove it. To ensure these models are not penalized they are 'manually' removed from the generated code.
+
+### Flake check
+
+Often LLMs struggle to provide a correct answer on the first attempt, but the 'chat-like' feature of these models can be levereged to enable them to correct their mistakes.
+
+After the nix code is generated, it is parsed and validated using the `nix flake check` command. Eventual errors encountered are provided to the LLM to give it a chance to improve on it's provided code.
+
+A total of 10 attempts are done, by providing the error messate to the model and asking it to fix the errors, before giving up on generating the dev env config and notifing the user.
 
 [Back to index](./index.md) |
 [Previous Chapter](./implementation.md) |
