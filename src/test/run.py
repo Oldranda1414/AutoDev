@@ -68,5 +68,5 @@ def _run_simulation(category: str, model: str):
         add_line_to_file(RESULTS_PATH, simulation_summary)
 
 def _save_result(category: str, model: str, test_space: str, index: int):
-    move_and_rename(f"./test_space/{test_space}/flake.nix", f"test_results/{model}/{category}/flake_{index}.nix", "file was not generated")
+    move_and_rename(f"./test_space/{test_space}/flake.nix", f"test_results/{test_space}/{model}/{category}/flake_{index}.nix", "file was not generated")
 
