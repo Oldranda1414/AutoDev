@@ -22,7 +22,6 @@ def run_tests(category: Optional[str] = None, model: Optional[str] = None):
     now = datetime.today().strftime('%Y-%m-%d %H:%M:%S')
     add_line_to_file(RESULTS_PATH, "---------------------------------------------")
     add_line_to_file(RESULTS_PATH, f"TESTS STARTED ON {now}")
-    add_line_to_file(RESULTS_PATH, "---------------------------------------------")
     if category:
         if model:
             _run_model_tests(category, model)
@@ -31,7 +30,6 @@ def run_tests(category: Optional[str] = None, model: Optional[str] = None):
     else:
         _run_all_tests()
     now = datetime.today().strftime('%Y-%m-%d %H:%M:%S')
-    add_line_to_file(RESULTS_PATH, "---------------------------------------------")
     add_line_to_file(RESULTS_PATH, f"TESTS FINISHED ON {now}")
     add_line_to_file(RESULTS_PATH, "---------------------------------------------")
 
