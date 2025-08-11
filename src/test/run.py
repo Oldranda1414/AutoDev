@@ -20,6 +20,7 @@ def run_tests(category: Optional[str] = None, model: Optional[str] = None):
         now = datetime.today().strftime('%Y-%m-%d %H:%M:%S')
         add_line_to_file(RESULTS_PATH, "---------------------------------------------")
         add_line_to_file(RESULTS_PATH, f"TESTS STARTED AT {now}")
+        add_line_to_file(RESULTS_PATH, f"\n")
         if category:
             if model:
                 _run_model_tests(category, model)
@@ -33,7 +34,7 @@ def run_tests(category: Optional[str] = None, model: Optional[str] = None):
     except KeyboardInterrupt:
         print("Process interrupted by user. Exiting gracefully.")
         now = datetime.today().strftime('%Y-%m-%d %H:%M:%S')
-        add_line_to_file(RESULTS_PATH, f"TESTS INTERRUPTED BY USER AT {now}")
+        add_line_to_file(RESULTS_PATH, f"\nTESTS INTERRUPTED BY USER AT {now}")
         add_line_to_file(RESULTS_PATH, "---------------------------------------------")
         sys.exit(0)
 
@@ -62,7 +63,6 @@ def _run_simulation(category: str, model: str):
             )
             if command.returncode == 0:
                 accepted = accepted + 1
-                print("passed!")
             _save_result(category, model, test_space, simulation_index)
         simulation_summary = f"test for category {category}, model {model} and test_space {test_space} has resulted in {accepted/N_SIMULATION} success rate."
         add_line_to_file(RESULTS_PATH, simulation_summary)
