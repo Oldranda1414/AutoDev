@@ -18,5 +18,4 @@ uv --project src run $SCRIPT_DIR/../../src/main/main.py $WORKSPACE_DIR -m $MODEL
 nix develop $WORKSPACE_DIR --command $TEST_SCRIPT
 RESULT=$?
 
-echo $RESULT
 exit $RESULT

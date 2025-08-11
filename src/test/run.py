@@ -6,6 +6,7 @@ from enum import Enum
 from categories import CATEGORIES
 from models import MODELS
 from test_spaces import TEST_SPACES
+from file import move_and_rename
 
 N_SIMULATION = 3
 TEST_DIR_PATH = os.path.dirname(os.path.realpath(__file__))
@@ -40,7 +41,7 @@ def _run_simulation(category: str, model: str):
     print(f"running test for category {category} and model {model}")
     for test_space in TEST_SPACES:
         accepted = 0
-        for _ in range(N_SIMULATION):
+        for simulation_index in range(N_SIMULATION):
             command = run(
                 TEST_SCRIPT + f" ./test_space/{test_space} {model} {TEST_DIR_PATH}/prompts/{category}.json",
                 shell=True,
@@ -50,9 +51,9 @@ def _run_simulation(category: str, model: str):
             if command.returncode == 0:
                 accepted = accepted + 1
                 print("passed!")
-        print("accepted:", accepted)
-        print("simulation result: ", accepted/N_SIMULATION)
-        _save_result(category, model, test_space, accepted/N_SIMULATION)
+            _save_result(category, model, test_space, simulation_index)
+        print(f"test for category {category}, model {model} and test_space {test_space} has resulted in {accepted/N_SIMULATION} success rate.")
 
-def _save_result(category: str, model: str, test_space: str, result: float):
-    print(f"test for category {category}, model {model} and test_space {test_space} has resulted in {result} success rate.")
+def _save_result(category: str, model: str, test_space: str, index: int):
+    move_and_rename(f"./test_space/{test_space}/flake.nix", f"test_results/{model}/{category}/flake_{index}.nix", "file was not generated")
+
