@@ -51,7 +51,6 @@ The json file must have the following structure:
 
 ```json
 {
-    "attempts": <attempts_number>,
     "depth": <depth_level>,
     "premise": <premise_prompt>,
     "conclusion": <conclusion_prompt>,
@@ -59,23 +58,12 @@ The json file must have the following structure:
 }
 ```
 
-##### \<attempts_number\> 
-
-TODO implement this
-
-`<attempts_number>` is the number of generation attempts that AutoDev should do while generating the dev env config.
-
-The value of `<attempts_number>` must be an integer.
-
-This value is made necessary do to the unreliable nature of LLM code generation. AutoDev checks that the generated code is valid nix code and if it is not it can try to pass the error encountered to the LLM in an attempt to fix the faulty code. Still a given model could be unable to generate valid nix code in a limited time, so the `<attempts_number>` value can guard against high generation times, by instructing AutoDev to simply 'give up' after a certain number of attempts.
-
 ##### \<depth_level\> 
 
 `<depth_level>` is the max depth level that should be reached when traversing the directory tree.
 
 The value of `<depth_level>` must be an integer.
 
-TODO check if this is followed
 If `<depth_level>` is set to 0 then the project directory contents will not be considered when creating the prompt. Only the premise will compse the used prompt.
 
 If `<depth_level>` is set to a value greater than 0 then the project directory will be traversed up to the depth indicated by the value of `<depth_level>`, and the directories and files encountered during traversal will be used to generate the prompt.

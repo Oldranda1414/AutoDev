@@ -11,6 +11,8 @@ class FileSystemObject:
         self.is_dir = not contents
 
 def generate_fso_list(fso_path: str, depth: int) -> list[FileSystemObject]:
+    if depth < 1:
+        return  []
     return _generate_fso_list(fso_path, depth, [])
 
 def _generate_fso_list(fso_path: str, depth: int, current_list: list[FileSystemObject]) -> list[FileSystemObject]:
@@ -19,7 +21,7 @@ def _generate_fso_list(fso_path: str, depth: int, current_list: list[FileSystemO
         current_list.append(fso)
         if not fso.name == ".git":
             for current in scandir(fso_path):
-                if depth > 0:
+                if depth > 1:
                     fso.children.append(_generate_fso_list(current.path, depth - 1, current_list))
     else:
         with open(fso_path) as file:
