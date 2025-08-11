@@ -6,7 +6,7 @@ from enum import Enum
 from categories import CATEGORIES
 from models import MODELS
 from test_spaces import TEST_SPACES
-from file import move_and_rename
+from file import move_and_rename, add_line_to_file
 
 N_SIMULATION = 3
 TEST_DIR_PATH = os.path.dirname(os.path.realpath(__file__))
@@ -52,7 +52,9 @@ def _run_simulation(category: str, model: str):
                 accepted = accepted + 1
                 print("passed!")
             _save_result(category, model, test_space, simulation_index)
-        print(f"test for category {category}, model {model} and test_space {test_space} has resulted in {accepted/N_SIMULATION} success rate.")
+        simulation_summary = f"test for category {category}, model {model} and test_space {test_space} has resulted in {accepted/N_SIMULATION} success rate."
+        results_path = "./test_results/results.txt"
+        add_line_to_file(results_path, simulation_summary)
 
 def _save_result(category: str, model: str, test_space: str, index: int):
     move_and_rename(f"./test_space/{test_space}/flake.nix", f"test_results/{model}/{category}/flake_{index}.nix", "file was not generated")

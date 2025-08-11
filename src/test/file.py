@@ -8,3 +8,12 @@ def move_and_rename(src_path: str, dest_path: str, fallback_contents: str):
     except FileNotFoundError:
         with open(dest_path, "x", encoding="utf-8") as f:
             f.write(fallback_contents)   
+
+def add_line_to_file(file_path: str, additional_contents: str):
+    # Ensure the added line ends with a newline
+    if not additional_contents.endswith("\n"):
+        additional_contents += "\n"
+    
+    # Open in append mode so we don't overwrite
+    with open(file_path, "a", encoding="utf-8") as f:
+        f.write(additional_contents)
