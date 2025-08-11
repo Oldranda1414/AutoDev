@@ -23,18 +23,17 @@ def init(quiet: bool = False):
 
 def _require_init():
     if not _initialized:
-        raise RuntimeError("Prompt.init() must be called before using this method.")
+        raise RuntimeError("Console not initialized. init() must be called before using this method.")
 
 def cli_print(print_type: PrintType, *message: str):
     _require_init()
-    if not _quiet:
-        for line in message:
-            if print_type == PrintType.SUCCESS:
-                _console.print(f"[bold green] {line} [/bold green]")
-            elif print_type == PrintType.WARNING:
-                _console.print(f"[bold yellow] {line} [/bold yellow]")
-            else:
-                _console.print(f"[bold red] {line} [/bold red]")
+    for line in message:
+        if print_type == PrintType.SUCCESS and not _quiet:
+            _console.print(f"[bold green] {line} [/bold green]")
+        elif print_type == PrintType.WARNING:
+            _console.print(f"[bold yellow] {line} [/bold yellow]")
+        else:
+            _console.print(f"[bold red] {line} [/bold red]")
 
 def get_spinner(message: str):
     _require_init()
