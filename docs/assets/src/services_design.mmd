@@ -41,11 +41,18 @@ classDiagram
         generate_fso_list(path: str, depth: int) -> FileSystemObject
     }
 
+    class Server {
+        start_server()
+        install_model(model_name: str)
+        uninstall_model(model_name: str)
+    }
+
     Direnv ..> Output
     Configuration ..> Output
-    Install ..> Output
-    Uninstall ..> Output
+    Install ..> Server
+    Uninstall ..> Server
     Configuration ..> Generator
     Generator ..> Model
     Generator ..> Prompt
     Prompt ..> FileSystem
+    Model ..> Server
