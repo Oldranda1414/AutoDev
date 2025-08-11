@@ -1,4 +1,5 @@
 import os 
+import sys
 from typing import Optional
 from subprocess import run, DEVNULL
 from enum import Enum
@@ -9,29 +10,32 @@ from models import MODELS
 from test_spaces import TEST_SPACES
 from file import move_and_rename, add_line_to_file
 
-N_SIMULATION = 3
+N_SIMULATION = 10
 TEST_DIR_PATH = os.path.dirname(os.path.realpath(__file__))
 TEST_SCRIPT = f"{TEST_DIR_PATH}/test.sh"
 RESULTS_PATH = "./test_results/results.txt"
 
-class Result(Enum):
-    SUCCESS = 1
-    FAIL = 2
-
 def run_tests(category: Optional[str] = None, model: Optional[str] = None):
-    now = datetime.today().strftime('%Y-%m-%d %H:%M:%S')
-    add_line_to_file(RESULTS_PATH, "---------------------------------------------")
-    add_line_to_file(RESULTS_PATH, f"TESTS STARTED ON {now}")
-    if category:
-        if model:
-            _run_model_tests(category, model)
+    try:
+        now = datetime.today().strftime('%Y-%m-%d %H:%M:%S')
+        add_line_to_file(RESULTS_PATH, "---------------------------------------------")
+        add_line_to_file(RESULTS_PATH, f"TESTS STARTED AT {now}")
+        if category:
+            if model:
+                _run_model_tests(category, model)
+            else:
+                _run_category_tests(category)
         else:
-            _run_category_tests(category)
-    else:
-        _run_all_tests()
-    now = datetime.today().strftime('%Y-%m-%d %H:%M:%S')
-    add_line_to_file(RESULTS_PATH, f"TESTS FINISHED ON {now}")
-    add_line_to_file(RESULTS_PATH, "---------------------------------------------")
+            _run_all_tests()
+        now = datetime.today().strftime('%Y-%m-%d %H:%M:%S')
+        add_line_to_file(RESULTS_PATH, f"TESTS FINISHED AT {now}")
+        add_line_to_file(RESULTS_PATH, "---------------------------------------------")
+    except KeyboardInterrupt:
+        print("Process interrupted by user. Exiting gracefully.")
+        now = datetime.today().strftime('%Y-%m-%d %H:%M:%S')
+        add_line_to_file(RESULTS_PATH, f"TESTS INTERRUPTED BY USER AT {now}")
+        add_line_to_file(RESULTS_PATH, "---------------------------------------------")
+        sys.exit(0)
 
 def _run_all_tests():
     for category in CATEGORIES:
