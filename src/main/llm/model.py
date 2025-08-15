@@ -7,6 +7,7 @@ from llm.server import start as start_server
 
 COT_START_TAG = "<think>"
 COT_END_TAG = "</think>"
+REQUEST_TIMEOUT = 1000
 
 class Model:
     
@@ -27,7 +28,8 @@ class Model:
         response = completion(
                     model = get_server_model_name(self.model_name),
                     messages = self.chat_history,
-                    api_base = get_api_base()
+                    api_base = get_api_base(),
+                    request_timeout = REQUEST_TIMEOUT
         )
         self.chat_history.append({ "content": response,"role": "assistant"})
         cleaned_response = _clean_response(response.choices[0].message.content)
