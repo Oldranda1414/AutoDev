@@ -1,0 +1,52 @@
+[0m[[0m[0mdebug[0m] [0m[0mCreated transactional ClassFileManager with tempDir = /home/leonardo/Uni/asmd/progetto/test_space/03/target/scala-3.3.5/classes.bak[0m
+[0m[[0m[0mdebug[0m] [0m[0mAbout to delete class files:[0m
+[0m[[0m[0mdebug[0m] [0m[0mWe backup class files:[0m
+[0m[[0m[0mdebug[0m] [0m[0mCreated transactional ClassFileManager with tempDir = /home/leonardo/Uni/asmd/progetto/test_space/03/target/scala-3.3.5/classes.bak[0m
+[0m[[0m[0mdebug[0m] [0m[0mAbout to delete class files:[0m
+[0m[[0m[0mdebug[0m] [0m[0mWe backup class files:[0m
+[0m[[0m[0mdebug[0m] [0m[0mRegistering generated classes:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Pair.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ChatAgentBase.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ChainOfThoughtAgent.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ZeroShotExample.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	FewShotAgent$QuestionAnswer.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ChatAgent.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	FewShotAgent.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	TechniquesComparison.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	SelfConsistencyExample.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	CosineEmbeddingEvaluator.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	SelfConsistencyAgent.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Vector.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	TextGenerationExample.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	BasePromptBasedAgent.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	EmbeddingBaseExample.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ChainOfThoughtAgentExample.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ChatBetweenAgents.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Evaluator.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	FewShotAgentExample.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	EmbeddingVisualizationAndSearch.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	PromptBasedAgent.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ZeroShotAgent.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Pair.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ChatAgentBase.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ChainOfThoughtAgent.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ZeroShotExample.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	FewShotAgent$QuestionAnswer.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ChatAgent.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	FewShotAgent.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	TechniquesComparison.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	SelfConsistencyExample.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	CosineEmbeddingEvaluator.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	SelfConsistencyAgent.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Vector.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	TextGenerationExample.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	BasePromptBasedAgent.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	EmbeddingBaseExample.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ChainOfThoughtAgentExample.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ChatBetweenAgents.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Evaluator.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	FewShotAgentExample.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	EmbeddingVisualizationAndSearch.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	PromptBasedAgent.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ZeroShotAgent.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0mRemoving the temporary directory used for backing up class files: /home/leonardo/Uni/asmd/progetto/test_space/03/target/scala-3.3.5/classes.bak[0m
