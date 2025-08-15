@@ -1,0 +1,19 @@
+[0m[[0m[0mdebug[0m] [0m[0mCreated transactional ClassFileManager with tempDir = /home/leonardo/Uni/asmd/progetto/test_space/02/target/scala-2.12/test-classes.bak[0m
+[0m[[0m[0mdebug[0m] [0m[0mAbout to delete class files:[0m
+[0m[[0m[0mdebug[0m] [0m[0mWe backup class files:[0m
+[0m[[0m[0mdebug[0m] [0m[0mCreated transactional ClassFileManager with tempDir = /home/leonardo/Uni/asmd/progetto/test_space/02/target/scala-2.12/test-classes.bak[0m
+[0m[[0m[0mdebug[0m] [0m[0mAbout to delete class files:[0m
+[0m[[0m[0mdebug[0m] [0m[0mWe backup class files:[0m
+[0m[[0m[0mdebug[0m] [0m[0mRegistering generated classes:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	StandardDeviceTest$ShowcaseSpies.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	AlternateStandardDeviceTest.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	StandardDeviceTest$ShowcaseDummies.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	JUnitShowcase.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	TestList.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	DeviceTest.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	StandardDeviceTest$ShowcaseFakes.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	StandardDeviceTest.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	StandardDeviceTest$ShowcaseStubs.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	AdderTest.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	StandardDeviceTest$ShowcaseMocks.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mRemoving the temporary directory used for backing up class files: /home/leonardo/Uni/asmd/progetto/test_space/02/target/scala-2.12/test-classes.bak[0m
