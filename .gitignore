@@ -16,8 +16,10 @@ wheels/
 # util scripts and files
 set-hooks.sh
 update.sh
+clean.sh
 
 # test git repositories
 test_space/**/.git
 test_space/**/flake.nix
 test_space/**/flake.lock
+
