@@ -10,7 +10,7 @@ from models import MODELS
 from test_spaces import TEST_SPACES
 from file import move_and_rename, add_line_to_file
 
-N_SIMULATION = 3
+N_SIMULATION = 5
 TEST_DIR_PATH = os.path.dirname(os.path.realpath(__file__))
 TEST_SCRIPT = f"{TEST_DIR_PATH}/test.sh"
 RESULTS_PATH = "./test_results/results.txt"
