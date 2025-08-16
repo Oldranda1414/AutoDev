@@ -4,7 +4,6 @@ title: Requirements
 ---
 
 <!-- TODO check if these are correct -->
-<!-- TODO add timeout error handling to litellm -->
 
 During project analysis the following requirements have been identified.
 
