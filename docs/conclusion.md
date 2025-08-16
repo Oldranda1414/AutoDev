@@ -37,5 +37,15 @@ As of now the project is run using the uv python build system and it is intended
 
 Ideally the project could be turned into a pip package (uv actually provides a way to easily do this at [https://docs.astral.sh/uv/guides/package/]) so that it could be installed globally (e.g. with `pip install AutoDev`).
 
+## Retrospective
+
+This project was very fun to develop. The usage of nix defined development enviroments to develop the project itself felt very 'meta', which felt in the line with the course's themes.
+
+Working with python, while trying to impose a good typing and directory structure discipline has been a mixed experience. Although a good programmer is able to 'work' with any language, focusing on the abstract problem solving aspects of programming, it is appearent that trying to adapt a language to the users expectation can be very time consuming. Even though the result might be satisfing, a programmer is better off with choosing the right 'tool for the job' and adapt to it's conventions as much as possible, instead of trying to take only the 'good' parts of the language and attempt to modify the rest to suit the user's programming style.
+
+In this project in particolar the choice of the python language seemd foregone because of it's use in most AI projects. I thought that adding typing to the language would eliminate the frustrations conected to it's 'scripting nature', but alas some frustration anyway arised and most of the time I found myself embracing the dynamic typing when deemed possible. The same goes for many other python conventions.
+
+During the tail end of the project the design decisions started to feel a bit restrictive as many assumptions made at design time proved to be slightly incorrect. If the project had been far from finished, when these problems had arisen, a redesign would have been considered. Alas since the project was deemed to be close to completion and since the self imposed soft deadline was approaching the necessary redesign has not been executed. This approach proved to be origin of minor frustrationswhen the mistakes in the design where obvious, but I believe it to have been a good example of unideal software development occurrences that happen way too often in real projects.
+
 [Back to index](./index.md) |
 [Previous Chapter](./testing.md) |
