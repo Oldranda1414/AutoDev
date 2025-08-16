@@ -7,7 +7,7 @@ from llm.server import start as start_server
 
 COT_START_TAG = "<think>"
 COT_END_TAG = "</think>"
-REQUEST_TIMEOUT = 1000
+REQUEST_TIMEOUT = 3600
 
 class Model:
     

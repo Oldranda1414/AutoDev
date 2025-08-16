@@ -8,8 +8,7 @@ from services.output.console import PrintType, cli_print
 from services.output.file import create_file, write_file
 from errors import ExeededAttemptsError
 
-ATTEMPTS = 10
-# TODO save how many attempts it took
+ATTEMPTS = 3
 
 def add_config(model_name: str, project_path: str, prompt_path: str):
     model = Model(model_name)
