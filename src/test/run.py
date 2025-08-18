@@ -52,10 +52,11 @@ def _run_model_tests(category: str, model: str):
     _run_simulation(category, model)
 
 def _run_simulation(category: str, model: str):
-    _update_results(f"----results for category {category} and model {model}----")
     for space in SPACES:
         for simulation_index in range(1, N_SIMULATION + 1):
             if not _is_done(space, model, category, simulation_index):
+                if simulation_index == 1:
+                    _update_results(f"----results for category {category} and model {model}----")
                 command = run(
                     path.TEST_SCRIPT + f" {path.SPACES_PATH}/{space} {model} {path.PROMPTS_PATH}/{category}.json",
                     shell=True,

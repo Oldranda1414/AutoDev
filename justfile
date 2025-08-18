@@ -9,13 +9,10 @@ default:
 run *args:
     uv --project src run src/main/main.py {{args}}
 
-# Run the test script and create a log file for it
+# Run the test script
 [no-exit-message]
 test *args:
-    log_file="src/test/results/logs/test-$(date +'%Y-%m-%d_%H-%M-%S').log" ; \
-    uv --project src run src/test/main.py {{args}} 2>&1 \
-        | ts '[%Y-%m-%d %H:%M:%S]' \
-        >"$log_file"
+    uv --project src run src/test/main.py {{args}}
 
 # Run uv with correct project path
 [no-exit-message]
