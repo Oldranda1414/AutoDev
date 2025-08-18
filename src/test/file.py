@@ -20,3 +20,6 @@ def add_line_to_file(file_path: str, additional_contents: str):
 
 def file_exists(path: str) -> bool:
     return os.path.exists(path)
+
+def remove_dir(path: str):
+    shutil.rmtree(path, ignore_errors=True)

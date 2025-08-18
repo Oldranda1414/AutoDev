@@ -9,8 +9,8 @@ TEST_SCRIPT="$WORKSPACE_DIR/test.sh"
 TEMP_SCRIPT="$SCRIPT_DIR/space/test.sh"
 
 # Clean project dir
-rm $WORKSPACE_DIR/flake.nix
-rm $WORKSPACE_DIR/flake.lock
+rm -f $WORKSPACE_DIR/flake.nix
+rm -f $WORKSPACE_DIR/flake.lock
 
 git init $WORKSPACE_DIR
 

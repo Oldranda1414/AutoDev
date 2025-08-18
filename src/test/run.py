@@ -6,14 +6,14 @@ from datetime import datetime
 
 from list.categories import CATEGORIES
 from list.models import MODELS
-from list.spaces import TEST_SPACES
-from file import move_and_rename, add_line_to_file, file_exists
+from list.spaces import SPACES
+from file import move_and_rename, add_line_to_file, file_exists, remove_dir
 
 N_SIMULATION = 5
 TEST_DIR_PATH = os.path.dirname(os.path.realpath(__file__))
 TEST_SCRIPT = f"{TEST_DIR_PATH}/test.sh"
 PROMPTS_PATH = f"{TEST_DIR_PATH}/prompts"
-SPACE_PATH = f"{TEST_DIR_PATH}/space"
+SPACES_PATH = f"{TEST_DIR_PATH}/space"
 RESULTS_PATH = f"{TEST_DIR_PATH}/results"
 RESULTS_FILE = f"{RESULTS_PATH}/results.txt"
 
@@ -36,6 +36,7 @@ def run_tests(category: Optional[str] = None, model: Optional[str] = None):
             "---------------------------------------------"
         )
     except KeyboardInterrupt:
+        _clean_spaces()
         print("Process interrupted by user. Exiting gracefully.")
         _update_results(
             f"\nTESTS INTERRUPTED BY USER AT {_now()}",
@@ -58,20 +59,20 @@ def _run_model_tests(category: str, model: str):
 def _run_simulation(category: str, model: str):
     print(f"running test for category {category} and model {model}")
     _update_results(f"----results for category {category} and model {model}----")
-    for test_space in TEST_SPACES:
+    for space in SPACES:
         for simulation_index in range(1, N_SIMULATION + 1):
-            if not _is_done(test_space, model, category, simulation_index):
+            if not _is_done(space, model, category, simulation_index):
                 command = run(
-                    TEST_SCRIPT + f" {SPACE_PATH}/{test_space} {model} {PROMPTS_PATH}/{category}.json",
+                    TEST_SCRIPT + f" {SPACES_PATH}/{space} {model} {PROMPTS_PATH}/{category}.json",
                     shell=True,
                     # stdout=DEVNULL,
                     # stderr=DEVNULL
                 )
-                _save_result(category, model, test_space, simulation_index, command.returncode == 0)
+                _save_result(category, model, space, simulation_index, command.returncode == 0)
 
 def _save_result(category: str, model: str, space: str, index: int, result: bool):
     _update_results(f"--{_now()}-- simulation {index}: {result}")
-    move_and_rename(f"{SPACE_PATH}/{space}/flake.nix", _result_path(space, model, category, index), "file was not generated")
+    move_and_rename(f"{SPACES_PATH}/{space}/flake.nix", _result_path(space, model, category, index), "file was not generated")
 
 def _is_done(space: str, model: str, category: str, index: int):
     file_exists(_result_path(space, model, category, index))
@@ -85,4 +86,8 @@ def _update_results(*contents: str):
 
 def _now() -> str:
         return datetime.today().strftime('%Y-%m-%d %H:%M:%S')
+
+def _clean_spaces():
+    for space in SPACES:
+        remove_dir(f"{SPACES_PATH}/{space}/.git")
 

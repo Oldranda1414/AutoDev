@@ -15,7 +15,7 @@ test *args:
     log_file="src/test/results/logs/test-$(date +'%Y-%m-%d_%H-%M-%S').log" ; \
     uv --project src run src/test/main.py {{args}} 2>&1 \
         | ts '[%Y-%m-%d %H:%M:%S]' \
-        | tee "$log_file"
+        >"$log_file"
 
 # Run uv with correct project path
 [no-exit-message]

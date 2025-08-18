@@ -1,4 +1,4 @@
-TEST_SPACES = [
+SPACES = [
             "acceptance_testing",
             "advanced_programming",
             "basic",
