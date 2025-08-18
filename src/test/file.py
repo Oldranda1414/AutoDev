@@ -23,3 +23,6 @@ def file_exists(path: str) -> bool:
 
 def remove_dir(path: str):
     shutil.rmtree(path, ignore_errors=True)
+
+def remove_file(path: str):
+    os.remove("demofile.txt")
