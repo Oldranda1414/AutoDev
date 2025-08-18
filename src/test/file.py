@@ -25,4 +25,5 @@ def remove_dir(path: str):
     shutil.rmtree(path, ignore_errors=True)
 
 def remove_file(path: str):
-    os.remove("demofile.txt")
+    if os.path.exists(path):
+        os.remove(path)

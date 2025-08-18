@@ -1,6 +1,7 @@
 from path import SPACES_PATH
 from list.spaces import SPACES
-from file import remove_file
+from file import remove_file, remove_dir
+from subprocess import run, DEVNULL
 
 def clean():
     for space in SPACES:

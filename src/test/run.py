@@ -10,16 +10,21 @@ from list.spaces import SPACES
 from file import move_and_rename, add_line_to_file, file_exists, remove_dir
 from clean import clean
 import path
+from logger import Logger
+from test import test
 
 N_SIMULATION = 5
+LOG_FILE = f"{path.LOG_PATH}/{datetime.now().strftime('%Y-%m-%d_%H-%M-%S.log')}"
+sys.stdout = Logger(LOG_FILE)
+sys.stderr = Logger(LOG_FILE)
 
 def run_tests(category: Optional[str] = None, model: Optional[str] = None):
+    _update_results(
+        "---------------------------------------------",
+        f"TESTS STARTED AT {_now()}",
+        "\n"
+    )
     try:
-        _update_results(
-            "---------------------------------------------",
-            f"TESTS STARTED AT {_now()}",
-            "\n"
-        )
         if category:
             if model:
                 _run_model_tests(category, model)
@@ -27,10 +32,6 @@ def run_tests(category: Optional[str] = None, model: Optional[str] = None):
                 _run_category_tests(category)
         else:
             _run_all_tests()
-        _update_results(
-            f"TESTS FINISHED AT {_now()}",
-            "---------------------------------------------"
-        )
     except KeyboardInterrupt:
         clean()
         _update_results(
@@ -38,6 +39,10 @@ def run_tests(category: Optional[str] = None, model: Optional[str] = None):
             "---------------------------------------------"
         )
         sys.exit(0)
+    _update_results(
+        f"TESTS FINISHED AT {_now()}",
+        "---------------------------------------------"
+    )
 
 def _run_all_tests():
     for category in CATEGORIES:
@@ -56,14 +61,13 @@ def _run_simulation(category: str, model: str):
         for simulation_index in range(1, N_SIMULATION + 1):
             if not _is_done(space, model, category, simulation_index):
                 if simulation_index == 1:
-                    _update_results(f"----results for category {category} and model {model}----")
-                command = run(
-                    path.TEST_SCRIPT + f" {path.SPACES_PATH}/{space} {model} {path.PROMPTS_PATH}/{category}.json",
-                    shell=True,
-                    # stdout=DEVNULL,
-                    # stderr=DEVNULL
-                )
-                _save_result(category, model, space, simulation_index, command.returncode == 0)
+                    _update_results(f"----results for category {category}, model {model} and space {space}----")
+                result = test(model, category, space)
+                if result.stdout:
+                    sys.stdout.write(result.stdout)
+                if result.stderr:
+                    sys.stderr.write(result.stderr)
+                _save_result(category, model, space, simulation_index, result.returncode == 0)
 
 def _save_result(category: str, model: str, space: str, index: int, result: bool):
     _update_results(f"--{_now()}-- simulation {index}: {result}")
@@ -80,5 +84,5 @@ def _update_results(*contents: str):
         add_line_to_file(path.RESULTS_FILE, line)
 
 def _now() -> str:
-        return datetime.today().strftime('%Y-%m-%d %H:%M:%S')
+    return datetime.today().strftime('%Y-%m-%d %H:%M:%S')
 

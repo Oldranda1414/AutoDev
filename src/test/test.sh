@@ -12,7 +12,7 @@ TEMP_SCRIPT="$SCRIPT_DIR/space/test.sh"
 rm -f $WORKSPACE_DIR/flake.nix
 rm -f $WORKSPACE_DIR/flake.lock
 
-git init $WORKSPACE_DIR
+git init $WORKSPACE_DIR -q
 
 mv $TEST_SCRIPT $TEMP_SCRIPT
 
