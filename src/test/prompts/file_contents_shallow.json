@@ -1,0 +1,6 @@
+{
+  "depth" : 100,
+  "premise" : "Generate the contents of a flake.nix file that defines the development environment for the following project.\nThe development enviroment should be started with 'nix develop'.\nThis is the project tree:\n<project_tree>\nThe following are the project directory contents:\n",
+  "conclusion" : "Generate only the contents of the flake.nix file, nothing more.\nI want to copy your answer directly into the file and have it working, so don't tell me anything more, please.\nDo not encapsulate the answer with ``` and don't add any final comments.\nOnly output working nix code.",
+  "fsobject" : "this is the name of the file/folder: <fso_name>.\nthese are it's contents if it is a file:\n```\n<fso_contents>\n```\n"
+}

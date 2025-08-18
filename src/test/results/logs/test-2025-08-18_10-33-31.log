@@ -1,0 +1,4 @@
+[2025-08-18 10:33:31] Traceback (most recent call last):
+[2025-08-18 10:33:31]   File "/home/leonardo/Uni/asmd/progetto/src/test/main.py", line 3, in <module>
+[2025-08-18 10:33:31]     from categories import CATEGORIES
+[2025-08-18 10:33:31] ModuleNotFoundError: No module named 'categories'

@@ -17,3 +17,6 @@ def add_line_to_file(file_path: str, additional_contents: str):
     # Open in append mode so we don't overwrite
     with open(file_path, "a", encoding="utf-8") as f:
         f.write(additional_contents)
+
+def file_exists(path: str) -> bool:
+    return os.path.exists(path)

@@ -22,6 +22,8 @@
         mermaid-cli
         # modern command runner
         just
+        # for ts cli command (timestamp logging)
+        moreutils
       ];
 
       shellHook = ''

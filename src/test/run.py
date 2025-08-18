@@ -2,25 +2,28 @@ import os
 import sys
 from typing import Optional
 from subprocess import run, DEVNULL
-from enum import Enum
 from datetime import datetime
 
-from categories import CATEGORIES
-from models import MODELS
-from test_spaces import TEST_SPACES
-from file import move_and_rename, add_line_to_file
+from list.categories import CATEGORIES
+from list.models import MODELS
+from list.spaces import TEST_SPACES
+from file import move_and_rename, add_line_to_file, file_exists
 
 N_SIMULATION = 5
 TEST_DIR_PATH = os.path.dirname(os.path.realpath(__file__))
 TEST_SCRIPT = f"{TEST_DIR_PATH}/test.sh"
-RESULTS_PATH = "./test_results/results.txt"
+PROMPTS_PATH = f"{TEST_DIR_PATH}/prompts"
+SPACE_PATH = f"{TEST_DIR_PATH}/space"
+RESULTS_PATH = f"{TEST_DIR_PATH}/results"
+RESULTS_FILE = f"{RESULTS_PATH}/results.txt"
 
 def run_tests(category: Optional[str] = None, model: Optional[str] = None):
     try:
-        now = datetime.today().strftime('%Y-%m-%d %H:%M:%S')
-        add_line_to_file(RESULTS_PATH, "---------------------------------------------")
-        add_line_to_file(RESULTS_PATH, f"TESTS STARTED AT {now}")
-        add_line_to_file(RESULTS_PATH, f"\n")
+        _update_results(
+            "---------------------------------------------",
+            f"TESTS STARTED AT {_now()}",
+            "\n"
+        )
         if category:
             if model:
                 _run_model_tests(category, model)
@@ -28,14 +31,16 @@ def run_tests(category: Optional[str] = None, model: Optional[str] = None):
                 _run_category_tests(category)
         else:
             _run_all_tests()
-        now = datetime.today().strftime('%Y-%m-%d %H:%M:%S')
-        add_line_to_file(RESULTS_PATH, f"TESTS FINISHED AT {now}")
-        add_line_to_file(RESULTS_PATH, "---------------------------------------------")
+        _update_results(
+            f"TESTS FINISHED AT {_now()}",
+            "---------------------------------------------"
+        )
     except KeyboardInterrupt:
         print("Process interrupted by user. Exiting gracefully.")
-        now = datetime.today().strftime('%Y-%m-%d %H:%M:%S')
-        add_line_to_file(RESULTS_PATH, f"\nTESTS INTERRUPTED BY USER AT {now}")
-        add_line_to_file(RESULTS_PATH, "---------------------------------------------")
+        _update_results(
+            f"\nTESTS INTERRUPTED BY USER AT {_now()}",
+            "---------------------------------------------"
+        )
         sys.exit(0)
 
 def _run_all_tests():
@@ -52,28 +57,32 @@ def _run_model_tests(category: str, model: str):
 
 def _run_simulation(category: str, model: str):
     print(f"running test for category {category} and model {model}")
-    simulation_start_tag = f"----results for category {category} and model {model}----"
-    _update_results(simulation_start_tag)
+    _update_results(f"----results for category {category} and model {model}----")
     for test_space in TEST_SPACES:
-        accepted = 0
-        for simulation_index in range(N_SIMULATION):
-            command = run(
-                TEST_SCRIPT + f" ./test_space/{test_space} {model} {TEST_DIR_PATH}/prompts/{category}.json",
-                shell=True,
-                stdout=DEVNULL,
-                stderr=DEVNULL
-            )
-            if command.returncode == 0:
-                accepted = accepted + 1
-            _save_result(category, model, test_space, simulation_index, command.returncode == 0)
-        simulation_summary = f"----test for category {category}, model {model} and test_space {test_space} has resulted in {accepted/N_SIMULATION} success rate.----"
-        _update_results(simulation_summary)
+        for simulation_index in range(1, N_SIMULATION + 1):
+            if not _is_done(test_space, model, category, simulation_index):
+                command = run(
+                    TEST_SCRIPT + f" {SPACE_PATH}/{test_space} {model} {PROMPTS_PATH}/{category}.json",
+                    shell=True,
+                    # stdout=DEVNULL,
+                    # stderr=DEVNULL
+                )
+                _save_result(category, model, test_space, simulation_index, command.returncode == 0)
 
-def _save_result(category: str, model: str, test_space: str, index: int, result: bool):
-    step_summary = f"simulation {index}: {result}"
-    _update_results(step_summary)
-    move_and_rename(f"./test_space/{test_space}/flake.nix", f"test_results/{test_space}/{model}/{category}/flake_{index}.nix", "file was not generated")
+def _save_result(category: str, model: str, space: str, index: int, result: bool):
+    _update_results(f"--{_now()}-- simulation {index}: {result}")
+    move_and_rename(f"{SPACE_PATH}/{space}/flake.nix", _result_path(space, model, category, index), "file was not generated")
 
-def _update_results(contents: str):
-    add_line_to_file(RESULTS_PATH, contents)
+def _is_done(space: str, model: str, category: str, index: int):
+    file_exists(_result_path(space, model, category, index))
+
+def _result_path(space: str, model: str, category: str, index: int):
+    return f"{RESULTS_PATH}/{space}/{model}/{category}/flake_{index}.nix"
+
+def _update_results(*contents: str):
+    for line in contents:
+        add_line_to_file(RESULTS_FILE, line)
+
+def _now() -> str:
+        return datetime.today().strftime('%Y-%m-%d %H:%M:%S')
 

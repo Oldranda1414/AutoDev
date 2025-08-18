@@ -1,0 +1,13 @@
+[2025-08-18 10:33:54] Traceback (most recent call last):
+[2025-08-18 10:33:54]   File "/home/leonardo/Uni/asmd/progetto/src/test/main.py", line 54, in <module>
+[2025-08-18 10:33:54]     main()
+[2025-08-18 10:33:54]   File "/home/leonardo/Uni/asmd/progetto/src/test/main.py", line 10, in main
+[2025-08-18 10:33:54]     run_tests(category, model)
+[2025-08-18 10:33:54]   File "/home/leonardo/Uni/asmd/progetto/src/test/run.py", line 22, in run_tests
+[2025-08-18 10:33:54]     _update_results(
+[2025-08-18 10:33:54]   File "/home/leonardo/Uni/asmd/progetto/src/test/run.py", line 84, in _update_results
+[2025-08-18 10:33:54]     add_line_to_file(RESULTS_PATH, line)
+[2025-08-18 10:33:54]   File "/home/leonardo/Uni/asmd/progetto/src/test/file.py", line 18, in add_line_to_file
+[2025-08-18 10:33:54]     with open(file_path, "a", encoding="utf-8") as f:
+[2025-08-18 10:33:54]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-08-18 10:33:54] IsADirectoryError: [Errno 21] Is a directory: '/home/leonardo/Uni/asmd/progetto/src/test/results'

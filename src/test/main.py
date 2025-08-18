@@ -1,7 +1,7 @@
 import sys
 
-from categories import CATEGORIES
-from models import MODELS
+from list.categories import CATEGORIES
+from list.models import MODELS
 from run import run_tests
 
 def main():

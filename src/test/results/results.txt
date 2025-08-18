@@ -1,0 +1,7 @@
+---------------------------------------------
+TESTS STARTED AT 2025-08-18 10:34:59
+
+----results for category directory_structure_deep and model llama3----
+
+TESTS INTERRUPTED BY USER AT 2025-08-18 10:37:13
+---------------------------------------------
