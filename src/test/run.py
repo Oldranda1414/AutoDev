@@ -64,8 +64,10 @@ def _run_simulation(category: str, model: str):
                     _update_results(f"----results for category {category}, model {model} and space {space}----")
                 result = test(model, category, space)
                 if result.stdout:
+                    sys.stdout.write("stdout:\n")
                     sys.stdout.write(result.stdout)
                 if result.stderr:
+                    sys.stdout.write("stderr:\n")
                     sys.stderr.write(result.stderr)
                 _save_result(category, model, space, simulation_index, result.returncode == 0)
 
@@ -73,10 +75,10 @@ def _save_result(category: str, model: str, space: str, index: int, result: bool
     _update_results(f"--{_now()}-- simulation {index}: {result}")
     move_and_rename(f"{path.SPACES_PATH}/{space}/flake.nix", _result_path(space, model, category, index), "file was not generated")
 
-def _is_done(space: str, model: str, category: str, index: int):
-    file_exists(_result_path(space, model, category, index))
+def _is_done(space: str, model: str, category: str, index: int) -> bool:
+    return file_exists(_result_path(space, model, category, index))
 
-def _result_path(space: str, model: str, category: str, index: int):
+def _result_path(space: str, model: str, category: str, index: int) -> str:
     return f"{path.RESULTS_PATH}/{space}/{model}/{category}/flake_{index}.nix"
 
 def _update_results(*contents: str):
