@@ -1,0 +1,62 @@
+---------------------------------------------
+TESTS STARTED AT 2025-08-18 14:06:42
+
+----results for category directory_structure_deep, model llama3 and space acceptance_testing----
+--2025-08-18 14:09:56-- simulation 1: False
+--2025-08-18 14:13:14-- simulation 2: False
+--2025-08-18 14:16:48-- simulation 3: False
+--2025-08-18 14:21:39-- simulation 4: False
+--2025-08-18 14:26:27-- simulation 5: False
+----results for category directory_structure_deep, model llama3 and space advanced_programming----
+--2025-08-18 14:31:53-- simulation 1: False
+--2025-08-18 14:37:16-- simulation 2: False
+--2025-08-18 14:42:06-- simulation 3: False
+--2025-08-18 14:46:59-- simulation 4: False
+--2025-08-18 14:51:59-- simulation 5: False
+----results for category directory_structure_deep, model llama3 and space basic----
+--2025-08-18 14:55:08-- simulation 1: False
+--2025-08-18 14:58:26-- simulation 2: False
+--2025-08-18 15:01:27-- simulation 3: False
+--2025-08-18 15:04:06-- simulation 4: False
+--2025-08-18 15:07:46-- simulation 5: False
+----results for category directory_structure_deep, model llama3 and space integration_testing----
+--2025-08-18 15:12:52-- simulation 1: False
+--2025-08-18 15:17:10-- simulation 2: False
+--2025-08-18 15:21:10-- simulation 3: False
+--2025-08-18 15:26:37-- simulation 4: False
+--2025-08-18 15:31:10-- simulation 5: False
+----results for category directory_structure_deep, model llama3 and space llm_advanced----
+--2025-08-18 15:38:40-- simulation 1: False
+--2025-08-18 15:45:44-- simulation 2: False
+--2025-08-18 15:52:07-- simulation 3: False
+--2025-08-18 15:59:15-- simulation 4: False
+--2025-08-18 16:06:17-- simulation 5: False
+----results for category directory_structure_deep, model llama3 and space llm_intro----
+--2025-08-18 16:12:33-- simulation 1: False
+--2025-08-18 16:18:08-- simulation 2: False
+--2025-08-18 16:23:33-- simulation 3: False
+--2025-08-18 16:28:53-- simulation 4: False
+--2025-08-18 16:34:02-- simulation 5: False
+----results for category directory_structure_deep, model llama3 and space models----
+--2025-08-18 16:40:56-- simulation 1: False
+--2025-08-18 16:48:01-- simulation 2: False
+--2025-08-18 16:55:51-- simulation 3: False
+--2025-08-18 17:03:28-- simulation 4: False
+--2025-08-18 17:09:55-- simulation 5: False
+----results for category directory_structure_deep, model llama3 and space scafi----
+--2025-08-18 17:14:35-- simulation 1: False
+--2025-08-18 17:19:45-- simulation 2: False
+--2025-08-18 17:24:24-- simulation 3: False
+--2025-08-18 17:30:10-- simulation 4: False
+--2025-08-18 17:34:35-- simulation 5: False
+----results for category directory_structure_deep, model qwen3 and space acceptance_testing----
+--2025-08-18 18:34:39-- simulation 1: False
+--2025-08-18 19:30:13-- simulation 2: False
+--2025-08-18 19:53:42-- simulation 3: False
+--2025-08-18 20:21:35-- simulation 4: False
+--2025-08-18 21:32:48-- simulation 5: False
+----results for category directory_structure_deep, model qwen3 and space advanced_programming----
+--2025-08-18 22:08:54-- simulation 1: False
+
+TESTS INTERRUPTED BY USER AT 2025-08-18 22:38:50
+---------------------------------------------
