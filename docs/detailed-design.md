@@ -9,9 +9,9 @@ Python is the de-facto standard language for Machine Learning and LLM APIs.
 
 Python also has a good cli interface generator in the [docopt package](https://github.com/jazzband/docopt-ng).
 
-Python is a simple and easy to use language, often used to create simple working prototypes.
+Python is a simple and easy to use language, often used to create simple proof-of-work prototypes.
 
-Since the project has a rather small scope, it's goals are to test and prototype the concept and for the good available libraries python is the chosen language for this project.
+Since the project has a rather small scope, it's goals are to test and prototype the concept and given the good available libraries python is the chosen language for this project.
 
 ## Modules
 

@@ -9,9 +9,9 @@ title: Conclusion
 
 Although the projects used are a good sample of non trivial projects, as a dataset they do lack in variety, being mainly centered on sbt (scala/java) projects. Other projects could be added to the dataset to test for other languages and tech stacks.
 
-Also when in the tests where the file contents where provided in the prompt, a `test.sh` file was always listed, containing the actual test commands that would be run to test the generated dev env config. The presence of such explicit testing files might have helped AutoDev's generation and in real applications they might not be present. Further testing could be done by not providing these files through the prompt and see if the generation quality diminishes.
-
 The idea of providing the models multiple attempts to generate working code was implemented late in development. For this reason data about how many attempts where necessary to for every test conditions to generate correct code was not recorded. It might be interesting to repeat the test and collecting data on attempt numbers as this could be a good insight in model performances.
+
+TODO say that you wanted to do simulations but couldn't
 
 ### Improve prompt customization
 

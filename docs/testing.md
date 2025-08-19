@@ -29,7 +29,6 @@ Because of the nature of tests, i.e. running LLMs locally, test runtime can be q
 All test will be run with the following strategies:
 
 - Laboratories for the [__Advanced Software Modelling and Design__](https://www.unibo.it/it/studiare/insegnamenti-competenze-trasversali-moocs/insegnamenti/insegnamento/2025/483706) as test projects. These projects are a good testing ground for the abilities of LLMs to generate dev env configurations for non trivial projects.
-- All tests are being run multiple times in a Monte Carlo Simulation style to extrapolate success rates of various tests. This is necessary due to the stochastic nature of LLMs.
 - All the models made available through AutoDev have been tested for every category and lab.
 - A test is considered passed if commands that would be run in the development workflow execute correctly in the development enviroment obtained from the configuration AutoDev generated.
 
@@ -37,14 +36,22 @@ Since the LLM 'temperature' setting can be ambiguous when assessing different LL
 
 Given the above considerations, for every test category the number of tests being executed:
 
-projects number * simulations number * models number = 
+models * projects * categories * simulations = 6 * 8 * 6 = TODO put the total here
 
-<!-- TODO write here how many tests have been run in the end. Consider if this number should be calculated this way, or if the number of simulations should be removed from equation -->
-
-<!-- 10 labs -->
-
+## Projects
 
 ## Categories
+
+For every category, two actual subcategories where created:
+
+- deep: with a depth value of 100
+- shallow: with a depth value of 3
+
+All the test prompts are located at `src/test/prompts/`.
+
+The prompt json files are named as follows:
+
+`<category>_<subcategory>.json`
 
 The following test categories where identified.
 
@@ -52,7 +59,7 @@ The following test categories where identified.
 
 The prompt was completed with the contents of the project directory, as in directory structure and file names.
 
-These tests are located at `test/directory_structure/`.
+This prompt configuration is located at `src/test/prompts/directory_structure_deep.json`.
 
 ### Project files contents
 
@@ -68,19 +75,9 @@ The prompt also comprehends the project directory strucure and file contents, so
 
 These tests are located at `test/1_shot`
 
-### Test files provided
-
-TODO implement this?
-
-The prompt is composed by the contents of the `test.sh` files used to determine if the dev env works as expected.
-
-This method takes into consideration projects where end-to-end tests might be already been written, hoping that they are helpfull in generating the dev env config.
-
-<!-- TODO checkout this for prompt engeneering: https://www.promptingguide.ai/ -->
-
 ## Improvements
 
-During testing the following improvements where implemented.
+Initial testing proved the necessity of the following improvements.
 
 ### Response cleaning
 
@@ -94,7 +91,7 @@ Often LLMs struggle to provide a correct answer on the first attempt, but the 'c
 
 After the nix code is generated, it is parsed and validated using the `nix flake check` command. Eventual errors encountered are provided to the LLM to give it a chance to improve on it's provided code.
 
-A total of 10 attempts are done, by providing the error messate to the model and asking it to fix the errors, before giving up on generating the dev env config and notifing the user.
+A total of 3 attempts are done, by providing the error messate to the model and asking it to fix the errors, before giving up on generating the dev env config and notifing the user.
 
 [Back to index](./index.md) |
 [Previous Chapter](./implementation.md) |

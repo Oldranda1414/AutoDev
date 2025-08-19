@@ -58,5 +58,7 @@ nix develop
 
 To find out more on the usage of AutoDev, run the following command:
 
+```bash
 just run --help
+```
 
