@@ -6,6 +6,8 @@ from services.list import list
 from services.output.console import cli_print, PrintType, get_spinner, print_model_name_error
 from errors import ExeededAttemptsError, JsonValueTypeError, ModelAlreadyInstalledError, ModelNotInstalledError, OllamaNotInstalledError, PromptPathError, ModelNameError, MissingAttributesError, ModelNotInstalledError
 
+# TODO handle timeout error litellm.Timeout
+
 def generate_config(project_path: str, model: str, prompt_path: str):
     try:
         with get_spinner("Generating config..."):

@@ -20,6 +20,8 @@ uv --project src run $SCRIPT_DIR/../../src/main/main.py $WORKSPACE_DIR -m $MODEL
 
 mv $TEMP_SCRIPT $TEST_SCRIPT
 
+# TODO do not execute if AutoDev exit with wrong code
+
 nix develop $WORKSPACE_DIR --command $TEST_SCRIPT
 RESULT=$?
 

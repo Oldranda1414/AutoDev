@@ -1,9 +1,9 @@
 from subprocess import run, PIPE, CompletedProcess
-import path
+from path import TEST_SCRIPT, SPACES_PATH, PROMPTS_PATH
 
-def test(model: str, category: str, space: str) -> CompletedProcess:
+def execute_test(model: str, category: str, space: str) -> CompletedProcess:
     command = run(
-        path.TEST_SCRIPT + f" {path.SPACES_PATH}/{space} {model} {path.PROMPTS_PATH}/{category}.json",
+        TEST_SCRIPT + f" {SPACES_PATH}/{space} {model} {PROMPTS_PATH}/{category}.json",
         shell=True,
         stdout=PIPE,
         stderr=PIPE,

@@ -3,7 +3,7 @@ from list.spaces import SPACES
 from file import remove_file, remove_dir
 from subprocess import run, DEVNULL
 
-def clean():
+def clean_test_dir():
     for space in SPACES:
         remove_dir(f"{SPACES_PATH}/{space}/.git")
         run(

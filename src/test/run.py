@@ -1,27 +1,23 @@
-import os 
 import sys
 from typing import Optional
-from subprocess import run, DEVNULL
 from datetime import datetime
 
 from list.categories import CATEGORIES
 from list.models import MODELS
 from list.spaces import SPACES
-from file import move_and_rename, add_line_to_file, file_exists, remove_dir
-from clean import clean
-import path
+from clean import clean_test_dir
+from path import LOG_FILE
 from logger import Logger
-from test import test
+from test import execute_test
+from utils import now, update_results, is_done, save_result
 
-N_SIMULATION = 5
-LOG_FILE = f"{path.LOG_PATH}/{datetime.now().strftime('%Y-%m-%d_%H-%M-%S.log')}"
 sys.stdout = Logger(LOG_FILE)
 sys.stderr = Logger(LOG_FILE)
 
 def run_tests(category: Optional[str] = None, model: Optional[str] = None):
-    _update_results(
+    update_results(
         "---------------------------------------------",
-        f"TESTS STARTED AT {_now()}",
+        f"TESTS STARTED AT {now()}",
         "\n"
     )
     try:
@@ -33,14 +29,14 @@ def run_tests(category: Optional[str] = None, model: Optional[str] = None):
         else:
             _run_all_tests()
     except KeyboardInterrupt:
-        clean()
-        _update_results(
-            f"\nTESTS INTERRUPTED BY USER AT {_now()}",
+        clean_test_dir()
+        update_results(
+            f"\nTESTS INTERRUPTED BY USER AT {now()}",
             "---------------------------------------------"
         )
         sys.exit(0)
-    _update_results(
-        f"TESTS FINISHED AT {_now()}",
+    update_results(
+        f"TESTS FINISHED AT {now()}",
         "---------------------------------------------"
     )
 
@@ -58,33 +54,13 @@ def _run_model_tests(category: str, model: str):
 
 def _run_simulation(category: str, model: str):
     for space in SPACES:
-        for simulation_index in range(1, N_SIMULATION + 1):
-            if not _is_done(space, model, category, simulation_index):
-                if simulation_index == 1:
-                    _update_results(f"----results for category {category}, model {model} and space {space}----")
-                result = test(model, category, space)
-                if result.stdout:
-                    sys.stdout.write("stdout:\n")
-                    sys.stdout.write(result.stdout)
-                if result.stderr:
-                    sys.stdout.write("stderr:\n")
-                    sys.stderr.write(result.stderr)
-                _save_result(category, model, space, simulation_index, result.returncode == 0)
-
-def _save_result(category: str, model: str, space: str, index: int, result: bool):
-    _update_results(f"--{_now()}-- simulation {index}: {result}")
-    move_and_rename(f"{path.SPACES_PATH}/{space}/flake.nix", _result_path(space, model, category, index), "file was not generated")
-
-def _is_done(space: str, model: str, category: str, index: int) -> bool:
-    return file_exists(_result_path(space, model, category, index))
-
-def _result_path(space: str, model: str, category: str, index: int) -> str:
-    return f"{path.RESULTS_PATH}/{space}/{model}/{category}/flake_{index}.nix"
-
-def _update_results(*contents: str):
-    for line in contents:
-        add_line_to_file(path.RESULTS_FILE, line)
-
-def _now() -> str:
-    return datetime.today().strftime('%Y-%m-%d %H:%M:%S')
+        if not is_done(space, model, category):
+            result = execute_test(model, category, space)
+            if result.stdout:
+                sys.stdout.write("stdout:\n")
+                sys.stdout.write(result.stdout)
+            if result.stderr:
+                sys.stdout.write("stderr:\n")
+                sys.stderr.write(result.stderr)
+            save_result(category, model, space, result.returncode == 0)
 
