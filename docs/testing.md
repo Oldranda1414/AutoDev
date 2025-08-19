@@ -36,9 +36,11 @@ Since the LLM 'temperature' setting can be ambiguous when assessing different LL
 
 Given the above considerations, for every test category the number of tests being executed:
 
-models * projects * categories * simulations = 6 * 8 * 6 = TODO put the total here
+models * projects * categories = 6 * 8 * 6 = 288
 
 ## Projects
+
+TODO fill this up with project names and links
 
 ## Categories
 
