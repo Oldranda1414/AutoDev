@@ -49,5 +49,7 @@ In this project in particolar the choice of the python language seemd foregone b
 
 During the tail end of the project the design decisions started to feel a bit restrictive as many assumptions made at design time proved to be slightly incorrect. If the project had been far from finished, when these problems had arisen, a redesign would have been considered. Alas since the project was deemed to be close to completion and since the self imposed soft deadline was approaching the necessary redesign has not been executed. This approach proved to be origin of minor frustrations when the mistakes in the design where made obvious, but I believe it to have been a good example of unideal software development occurrences that happen way too often in real projects.
 
+TODO talk about scope creep
+
 [Back to index](./index.md) |
 [Previous Chapter](./testing.md) |
