@@ -5,12 +5,14 @@ from llm.model import Model
 from services.check import check_flake
 from services.generator import generate_config
 from services.output.console import PrintType, cli_print
-from services.output.file import create_file, write_file
-from errors import ExeededAttemptsError
+from services.output.file import create_file, file_exists, write_file
+from errors import ExceededAttemptsError, FlakeExistsError
 
 ATTEMPTS = 3
 
 def add_config(model_name: str, project_path: str, prompt_path: str):
+    if file_exists(f"{project_path}/flake.nix"):
+        raise FlakeExistsError(project_path)
     model = Model(model_name)
     contents = generate_config(model, project_path, prompt_path)
     create_file("flake.nix", contents, project_path)
@@ -22,7 +24,7 @@ def add_config(model_name: str, project_path: str, prompt_path: str):
     current_attempts = 0
     while not check_result.outcome:
         if current_attempts == ATTEMPTS:
-            raise ExeededAttemptsError(f"After {ATTEMPTS} attempts the model was unable to generate working nix code")
+            raise ExceededAttemptsError(model_name, ATTEMPTS)
         new_contents = model.ask(_get_fix_prompt(check_result.error))
         write_file("flake.nix", new_contents, project_path)
         check_result = check_flake(project_path)

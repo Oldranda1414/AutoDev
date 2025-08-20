@@ -29,7 +29,7 @@ def start():
                 stderr=DEVNULL
             )
         except FileNotFoundError:
-            raise OllamaNotInstalledError("Ollama does not seem to be installed on the system")
+            raise OllamaNotInstalledError()
         atexit.register(_stop_server)
 
         while not _is_running():
@@ -71,7 +71,7 @@ def install_model(model_name: str):
 def uninstall_model(model_name: str):
     start()
     if not is_model_installed(model_name):
-        raise ModelNotInstalledError(f"{model_name} model is not installed") 
+        raise ModelNotInstalledError(model_name) 
     run(
         ["ollama", "rm", model_name],
         stdout=DEVNULL,

@@ -41,7 +41,7 @@ Since the LLM must understand the project contents to generate the dev env confi
 
 During development the necessity to create custom exception types arose from the necessity of handling various usage errors in the correct manner, ensuring the user was correctly notified of the mistake.
 
-### Initial solution
+### First solution
 
 Initially custom 'per module' exception types where employed.
 
@@ -73,11 +73,25 @@ If a `module_c` is introduced, that depends on `module_b` and must catch custom 
 
 The second solution is preferabble but if the new exceptions defined in `module_b` are simple copy pastes of the exceptions defined by `module_a` this solutions seems to violate the DRY principle.
 
-### Final solution
+### Second solution
 
-Custom exceptions have been defined in their own module, and only the modules that need to throw or catch the exceptions import them.
+Custom exceptions have been defined in their own module, `errors.py`, and only the modules that need to throw or catch the exceptions import them.
 
 This allows the modules that catch the exceptions to only depend on the exceptions module and not depend on the modules that actually throw them.
+
+### Final solution
+
+During development the necessity to return different exit values based on the execution result of the tool arose from requirements.
+
+Also the presence of error text provided to the user in the handlers module appeard to be a major separation of concerns principle violation.
+
+For this reason a more powerfull error handling structure was implemented.
+
+TODO complete this
+
+- only services depend on the errors they throw, not the handlers
+- services can create the error passing helpful information
+- only errors module knows error code and message
 
 ## LLM Server Module
 
@@ -90,9 +104,6 @@ A new module, `server.py`, has been created to expose methods that can be used t
 ![llm server class diagram](./assets/mermaid/llm_server.png)
 
 This module is an implementation of the 'anti-curruption layer' pattern relative to the ollama server dependency, while the Model module is an 'anti-curruption layer' relative to the litellm dependency.
-
-# Termination
-TODO explain the termination module
 
 [Back to index](./index.md) |
 [Previous Chapter](./detailed-design.md) |

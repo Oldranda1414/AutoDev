@@ -42,7 +42,6 @@ def get_spinner(message: str):
     return _console.status(f"[bold green] {message} [/bold green]")
 
 def print_table(table: Table):
-
     rich_table = RichTable(show_header=True, header_style="bold magenta")
     for header in table.headers:
         rich_table.add_column(header)
@@ -50,12 +49,5 @@ def print_table(table: Table):
         rich_table.add_row(
             *row
         )
-
     _console.print(rich_table)
-
-def print_model_name_error(model: str):
-    cli_print(PrintType.ERROR,
-        f"Model name '{model}' is not a valid model name.",
-        "To see all valid model names run 'autodev --list'."
-    )
 

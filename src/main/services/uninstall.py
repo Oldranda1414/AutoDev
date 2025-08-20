@@ -4,7 +4,7 @@ from llm.model import model_names
 
 def uninstall(model_name: str):
     if not model_name in model_names:
-        raise ModelNameError
+        raise ModelNameError(model_name)
     if not is_model_installed(model_name):
-        raise ModelNotInstalledError
+        raise ModelNotInstalledError(model_name)
     uninstall_model(model_name)

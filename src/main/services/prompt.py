@@ -83,26 +83,26 @@ def get_prompt(prompt_path: str, project_path: str) -> str:
 def _extract_prompt(prompt_path: str) -> tuple[int, "_Prompt"]:
     extension = prompt_path.split(".")[-1]
     if not extension == "json":
-        raise PromptPathError("prompt_path must be a json type file path") 
+        raise PromptPathError(prompt_path) 
     if not os.path.exists(prompt_path):
-        raise PromptPathError("prompt_path provided must lead to an existing file") 
+        raise PromptPathError(prompt_path) 
     with open(prompt_path) as prompt_file:
         custom_prompt: dict[str, str] = json.load(prompt_file)
-    depth, prefix, conclusion, fso = _get_prompts(custom_prompt)
+    depth, prefix, conclusion, fso = _get_prompts(custom_prompt, prompt_path)
     return depth, _Prompt(prefix, conclusion, fso)
 
-def _get_prompts(custom_prompt: dict[str, str]) -> tuple[int, str, str, str]:
+def _get_prompts(custom_prompt: dict[str, str], prompt_path: str) -> tuple[int, str, str, str]:
     required_keys =  ["depth", "premise", "conclusion", "fsobject"]
     required_types = [int,     str,       str,          str]
 
     missing = [key for key in required_keys if key not in custom_prompt]
     if missing:
-        raise MissingAttributesError(missing)
+        raise MissingAttributesError(prompt_path)
 
     prompts = tuple[int, str, str, str]([custom_prompt[key] for key in required_keys])
     for index, required_type in enumerate(required_types):
         if not type(prompts[index]) == required_type:
-            raise JsonValueTypeError(f"The key {required_keys[index]} does not have a valid value assigned")
+            raise JsonValueTypeError(prompt_path)
     return prompts
     
 def _generate_fso_prompt(project_path: str, depth: int, tagged_fso_prompt: str):

@@ -4,7 +4,7 @@ from errors import ModelAlreadyInstalledError, ModelNameError
 
 def install(model_name: str):
     if not model_name in model_names:
-        raise ModelNameError
+        raise ModelNameError(model_name)
     if is_model_installed(model_name):
-        raise ModelAlreadyInstalledError
+        raise ModelAlreadyInstalledError(model_name)
     install_model(model_name)

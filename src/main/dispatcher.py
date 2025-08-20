@@ -28,9 +28,9 @@ def dispatch(args: Dict[str, str]):
             uninstall_model(uninstall_mode)
         else:
             init(quiet)
-            generate_config(project_path, model_name, prompt_path)
             if direnv:
                 generate_direnv(project_path)
+            generate_config(project_path, model_name, prompt_path)
     except KeyboardInterrupt:
         cli_print(PrintType.WARNING, "Process interrupted by user. Exiting gracefully.")
         sys.exit(0)

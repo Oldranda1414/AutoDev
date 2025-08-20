@@ -1,3 +1,8 @@
+import os
+
+def file_exists(path: str) -> bool:
+    return os.path.exists(path)
+
 def create_file(name: str, contents: str, path: str):
     complete_path: str
     if path:
