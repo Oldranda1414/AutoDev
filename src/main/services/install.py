@@ -1,6 +1,6 @@
 from llm.server import install_model, is_model_installed
 from llm.model import model_names
-from errors import ModelAlreadyInstalledError, ModelNameError
+from error.model import ModelAlreadyInstalledError, ModelNameError
 
 def install(model_name: str):
     if not model_name in model_names:

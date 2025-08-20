@@ -1,4 +1,4 @@
-from errors import ModelNameError, ModelNotInstalledError
+from error.model import ModelNameError, ModelNotInstalledError
 from llm.server import is_model_installed, uninstall_model
 from llm.model import model_names
 

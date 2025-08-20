@@ -4,7 +4,8 @@ from subprocess import Popen, run
 from subprocess import DEVNULL, TimeoutExpired
 import atexit
 
-from errors import OllamaNotInstalledError, ModelNotInstalledError
+from error.model import ModelNotInstalledError
+from error.depencency import OllamaNotInstalledError
 
 API_BASE = "http://localhost:11434"
 START_COMMAND = ["ollama","serve"]

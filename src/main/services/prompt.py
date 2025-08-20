@@ -1,7 +1,7 @@
 import os
 import json
 
-from errors import PromptPathError, MissingAttributesError, JsonValueTypeError
+from error.prompt import PromptPathError, MissingAttributesError, JsonValueTypeError
 from file_system import generate_fso_list
 from utils.tree import generate_project_tree
 

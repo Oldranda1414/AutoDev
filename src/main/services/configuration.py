@@ -6,7 +6,8 @@ from services.check import check_flake
 from services.generator import generate_config
 from services.output.console import PrintType, cli_print
 from services.output.file import create_file, file_exists, write_file
-from errors import ExceededAttemptsError, FlakeExistsError
+from error.file import FlakeExistsError
+from error.generation import ExceededAttemptsError
 
 ATTEMPTS = 3
 

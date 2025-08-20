@@ -1,7 +1,8 @@
 from litellm import completion
 from litellm.exceptions import Timeout
 
-from errors import ModelNameError, ModelNotInstalledError, ModelTimeoutError
+from error.model import ModelNameError, ModelNotInstalledError
+from error.generation import ModelTimeoutError
 
 from llm.server import get_api_base, get_server_model_name, is_model_installed 
 from llm.server import start as start_server

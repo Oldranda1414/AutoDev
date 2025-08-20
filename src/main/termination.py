@@ -1,6 +1,6 @@
 import sys
 from services.output.console import cli_print, PrintType
-from errors import AutoDevError
+from error.auto_dev import AutoDevError
 
 def exit_success():
     sys.exit(0)

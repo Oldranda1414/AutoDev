@@ -5,7 +5,8 @@ from services.uninstall import uninstall
 from services.list import list
 from services.output.console import cli_print, PrintType, get_spinner
 
-from errors import AutoDevError, ModelNotInstalledError
+from error.auto_dev import AutoDevError
+from error.model import ModelNotInstalledError
 from termination import exit_success, handle_exception
 
 def generate_config(project_path: str, model: str, prompt_path: str):
