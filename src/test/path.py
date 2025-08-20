@@ -11,4 +11,4 @@ LOG_PATH = f"{RESULTS_PATH}/logs"
 LOG_FILE = f"{LOG_PATH}/{datetime.now().strftime('%Y-%m-%d_%H-%M-%S.log')}"
 
 def result_path(space: str, model: str, category: str) -> str:
-    return f"{RESULTS_PATH}/{category}/{model}/{space}/flake.nix"
+    return f"{RESULTS_PATH}/flakes/{category}/{model}/{space}/flake.nix"
