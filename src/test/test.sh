@@ -17,10 +17,15 @@ git init $WORKSPACE_DIR -q
 mv $TEST_SCRIPT $TEMP_SCRIPT
 
 uv --project src run $SCRIPT_DIR/../../src/main/main.py $WORKSPACE_DIR -m $MODEL_NAME -p $PROMPT_PATH -q
+AUTODEV_EXIT_CODE=$?
 
 mv $TEMP_SCRIPT $TEST_SCRIPT
 
-# TODO do not execute if AutoDev exit with wrong code
+# Check if the uv command failed
+if [ $AUTODEV_EXIT_CODE -ne 0 ]; then
+    echo "AutoDev failed with exit code $AUTODEV_EXIT_CODE. Skipping nix develop."
+    exit $AUTODEV_EXIT_CODE
+fi
 
 nix develop $WORKSPACE_DIR --command $TEST_SCRIPT
 RESULT=$?
