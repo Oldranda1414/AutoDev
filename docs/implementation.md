@@ -100,7 +100,7 @@ This solution has the following advantages:
 - services raise the exception passing helpful information only they might posess (such as specific data about the error)
 - only errors module knows error codes and the related message
 
-The following graph goes a bit more in depth, showing the dependencies in the final solution.
+The following class diagram goes a bit more in depth, showing the dependencies in the final solution.
 
 ![File system design](./assets/mermaid/error.png)
 
