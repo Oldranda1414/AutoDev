@@ -1,5 +1,5 @@
 from litellm import completion
-from litellm.exceptions import Timeout
+from litellm.exceptions import APIConnectionError
 
 from error.model import ModelNameError, ModelNotInstalledError
 from error.generation import ModelTimeoutError
@@ -37,7 +37,7 @@ class Model:
             self.chat_history.append({ "content": response,"role": "assistant"})
             cleaned_response = _clean_response(response.choices[0].message.content)
             return cleaned_response
-        except Timeout:
+        except APIConnectionError:
             raise ModelTimeoutError(self.model_name, REQUEST_TIMEOUT)
 
 def _is_valid_name(model_name):
