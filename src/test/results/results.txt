@@ -1,0 +1,41 @@
+---------------------------------------------
+TESTS STARTED AT 2025-08-20 14:25:25
+
+--2025-08-20 14:29:08-- category directory_structure_deep model llama3 space acceptance_testing : False
+--2025-08-20 14:34:24-- category directory_structure_deep model llama3 space advanced_programming : False
+--2025-08-20 14:37:24-- category directory_structure_deep model llama3 space basic : False
+--2025-08-20 14:41:19-- category directory_structure_deep model llama3 space integration_testing : False
+--2025-08-20 14:48:35-- category directory_structure_deep model llama3 space llm_advanced : False
+--2025-08-20 14:52:49-- category directory_structure_deep model llama3 space llm_intro : False
+--2025-08-20 15:00:18-- category directory_structure_deep model llama3 space models : False
+--2025-08-20 15:05:24-- category directory_structure_deep model llama3 space scafi : False
+--2025-08-20 15:37:22-- category directory_structure_deep model qwen3 space acceptance_testing : False
+--2025-08-20 16:17:58-- category directory_structure_deep model qwen3 space advanced_programming : False
+--2025-08-20 16:39:19-- category directory_structure_deep model qwen3 space basic : False
+--2025-08-20 16:56:30-- category directory_structure_deep model qwen3 space integration_testing : False
+--2025-08-20 18:26:23-- category directory_structure_deep model qwen3 space llm_advanced : False
+--2025-08-20 18:50:23-- category directory_structure_deep model qwen3 space llm_intro : False
+--2025-08-20 19:20:26-- category directory_structure_deep model qwen3 space models : False
+--2025-08-20 19:43:50-- category directory_structure_deep model qwen3 space scafi : False
+--2025-08-20 19:45:38-- category directory_structure_deep model smollm2 space acceptance_testing : False
+--2025-08-20 20:45:42-- category directory_structure_deep model smollm2 space advanced_programming : False
+--2025-08-20 20:46:30-- category directory_structure_deep model smollm2 space basic : False
+--2025-08-20 20:48:05-- category directory_structure_deep model smollm2 space integration_testing : False
+--2025-08-20 21:48:08-- category directory_structure_deep model smollm2 space llm_advanced : False
+--2025-08-20 21:53:03-- category directory_structure_deep model smollm2 space llm_intro : False
+--2025-08-20 21:57:39-- category directory_structure_deep model smollm2 space models : False
+--2025-08-20 21:59:14-- category directory_structure_deep model smollm2 space scafi : False
+--2025-08-20 22:06:00-- category directory_structure_deep model phi4-mini space acceptance_testing : False
+--2025-08-20 22:11:29-- category directory_structure_deep model phi4-mini space advanced_programming : False
+--2025-08-20 22:14:03-- category directory_structure_deep model phi4-mini space basic : False
+--2025-08-20 22:20:14-- category directory_structure_deep model phi4-mini space integration_testing : False
+--2025-08-20 22:29:11-- category directory_structure_deep model phi4-mini space llm_advanced : False
+--2025-08-20 22:59:40-- category directory_structure_deep model phi4-mini space llm_intro : False
+--2025-08-20 23:06:34-- category directory_structure_deep model phi4-mini space models : False
+--2025-08-20 23:11:12-- category directory_structure_deep model phi4-mini space scafi : False
+--2025-08-21 00:11:16-- category directory_structure_deep model deepseek-r1 space acceptance_testing : False
+--2025-08-21 01:11:20-- category directory_structure_deep model deepseek-r1 space advanced_programming : False
+--2025-08-21 02:11:23-- category directory_structure_deep model deepseek-r1 space basic : False
+
+TESTS INTERRUPTED BY USER AT 2025-08-21 02:52:51
+---------------------------------------------

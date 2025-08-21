@@ -1,0 +1,756 @@
+[2025-08-20 14:29:08] stdout:
+[2025-08-20 14:29:08]  Model llama3 was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-20 14:34:24] stdout:
+[2025-08-20 14:34:24]  Model llama3 was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-20 14:37:24] stdout:
+[2025-08-20 14:37:24]  Model llama3 was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-20 14:41:19] stdout:
+[2025-08-20 14:41:19]  Model llama3 was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-20 14:48:35] stdout:
+[2025-08-20 14:48:35]  Model llama3 was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-20 14:52:49] stdout:
+[2025-08-20 14:52:49]  Model llama3 was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-20 15:00:18] stdout:
+[2025-08-20 15:00:18]  Model llama3 was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-20 15:05:24] stdout:
+[2025-08-20 15:05:24]  Model llama3 was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-20 15:37:22] stdout:
+[2025-08-20 15:37:22]  Model qwen3 was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-20 16:17:58] stdout:
+[2025-08-20 16:17:58]  Model qwen3 was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-20 16:39:19] stdout:
+[2025-08-20 16:39:19]  Model qwen3 was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-20 16:56:30] stdout:
+[2025-08-20 16:56:30]  Model qwen3 was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-20 18:26:23] stdout:
+[2025-08-20 18:26:23]  Model qwen3 was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-20 18:50:23] stdout:
+[2025-08-20 18:50:23]  Model qwen3 was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-20 19:20:26] stdout:
+[2025-08-20 19:20:26]  Model qwen3 was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-20 19:43:50] stdout:
+[2025-08-20 19:43:50]  Model qwen3 was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-20 19:45:38] stdout:
+[2025-08-20 19:45:38]  Model smollm2 was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-20 20:45:42] stdout:
+[2025-08-20 20:45:42] 
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+AutoDev failed with exit code 1. Skipping nix develop.
+[2025-08-20 20:45:42] stderr:
+[2025-08-20 20:45:42] Traceback (most recent call last):
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 103, in handle_request
+    return self._connection.handle_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpcore/_sync/http11.py", line 136, in handle_request
+    raise exc
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpcore/_sync/http11.py", line 106, in handle_request
+    ) = self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpcore/_sync/http11.py", line 177, in _receive_response_headers
+    event = self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpcore/_sync/http11.py", line 217, in _receive_event
+    data = self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpcore/_backends/sync.py", line 126, in read
+    with map_exceptions(exc_map):
+  File "/home/randa/.local/share/uv/python/cpython-3.11.13-linux-x86_64-gnu/lib/python3.11/contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/llms/custom_httpx/http_handler.py", line 761, in post
+    response = self.client.send(req, stream=stream)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpx/_transports/default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+  File "/home/randa/.local/share/uv/python/cpython-3.11.13-linux-x86_64-gnu/lib/python3.11/contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/llms/custom_httpx/llm_http_handler.py", line 171, in _make_common_sync_call
+    response = sync_httpx_client.post(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/llms/custom_httpx/http_handler.py", line 765, in post
+    raise litellm.Timeout(
+litellm.exceptions.Timeout: litellm.Timeout: Connection timed out after 3600.0 seconds.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/main.py", line 3086, in completion
+    response = base_llm_http_handler.completion(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/llms/custom_httpx/llm_http_handler.py", line 467, in completion
+    response = self._make_common_sync_call(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/llms/custom_httpx/llm_http_handler.py", line 198, in _make_common_sync_call
+    raise self._handle_error(e=e, provider_config=provider_config)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/llms/custom_httpx/llm_http_handler.py", line 2405, in _handle_error
+    raise provider_config.get_error_class(
+litellm.llms.ollama.common_utils.OllamaError: litellm.Timeout: Connection timed out after 3600.0 seconds.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/randa/AutoDev/src/test/../../src/main/main.py", line 9, in <module>
+    main()
+  File "/home/randa/AutoDev/src/test/../../src/main/main.py", line 6, in main
+    interface.main(sys.argv[1:])
+  File "/home/randa/AutoDev/src/main/interface.py", line 39, in main
+    dispatch(parsed_args)
+  File "/home/randa/AutoDev/src/main/dispatcher.py", line 33, in dispatch
+    generate_config(project_path, model_name, prompt_path)
+  File "/home/randa/AutoDev/src/main/handlers.py", line 15, in generate_config
+    add_config(model, project_path, prompt_path)
+  File "/home/randa/AutoDev/src/main/services/configuration.py", line 18, in add_config
+    contents = generate_config(model, project_path, prompt_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/main/services/generator.py", line 6, in generate_config
+    response = model.ask(prompt)
+               ^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/main/llm/model.py", line 31, in ask
+    response = completion(
+               ^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/utils.py", line 1307, in wrapper
+    raise e
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/utils.py", line 1182, in wrapper
+    result = original_function(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/main.py", line 3430, in completion
+    raise exception_type(
+          ^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2301, in exception_type
+    raise e
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2270, in exception_type
+    raise APIConnectionError(
+litellm.exceptions.APIConnectionError: litellm.APIConnectionError: OllamaException - litellm.Timeout: Connection timed out after 3600.0 seconds.
+[2025-08-20 20:46:30] stdout:
+[2025-08-20 20:46:30]  Model smollm2 was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-20 20:48:05] stdout:
+[2025-08-20 20:48:05]  Model smollm2 was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-20 21:48:08] stdout:
+[2025-08-20 21:48:08] 
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+AutoDev failed with exit code 1. Skipping nix develop.
+[2025-08-20 21:48:08] stderr:
+[2025-08-20 21:48:08] Traceback (most recent call last):
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 103, in handle_request
+    return self._connection.handle_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpcore/_sync/http11.py", line 136, in handle_request
+    raise exc
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpcore/_sync/http11.py", line 106, in handle_request
+    ) = self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpcore/_sync/http11.py", line 177, in _receive_response_headers
+    event = self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpcore/_sync/http11.py", line 217, in _receive_event
+    data = self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpcore/_backends/sync.py", line 126, in read
+    with map_exceptions(exc_map):
+  File "/home/randa/.local/share/uv/python/cpython-3.11.13-linux-x86_64-gnu/lib/python3.11/contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/llms/custom_httpx/http_handler.py", line 761, in post
+    response = self.client.send(req, stream=stream)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpx/_transports/default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+  File "/home/randa/.local/share/uv/python/cpython-3.11.13-linux-x86_64-gnu/lib/python3.11/contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/llms/custom_httpx/llm_http_handler.py", line 171, in _make_common_sync_call
+    response = sync_httpx_client.post(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/llms/custom_httpx/http_handler.py", line 765, in post
+    raise litellm.Timeout(
+litellm.exceptions.Timeout: litellm.Timeout: Connection timed out after 3600.0 seconds.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/main.py", line 3086, in completion
+    response = base_llm_http_handler.completion(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/llms/custom_httpx/llm_http_handler.py", line 467, in completion
+    response = self._make_common_sync_call(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/llms/custom_httpx/llm_http_handler.py", line 198, in _make_common_sync_call
+    raise self._handle_error(e=e, provider_config=provider_config)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/llms/custom_httpx/llm_http_handler.py", line 2405, in _handle_error
+    raise provider_config.get_error_class(
+litellm.llms.ollama.common_utils.OllamaError: litellm.Timeout: Connection timed out after 3600.0 seconds.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/randa/AutoDev/src/test/../../src/main/main.py", line 9, in <module>
+    main()
+  File "/home/randa/AutoDev/src/test/../../src/main/main.py", line 6, in main
+    interface.main(sys.argv[1:])
+  File "/home/randa/AutoDev/src/main/interface.py", line 39, in main
+    dispatch(parsed_args)
+  File "/home/randa/AutoDev/src/main/dispatcher.py", line 33, in dispatch
+    generate_config(project_path, model_name, prompt_path)
+  File "/home/randa/AutoDev/src/main/handlers.py", line 15, in generate_config
+    add_config(model, project_path, prompt_path)
+  File "/home/randa/AutoDev/src/main/services/configuration.py", line 18, in add_config
+    contents = generate_config(model, project_path, prompt_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/main/services/generator.py", line 6, in generate_config
+    response = model.ask(prompt)
+               ^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/main/llm/model.py", line 31, in ask
+    response = completion(
+               ^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/utils.py", line 1307, in wrapper
+    raise e
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/utils.py", line 1182, in wrapper
+    result = original_function(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/main.py", line 3430, in completion
+    raise exception_type(
+          ^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2301, in exception_type
+    raise e
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2270, in exception_type
+    raise APIConnectionError(
+litellm.exceptions.APIConnectionError: litellm.APIConnectionError: OllamaException - litellm.Timeout: Connection timed out after 3600.0 seconds.
+[2025-08-20 21:53:03] stdout:
+[2025-08-20 21:53:03]  Model smollm2 was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-20 21:57:39] stdout:
+[2025-08-20 21:57:39]  Model smollm2 was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-20 21:59:14] stdout:
+[2025-08-20 21:59:14]  Model smollm2 was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-20 22:06:00] stdout:
+[2025-08-20 22:06:00]  phi4-mini model is not installed yet. 
+[2025-08-20 22:06:00] stderr:
+[2025-08-20 22:06:00] path '/home/randa/AutoDev/src/test/space/acceptance_testing' does not contain a 'flake.nix', searching up
+error: path '/home/randa/AutoDev/src/test/space/acceptance_testing' is not part of a flake (neither it nor its parent directories contain a 'flake.nix' file)
+[2025-08-20 22:11:29] stdout:
+[2025-08-20 22:11:29]  Model phi4-mini was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-20 22:14:03] stdout:
+[2025-08-20 22:14:03]  Model phi4-mini was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-20 22:20:14] stdout:
+[2025-08-20 22:20:14]  Model phi4-mini was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-20 22:29:11] stdout:
+[2025-08-20 22:29:11]  Model phi4-mini was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-20 22:59:40] stdout:
+[2025-08-20 22:59:40]  Model phi4-mini was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-20 23:06:34] stdout:
+[2025-08-20 23:06:34]  Model phi4-mini was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-20 23:11:12] stdout:
+[2025-08-20 23:11:12]  Model phi4-mini was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-21 00:11:16] stdout:
+[2025-08-21 00:11:16] 
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+AutoDev failed with exit code 1. Skipping nix develop.
+[2025-08-21 00:11:16] stderr:
+[2025-08-21 00:11:16] Traceback (most recent call last):
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 103, in handle_request
+    return self._connection.handle_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpcore/_sync/http11.py", line 136, in handle_request
+    raise exc
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpcore/_sync/http11.py", line 106, in handle_request
+    ) = self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpcore/_sync/http11.py", line 177, in _receive_response_headers
+    event = self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpcore/_sync/http11.py", line 217, in _receive_event
+    data = self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpcore/_backends/sync.py", line 126, in read
+    with map_exceptions(exc_map):
+  File "/home/randa/.local/share/uv/python/cpython-3.11.13-linux-x86_64-gnu/lib/python3.11/contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/llms/custom_httpx/http_handler.py", line 761, in post
+    response = self.client.send(req, stream=stream)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpx/_transports/default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+  File "/home/randa/.local/share/uv/python/cpython-3.11.13-linux-x86_64-gnu/lib/python3.11/contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/llms/custom_httpx/llm_http_handler.py", line 171, in _make_common_sync_call
+    response = sync_httpx_client.post(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/llms/custom_httpx/http_handler.py", line 765, in post
+    raise litellm.Timeout(
+litellm.exceptions.Timeout: litellm.Timeout: Connection timed out after 3600.0 seconds.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/main.py", line 3086, in completion
+    response = base_llm_http_handler.completion(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/llms/custom_httpx/llm_http_handler.py", line 467, in completion
+    response = self._make_common_sync_call(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/llms/custom_httpx/llm_http_handler.py", line 198, in _make_common_sync_call
+    raise self._handle_error(e=e, provider_config=provider_config)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/llms/custom_httpx/llm_http_handler.py", line 2405, in _handle_error
+    raise provider_config.get_error_class(
+litellm.llms.ollama.common_utils.OllamaError: litellm.Timeout: Connection timed out after 3600.0 seconds.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/randa/AutoDev/src/test/../../src/main/main.py", line 9, in <module>
+    main()
+  File "/home/randa/AutoDev/src/test/../../src/main/main.py", line 6, in main
+    interface.main(sys.argv[1:])
+  File "/home/randa/AutoDev/src/main/interface.py", line 39, in main
+    dispatch(parsed_args)
+  File "/home/randa/AutoDev/src/main/dispatcher.py", line 33, in dispatch
+    generate_config(project_path, model_name, prompt_path)
+  File "/home/randa/AutoDev/src/main/handlers.py", line 15, in generate_config
+    add_config(model, project_path, prompt_path)
+  File "/home/randa/AutoDev/src/main/services/configuration.py", line 18, in add_config
+    contents = generate_config(model, project_path, prompt_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/main/services/generator.py", line 6, in generate_config
+    response = model.ask(prompt)
+               ^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/main/llm/model.py", line 31, in ask
+    response = completion(
+               ^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/utils.py", line 1307, in wrapper
+    raise e
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/utils.py", line 1182, in wrapper
+    result = original_function(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/main.py", line 3430, in completion
+    raise exception_type(
+          ^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2301, in exception_type
+    raise e
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2270, in exception_type
+    raise APIConnectionError(
+litellm.exceptions.APIConnectionError: litellm.APIConnectionError: OllamaException - litellm.Timeout: Connection timed out after 3600.0 seconds.
+[2025-08-21 01:11:20] stdout:
+[2025-08-21 01:11:20] 
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+AutoDev failed with exit code 1. Skipping nix develop.
+[2025-08-21 01:11:20] stderr:
+[2025-08-21 01:11:20] Traceback (most recent call last):
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 103, in handle_request
+    return self._connection.handle_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpcore/_sync/http11.py", line 136, in handle_request
+    raise exc
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpcore/_sync/http11.py", line 106, in handle_request
+    ) = self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpcore/_sync/http11.py", line 177, in _receive_response_headers
+    event = self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpcore/_sync/http11.py", line 217, in _receive_event
+    data = self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpcore/_backends/sync.py", line 126, in read
+    with map_exceptions(exc_map):
+  File "/home/randa/.local/share/uv/python/cpython-3.11.13-linux-x86_64-gnu/lib/python3.11/contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/llms/custom_httpx/http_handler.py", line 761, in post
+    response = self.client.send(req, stream=stream)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpx/_transports/default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+  File "/home/randa/.local/share/uv/python/cpython-3.11.13-linux-x86_64-gnu/lib/python3.11/contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/llms/custom_httpx/llm_http_handler.py", line 171, in _make_common_sync_call
+    response = sync_httpx_client.post(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/llms/custom_httpx/http_handler.py", line 765, in post
+    raise litellm.Timeout(
+litellm.exceptions.Timeout: litellm.Timeout: Connection timed out after 3600.0 seconds.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/main.py", line 3086, in completion
+    response = base_llm_http_handler.completion(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/llms/custom_httpx/llm_http_handler.py", line 467, in completion
+    response = self._make_common_sync_call(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/llms/custom_httpx/llm_http_handler.py", line 198, in _make_common_sync_call
+    raise self._handle_error(e=e, provider_config=provider_config)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/llms/custom_httpx/llm_http_handler.py", line 2405, in _handle_error
+    raise provider_config.get_error_class(
+litellm.llms.ollama.common_utils.OllamaError: litellm.Timeout: Connection timed out after 3600.0 seconds.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/randa/AutoDev/src/test/../../src/main/main.py", line 9, in <module>
+    main()
+  File "/home/randa/AutoDev/src/test/../../src/main/main.py", line 6, in main
+    interface.main(sys.argv[1:])
+  File "/home/randa/AutoDev/src/main/interface.py", line 39, in main
+    dispatch(parsed_args)
+  File "/home/randa/AutoDev/src/main/dispatcher.py", line 33, in dispatch
+    generate_config(project_path, model_name, prompt_path)
+  File "/home/randa/AutoDev/src/main/handlers.py", line 15, in generate_config
+    add_config(model, project_path, prompt_path)
+  File "/home/randa/AutoDev/src/main/services/configuration.py", line 18, in add_config
+    contents = generate_config(model, project_path, prompt_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/main/services/generator.py", line 6, in generate_config
+    response = model.ask(prompt)
+               ^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/main/llm/model.py", line 31, in ask
+    response = completion(
+               ^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/utils.py", line 1307, in wrapper
+    raise e
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/utils.py", line 1182, in wrapper
+    result = original_function(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/main.py", line 3430, in completion
+    raise exception_type(
+          ^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2301, in exception_type
+    raise e
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2270, in exception_type
+    raise APIConnectionError(
+litellm.exceptions.APIConnectionError: litellm.APIConnectionError: OllamaException - litellm.Timeout: Connection timed out after 3600.0 seconds.
+[2025-08-21 02:11:23] stdout:
+[2025-08-21 02:11:23] 
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+AutoDev failed with exit code 1. Skipping nix develop.
+[2025-08-21 02:11:23] stderr:
+[2025-08-21 02:11:23] Traceback (most recent call last):
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 103, in handle_request
+    return self._connection.handle_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpcore/_sync/http11.py", line 136, in handle_request
+    raise exc
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpcore/_sync/http11.py", line 106, in handle_request
+    ) = self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpcore/_sync/http11.py", line 177, in _receive_response_headers
+    event = self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpcore/_sync/http11.py", line 217, in _receive_event
+    data = self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpcore/_backends/sync.py", line 126, in read
+    with map_exceptions(exc_map):
+  File "/home/randa/.local/share/uv/python/cpython-3.11.13-linux-x86_64-gnu/lib/python3.11/contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/llms/custom_httpx/http_handler.py", line 761, in post
+    response = self.client.send(req, stream=stream)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpx/_transports/default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+  File "/home/randa/.local/share/uv/python/cpython-3.11.13-linux-x86_64-gnu/lib/python3.11/contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/llms/custom_httpx/llm_http_handler.py", line 171, in _make_common_sync_call
+    response = sync_httpx_client.post(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/llms/custom_httpx/http_handler.py", line 765, in post
+    raise litellm.Timeout(
+litellm.exceptions.Timeout: litellm.Timeout: Connection timed out after 3600.0 seconds.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/main.py", line 3086, in completion
+    response = base_llm_http_handler.completion(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/llms/custom_httpx/llm_http_handler.py", line 467, in completion
+    response = self._make_common_sync_call(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/llms/custom_httpx/llm_http_handler.py", line 198, in _make_common_sync_call
+    raise self._handle_error(e=e, provider_config=provider_config)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/llms/custom_httpx/llm_http_handler.py", line 2405, in _handle_error
+    raise provider_config.get_error_class(
+litellm.llms.ollama.common_utils.OllamaError: litellm.Timeout: Connection timed out after 3600.0 seconds.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/randa/AutoDev/src/test/../../src/main/main.py", line 9, in <module>
+    main()
+  File "/home/randa/AutoDev/src/test/../../src/main/main.py", line 6, in main
+    interface.main(sys.argv[1:])
+  File "/home/randa/AutoDev/src/main/interface.py", line 39, in main
+    dispatch(parsed_args)
+  File "/home/randa/AutoDev/src/main/dispatcher.py", line 33, in dispatch
+    generate_config(project_path, model_name, prompt_path)
+  File "/home/randa/AutoDev/src/main/handlers.py", line 15, in generate_config
+    add_config(model, project_path, prompt_path)
+  File "/home/randa/AutoDev/src/main/services/configuration.py", line 18, in add_config
+    contents = generate_config(model, project_path, prompt_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/main/services/generator.py", line 6, in generate_config
+    response = model.ask(prompt)
+               ^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/main/llm/model.py", line 31, in ask
+    response = completion(
+               ^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/utils.py", line 1307, in wrapper
+    raise e
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/utils.py", line 1182, in wrapper
+    result = original_function(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/main.py", line 3430, in completion
+    raise exception_type(
+          ^^^^^^^^^^^^^^^
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2301, in exception_type
+    raise e
+  File "/home/randa/AutoDev/src/.venv/lib/python3.11/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2270, in exception_type
+    raise APIConnectionError(
+litellm.exceptions.APIConnectionError: litellm.APIConnectionError: OllamaException - litellm.Timeout: Connection timed out after 3600.0 seconds.
