@@ -8,12 +8,17 @@ classDiagram
         is_model_installed(model_name: str): bool
         install_model(model_name: str)
         uninstall_model(model_name: str)
-        get_api_base(): str
-        get_server_model_name(name: str): str
     }
 
     class Model {
-        add_direnv(project_path: str)
+        __init__(model_name: str)
+        ask(message: str): str
+    }
+
+    class Services {
+        install(model_name: str)
+        uninstall(model_name: str)
     }
 
     Model ..> Server
+    Services ..> Server

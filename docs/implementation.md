@@ -114,6 +114,8 @@ A new module, `server.py`, has been created to expose methods that can be used t
 
 ![llm server class diagram](./assets/mermaid/llm_server.png)
 
+The install and uninstall model services also depend on the server directly, bypassing the Model module.
+
 This module is an implementation of the 'anti-curruption layer' pattern relative to the ollama server dependency, while the Model module is an 'anti-curruption layer' relative to the litellm dependency.
 
 [Back to index](./index.md) |
