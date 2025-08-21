@@ -39,3 +39,23 @@ TESTS STARTED AT 2025-08-20 14:25:25
 
 TESTS INTERRUPTED BY USER AT 2025-08-21 02:52:51
 ---------------------------------------------
+---------------------------------------------
+TESTS STARTED AT 2025-08-21 14:31:26
+
+--2025-08-21 15:31:30-- category directory_structure_deep model deepseek-r1 space integration_testing : False
+--2025-08-21 16:31:34-- category directory_structure_deep model deepseek-r1 space llm_advanced : False
+--2025-08-21 17:41:52-- category directory_structure_deep model deepseek-r1 space llm_intro : False
+--2025-08-21 18:41:55-- category directory_structure_deep model deepseek-r1 space models : False
+--2025-08-21 19:41:59-- category directory_structure_deep model deepseek-r1 space scafi : False
+--2025-08-21 19:53:50-- category directory_structure_deep model mistral space acceptance_testing : False
+--2025-08-21 20:01:08-- category directory_structure_deep model mistral space advanced_programming : False
+--2025-08-21 20:06:44-- category directory_structure_deep model mistral space basic : False
+--2025-08-21 20:19:23-- category directory_structure_deep model mistral space integration_testing : False
+--2025-08-21 20:27:42-- category directory_structure_deep model mistral space llm_advanced : False
+--2025-08-21 20:32:48-- category directory_structure_deep model mistral space llm_intro : False
+--2025-08-21 20:42:02-- category directory_structure_deep model mistral space models : False
+--2025-08-21 20:47:13-- category directory_structure_deep model mistral space scafi : False
+--2025-08-21 20:58:56-- category file_contents_deep model llama3 space acceptance_testing : False
+
+TESTS INTERRUPTED BY USER AT 2025-08-21 22:09:02
+---------------------------------------------
