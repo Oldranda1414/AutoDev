@@ -12,6 +12,7 @@ class PromptPathError(AutoDevError):
             f"Prompt path '{abspath(self.prompt_path)}' is not a valid prompt path.",
             "Provide a path of an existing json file."
         )
+
 class MissingAttributesError(AutoDevError):
     exit_code = 32
 
@@ -31,6 +32,7 @@ class MissingAttributesError(AutoDevError):
                 }
             """
         )
+        
 class JsonValueTypeError(AutoDevError):
     exit_code = 33
 

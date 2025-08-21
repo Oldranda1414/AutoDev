@@ -11,6 +11,7 @@ class ModelNameError(AutoDevError):
             f"Model name '{self.model}' is not a valid model name.",
             "To see all valid model names run 'just run --list'."
         )
+
 class ModelAlreadyInstalledError(AutoDevError):
     exit_code = 42
 
