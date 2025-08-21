@@ -7,7 +7,7 @@ class ExceededAttemptsError(AutoDevError):
         self.model = model
         self.attempts = attempts
 
-    def _build_message(self) -> tuple[str, ...]:
+    def build_message(self) -> tuple[str, ...]:
         return (
             f"Model {self.model} was unable to generate correct nix code in {self.attempts} attempts.",
             "Select another model or improve the provided prompt."
@@ -19,7 +19,7 @@ class ModelTimeoutError(AutoDevError):
         self.model = model
         self.request_timeout = request_timeout
 
-    def _build_message(self) -> tuple[str, ...]:
+    def build_message(self) -> tuple[str, ...]:
         return (
             f"Model {self.model} was unable to generate a response in {self.request_timeout} seconds.",
             "Select another model or improve the provided prompt."
