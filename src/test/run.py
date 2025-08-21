@@ -1,6 +1,5 @@
 import sys
 from typing import Optional
-from datetime import datetime
 
 from list.categories import CATEGORIES
 from list.models import MODELS
