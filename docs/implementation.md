@@ -97,7 +97,7 @@ The subclass that inherit from `AutoDevError` must define:
 This solution has the following advantages:
 
 - only services depend on the errors they throw, not the handlers, as the handlers treat every exception catched the same way, as `AutoDevError`
-- services raise the exception passing helpful information only they might posess (such as specific data about the error)
+- services raise the exception passing helpful information only they might possess (such as specific data about the error)
 - only errors module knows error codes and the related message
 
 The following class diagram goes a bit more in depth, showing the dependencies in the final solution with some custom exceptions as an example.
