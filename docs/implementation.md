@@ -87,11 +87,22 @@ Also the presence of error text provided to the user in the handlers module appe
 
 For this reason a more powerfull error handling structure was implemented.
 
-TODO complete this
+All exceptions inherit from a base absract exception class, `AutoDevError`.
 
-- only services depend on the errors they throw, not the handlers
-- services can create the error passing helpful information
-- only errors module knows error code and message
+The subclass that inherit from `AutoDevError` must define:
+
+- an attribute `exit_code`, which is the exit code that should be returned by AutoDev when the exception occurs
+- a method `build_message()`, which returns the error message to be displayed to the user
+
+This solution has the following advantages:
+
+- only services depend on the errors they throw, not the handlers, as the handlers treat every exception catched the same way, as `AutoDevError`
+- services raise the exception passing helpful information only they might posess (such as specific data about the error)
+- only errors module knows error codes and the related message
+
+The following graph goes a bit more in depth, showing the dependencies in the final solution.
+
+![File system design](./assets/mermaid/error.png)
 
 ## LLM Server Module
 

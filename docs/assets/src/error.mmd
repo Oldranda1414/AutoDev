@@ -1,0 +1,33 @@
+---
+title: Output Design
+---
+classDiagram
+
+    OllamaNotInstalledError ..> AutoDevError
+    FlakeExistsError ..> AutoDevError
+    EnvrcExistsError ..> AutoDevError
+    ExceededAttemptsError ..> AutoDevError
+    ModelTimeoutError ..> AutoDevError
+    ModelNameError ..> AutoDevError
+    ModelAlreadyInstalledError ..> AutoDevError
+    ModelNotInstalledError ..> AutoDevError
+    PromptPathError ..> AutoDevError
+    MissingAttributesError ..> AutoDevError
+    JsonValueTypeError ..> AutoDevError
+
+    Services ..> OllamaNotInstalledError
+    Services ..> FlakeExistsError
+    Services ..> EnvrcExistsError
+    Services ..> ExceededAttemptsError
+    Services ..> ModelTimeoutError
+    Services ..> ModelNameError
+    Services ..> ModelAlreadyInstalledError
+    Services ..> ModelNotInstalledError
+    Services ..> PromptPathError
+    Services ..> MissingAttributesError
+    Services ..> JsonValueTypeError
+
+    Termination ..> AutoDevError
+    Termination ..> sys
+
+    Handlers ..> Termination

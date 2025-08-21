@@ -24,6 +24,8 @@ If no test category or model is specified all tests are run.
 
 Because of the nature of tests, i.e. running LLMs locally, test runtime can be quite high depending on the hardware used.
 
+Since AutoDev has a timeout of 1 hour when generating the LLM's response, bigger models might be unable to generate code in time, depending on the hardware used.
+
 ## Common strategies
 
 All test will be run with the following strategies:
@@ -34,13 +36,22 @@ All test will be run with the following strategies:
 
 Since the LLM 'temperature' setting can be ambiguous when assessing different LLMs, it is not considered in the test parameters and it is simply ignored. All tested models are used with 'default settings'.
 
+Since the projects can be considered separete 'test enviroments' or simply 'test spaces' the term 'space' is used when referring to the local, as in the AutoDev repo, copy of the project used in testing.
+
 Given the above considerations, for every test category the number of tests being executed:
 
-models * projects * categories = 6 * 8 * 6 = 288
+models * categories * spaces  = 6 * 6 * 8 = 288
 
-## Projects
+## Models
 
-TODO fill this up with project names and links
+The following is a list of the LLMs tested with links to their page on [Ollama](https://ollama.com/):
+
+- [llama3](https://ollama.com/library/llama3)
+- [qwen3](https://ollama.com/library/qwen3)
+- [smollm2](https://ollama.com/library/smollm2)
+- [phi4-mini](https://ollama.com/library/phi4-mini)
+- [deepseek-r1](https://ollama.com/library/deepseek-r1)
+- [mistral](https://ollama.com/library/mistral)
 
 ## Categories
 
@@ -61,13 +72,13 @@ The following test categories where identified.
 
 The prompt was completed with the contents of the project directory, as in directory structure and file names.
 
-This prompt configuration is located at `src/test/prompts/directory_structure_deep.json`.
+This prompt configurations are located at `src/test/prompts/directory_structure_{deep,shallow}.json`.
 
 ### Project files contents
 
 The prompt was completed with the full contents of the project directory, as in directory structure, file names and contents.
 
-These tests are located at `test/file_contents/`.
+This prompt configurations are located at `src/test/prompts/file_contents_{deep,shallow}.json`.
 
 ### 1-shot prompting
 
@@ -75,7 +86,27 @@ The prompt of the model was aided by the precence of an example of the desired r
 
 The prompt also comprehends the project directory strucure and file contents, so this is one of the most verbose prompts tested.
 
-These tests are located at `test/1_shot`
+This prompt configurations are located at `src/test/prompts/1_shot_{deep,shallow}.json`.
+
+## Spaces
+
+All spaces are taken from the __Advanced Software Modelling and Design__ course labs, appart from the 'basic' space, which is a hello world [Julia](http://julialang.org/) project that is meant to serve as a simple baseline.
+
+The following are the test spaces' names, with links to the publicly availabe github repo they where copied from.
+
+
+- [acceptance_testing](https://github.com/mviroli/asmd23-public-01-atdd)
+- [advanced_programming](https://github.com/mviroli/asmd24-public-04-advanced-programming)
+- basic (no link provided)
+- [integration_testing](https://github.com/mviroli/asmd24-public-02-testing)
+- [llm_advanced]()
+- [llm_intro](https://github.com/cric96/asmd24-public-03-llm-intro-code)
+- [models](https://github.com/mviroli/asmd24-public-models)
+- [scafi](https://github.com/mviroli/asmd24-public-scafi)
+
+All spaces are located at `src/test/space/<space_name>`, where <space_name> is the name of a space listed above.
+
+All spaces' directories also include a `test.sh` file that is used to determine wheather the generated development enviroment is correct.
 
 ## Improvements
 
@@ -94,6 +125,10 @@ Often LLMs struggle to provide a correct answer on the first attempt, but the 'c
 After the nix code is generated, it is parsed and validated using the `nix flake check` command. Eventual errors encountered are provided to the LLM to give it a chance to improve on it's provided code.
 
 A total of 3 attempts are done, by providing the error messate to the model and asking it to fix the errors, before giving up on generating the dev env config and notifing the user.
+
+## Results
+
+TODO put the results here
 
 [Back to index](./index.md) |
 [Previous Chapter](./implementation.md) |
