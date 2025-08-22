@@ -118,6 +118,12 @@ The install and uninstall model services also depend on the server directly, byp
 
 This module is an implementation of the 'anti-curruption layer' pattern relative to the ollama server dependency, while the Model module is an 'anti-curruption layer' relative to the litellm dependency.
 
+## Full Class diagram
+
+For completeness the full class diagram of the project is reported:
+
+![full diag](./assets/mermaid/full_diag.png)
+
 [Back to index](./index.md) |
 [Previous Chapter](./detailed-design.md) |
 [Next Chapter](./testing.md) |

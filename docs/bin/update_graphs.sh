@@ -32,3 +32,11 @@ for FILE in "$SRC_FOLDER"/*.mmd; do
     mmdc -i "$FILE" -o "$OUT_FOLDER"/"$BASENAME".png -t dark -b '#0d1117' -q
   fi
 done
+
+# augment scale for big diagrams
+BASENAME="full_diag"
+FILE="$SRC_FOLDER/$BASENAME.mmd"
+
+if [[ -f "$FILE" ]]; then
+  mmdc -i "$FILE" -o "$OUT_FOLDER"/"$BASENAME".png -t dark -b '#0d1117' -q --scale 7
+fi

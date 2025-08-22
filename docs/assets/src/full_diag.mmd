@@ -1,0 +1,346 @@
+---
+title: Full AutoDev Class Diagram
+---
+classDiagram
+    class main {
+        main()
+    }
+    main ..> sys
+    main ..> interface
+
+    class interface {
+        main(args: list[str])
+    }
+    interface ..> docopt
+    interface ..> dispatcher
+
+    class dispatcher {
+        dispatch(args: dict[str, str])
+    }
+    dispatcher ..> sys
+    dispatcher ..> handlers
+    dispatcher ..> console
+
+    class handlers {
+        generate_config(project_path: str, model: str, prompt_path: str)
+        generate_direnv(project_path: str)
+        install_model(model: str)
+        uninstall_model(model: str)
+        list_models()
+    }
+    handlers ..> configuration
+    handlers ..> direnv
+    handlers ..> install
+    handlers ..> uninstall
+    handlers ..> list
+    handlers ..> console
+    handlers ..> AutoDevError
+    handlers ..> ModelNotInstalledError
+    handlers ..> termination
+
+    class termination {
+        exit_success()
+        handle_exception(exc: AutoDevError)
+    }
+    termination ..> sys
+    termination ..> console
+    termination ..> AutoDevError
+
+    %% file_system
+
+    class file_system {
+        generate_fso_list(fso_path: str, depth: int): list[FileSystemObject]
+    }
+    file_system ..> FileSystemObject
+    file_system ..> os
+
+    class FileSystemObject {
+        name: str
+        contents: Optional[str]
+        children: list[FileSystemObject]
+        is_dir: bool
+        __init__(name: str, contents: Optional[str] = None)
+    }
+    FileSystemObject ..> Optional
+
+    %% error
+
+    %%% auto_dev
+
+    class AutoDevError {
+        exit_code: int
+        __init__()
+        build_message()*: tuple[str, ...]
+    }
+    AutoDevError ..> abc
+    AutoDevError <|-- Exception
+
+    class OllamaNotInstalledError {
+        exit_code: int
+        __init__()
+        build_message()*: tuple[str, ...]
+    }
+    OllamaNotInstalledError <|-- AutoDevError
+
+    %%% dependency
+
+    class FlakeExistsError {
+        exit_code: int
+        __init__(project_path: str)
+        build_message()*: tuple[str, ...]
+    }
+    FlakeExistsError <|-- AutoDevError
+    FlakeExistsError ..> os
+
+    %%% file
+
+    class EnvrcExistError {
+        exit_code: int
+        __init__(project_path: str)
+        build_message()*: tuple[str, ...]
+    }
+    EnvrcExistError <|-- AutoDevError
+    EnvrcExistError ..> os
+
+    %%% generation
+
+    class ExceededAttemptsError {
+        exit_code: int
+        __init__(model: str, attempts: int)
+        build_message()*: tuple[str, ...]
+    }
+    ExceededAttemptsError <|-- AutoDevError
+
+    class ModelTimeoutError {
+        exit_code: int
+        __init__(model: str, request_timeout: int)
+        build_message()*: tuple[str, ...]
+    }
+    ModelTimeoutError <|-- AutoDevError
+
+    %%% model
+
+    class ModelNameError {
+        exit_code: int
+        __init__(model: str)
+        build_message()*: tuple[str, ...]
+    }
+    ModelNameError <|-- AutoDevError
+
+    class ModelAlreadyInstalledError {
+        exit_code: int
+        __init__(model: str)
+        build_message()*: tuple[str, ...]
+    }
+    ModelAlreadyInstalledError <|-- AutoDevError
+
+    class ModelNotInstalledError {
+        exit_code: int
+        __init__(model: str)
+        build_message()*: tuple[str, ...]
+    }
+    ModelNotInstalledError <|-- AutoDevError
+
+    %%% prompt
+
+    class PromptPathError {
+        exit_code: int
+        __init__(prompt_path: str)
+        build_message()*: tuple[str, ...]
+    }
+    PromptPathError <|-- AutoDevError
+    PromptPathError ..> os
+
+    class MissingAttributesError{
+        exit_code: int
+        __init__(prompt_path: str)
+        build_message()*: tuple[str, ...]
+    }
+    MissingAttributesError <|-- AutoDevError
+    MissingAttributesError ..> os
+
+    class JsonValueTypeError{
+        exit_code: int
+        __init__(prompt_path: str)
+        build_message()*: tuple[str, ...]
+    }
+    JsonValueTypeError <|-- AutoDevError
+    JsonValueTypeError ..> os
+
+    %% llm
+
+    class Model {
+        __init__(prompt_path: str)
+    }
+    Model ..> model
+    Model ..> litellm
+    Model ..> ModelNameError
+    Model ..> ModelNotInstalledError
+    Model ..> ModelTimeoutError
+    Model ..> server
+
+    class model {
+        model_names: list[str]
+    }
+
+    class server {
+        start()
+        is_model_installed(model_name: str)
+        install_model(model_name: str)
+        uninstall_model(model_name: str)
+        get_api_base()
+        get_server_model_name(model_name: str)
+    }
+    server ..> requests
+    server ..> time
+    server ..> subprocess
+    server ..> atexit
+    server ..> ModelNotInstalledError
+    server ..> OllamaNotInstalledError
+
+    %% services
+
+    %% check
+
+    class check {
+        check_flake(flake_path: str): CheckResult
+    }
+    check ..> subprocess
+    check ..> CheckResult
+
+    class CheckResult {
+        outome: bool
+        error: str
+        __init__(outcome: bool, error: str)
+    }
+
+    class configuration {
+        add_config(model_name: str, project_path: str, prompt_path: str)
+    }
+    configuration ..> os
+    configuration ..> subprocess
+    configuration ..> Model
+    configuration ..> check
+    configuration ..> generator
+    configuration ..> console
+    configuration ..> file
+    configuration ..> FlakeExistsError
+    configuration ..> ExceededAttemptsError
+
+    class direnv {
+        add_direnv(project_path: str)
+    }
+    direnv ..> file
+    direnv ..> EnvrcExistError
+
+    class generator {
+        generate_config(model: str, project_path: str, prompt_path: str): str
+    }
+    generator ..> Model
+    generator ..> prompt
+
+    class install {
+        install(model_name: str)
+    }
+    install ..> server
+    install ..> model
+    install ..> ModelAlreadyInstalledError
+    install ..> ModelNameError
+
+    class list {
+        list()
+    }
+    list ..> console
+    list ..> model
+    list ..> server
+    list ..> Table
+
+    class prompt {
+        get_prompt(prompt_path: str, project_path: str): str
+    }
+    prompt ..> os
+    prompt ..> json
+    prompt ..> PromptPathError
+    prompt ..> MissingAttributesError
+    prompt ..> JsonValueTypeError
+    prompt ..> file_system
+    prompt ..> tree
+
+    class uninstall {
+        uninstall(model_name: str)
+    }
+    uninstall ..> model
+    uninstall ..> server
+    uninstall ..> ModelNameError
+    uninstall ..> ModelNotInstalledError
+
+    %%% output
+
+    class console {
+        PrintType(Enum)
+
+        init(quiet: bool = False)
+        cli_print(printType: PrintType, *message: str)
+        get_spinner(message: str): Context
+        print_table(table: Table)
+    }
+    console ..> Table
+    console ..> Enum
+    console ..> contextlib
+    console ..> rich
+
+    class file {
+        file_exists(path: str): bool
+        create_file(name: str, contents: str, path: str)
+        write_file(name: str, contents: str, path: str)
+    }
+    file ..> os
+
+    %% utils
+
+    class Table {
+        __init__(headers: list[str], rows: list[list[str]] = []):
+        add_row(row: list[str])
+    }
+
+    class tree {
+        generate_project_tree(project_path: str, depth: int) DisplayTree
+    }
+    tree ..> display_tree
+
+    %% builtins
+    class os
+    <<builtin>> os
+    class sys
+    <<builtin>> sys
+    class Enum
+    <<builtin>> Enum
+    class contextlib
+    <<builtin>> contextlib
+    class Exception
+    <<builtin>> Exception
+    class abc
+    <<builtin>> abc
+    class requests
+    <<builtin>> requests
+    class time
+    <<builtin>> time
+    class subprocess
+    <<builtin>> subprocess
+    class atexit
+    <<builtin>> atexit
+    class Optional
+    <<builtin>> Optional
+    class json
+    <<builtin>> json
+
+    %% external dependencies
+    class docopt
+    <<extern>> docopt
+    class rich
+    <<extern>> rich
+    class display_tree
+    <<extern>> display_tree
+    class litellm
+    <<extern>> litellm
+
