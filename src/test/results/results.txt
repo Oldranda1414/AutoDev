@@ -59,3 +59,21 @@ TESTS STARTED AT 2025-08-21 14:31:26
 
 TESTS INTERRUPTED BY USER AT 2025-08-21 22:09:02
 ---------------------------------------------
+---------------------------------------------
+TESTS STARTED AT 2025-08-22 08:02:07
+
+--2025-08-22 09:22:36-- category file_contents_deep model llama3 space advanced_programming : False
+--2025-08-22 09:25:46-- category file_contents_deep model llama3 space basic : False
+--2025-08-22 10:47:43-- category file_contents_deep model llama3 space integration_testing : False
+--2025-08-22 12:10:10-- category file_contents_deep model llama3 space llm_advanced : False
+--2025-08-22 13:32:45-- category file_contents_deep model llama3 space llm_intro : False
+--2025-08-22 14:54:41-- category file_contents_deep model llama3 space models : False
+--2025-08-22 16:14:21-- category file_contents_deep model llama3 space scafi : False
+--2025-08-22 17:42:35-- category file_contents_deep model qwen3 space acceptance_testing : False
+--2025-08-22 19:41:33-- category file_contents_deep model qwen3 space advanced_programming : False
+--2025-08-22 20:03:24-- category file_contents_deep model qwen3 space basic : False
+--2025-08-22 21:03:28-- category file_contents_deep model qwen3 space integration_testing : False
+--2025-08-22 22:50:57-- category file_contents_deep model qwen3 space llm_advanced : False
+
+TESTS INTERRUPTED BY USER AT 2025-08-22 23:04:59
+---------------------------------------------
