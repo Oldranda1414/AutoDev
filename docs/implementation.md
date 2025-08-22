@@ -122,7 +122,7 @@ This module is an implementation of the 'anti-curruption layer' pattern relative
 
 For completeness the full class diagram of the project is reported:
 
-![full diag](./assets/mermaid/full_diag.png)
+[Full Class Diagram](./assets/mermaid/full_diag.png)
 
 [Back to index](./index.md) |
 [Previous Chapter](./detailed-design.md) |
