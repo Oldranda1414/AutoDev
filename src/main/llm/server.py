@@ -48,8 +48,8 @@ def _stop_server():
 def get_api_base() -> str:
     return API_BASE
 
-def get_server_model_name(name: str) -> str:
-    return f"ollama/{name}"
+def get_server_model_name(model_name: str) -> str:
+    return f"ollama/{model_name}"
 
 def is_model_installed(model_name: str) -> bool:
     start()
