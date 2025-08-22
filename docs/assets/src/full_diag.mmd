@@ -1,4 +1,9 @@
 ---
+config:
+  class:
+    hideEmptyMembersBox: true
+  layout: elk
+  theme: dark
 title: Full AutoDev Class Diagram
 ---
 classDiagram
@@ -48,18 +53,18 @@ classDiagram
 
     %% file_system
 
-    class file_system {
+    class file_system:::file_system {
         generate_fso_list(fso_path: str, depth: int): list[FileSystemObject]
     }
     file_system ..> FileSystemObject
     file_system ..> os
 
-    class FileSystemObject {
+    class FileSystemObject:::file_system {
         name: str
         contents: Optional[str]
         children: list[FileSystemObject]
         is_dir: bool
-        __init__(name: str, contents: Optional[str] = None)
+        \_\_init\_\_(name: str, contents: Optional[str] = None)
     }
     FileSystemObject ..> Optional
 
@@ -67,110 +72,110 @@ classDiagram
 
     %%% auto_dev
 
-    class AutoDevError {
+    class AutoDevError:::error {
         exit_code: int
-        __init__()
-        build_message()*: tuple[str, ...]
+        \_\_init\_\_()
+        build_message(): tuple[str, ...]
     }
     AutoDevError ..> abc
     AutoDevError <|-- Exception
 
-    class OllamaNotInstalledError {
+    class OllamaNotInstalledError:::error {
         exit_code: int
-        __init__()
-        build_message()*: tuple[str, ...]
+        \_\_init\_\_()
+        build_message(): tuple[str, ...]
     }
     OllamaNotInstalledError <|-- AutoDevError
 
     %%% dependency
 
-    class FlakeExistsError {
+    class FlakeExistsError:::error {
         exit_code: int
-        __init__(project_path: str)
-        build_message()*: tuple[str, ...]
+        \_\_init\_\_(project_path: str)
+        build_message(): tuple[str, ...]
     }
     FlakeExistsError <|-- AutoDevError
     FlakeExistsError ..> os
 
     %%% file
 
-    class EnvrcExistError {
+    class EnvrcExistError:::error {
         exit_code: int
-        __init__(project_path: str)
-        build_message()*: tuple[str, ...]
+        \_\_init\_\_(project_path: str)
+        build_message(): tuple[str, ...]
     }
     EnvrcExistError <|-- AutoDevError
     EnvrcExistError ..> os
 
     %%% generation
 
-    class ExceededAttemptsError {
+    class ExceededAttemptsError:::error {
         exit_code: int
-        __init__(model: str, attempts: int)
-        build_message()*: tuple[str, ...]
+        \_\_init\_\_(model: str, attempts: int)
+        build_message(): tuple[str, ...]
     }
     ExceededAttemptsError <|-- AutoDevError
 
-    class ModelTimeoutError {
+    class ModelTimeoutError:::error {
         exit_code: int
-        __init__(model: str, request_timeout: int)
-        build_message()*: tuple[str, ...]
+        \_\_init\_\_(model: str, request_timeout: int)
+        build_message(): tuple[str, ...]
     }
     ModelTimeoutError <|-- AutoDevError
 
     %%% model
 
-    class ModelNameError {
+    class ModelNameError:::error {
         exit_code: int
-        __init__(model: str)
-        build_message()*: tuple[str, ...]
+        \_\_init\_\_(model: str)
+        build_message(): tuple[str, ...]
     }
     ModelNameError <|-- AutoDevError
 
-    class ModelAlreadyInstalledError {
+    class ModelAlreadyInstalledError:::error {
         exit_code: int
-        __init__(model: str)
-        build_message()*: tuple[str, ...]
+        \_\_init\_\_(model: str)
+        build_message(): tuple[str, ...]
     }
     ModelAlreadyInstalledError <|-- AutoDevError
 
-    class ModelNotInstalledError {
+    class ModelNotInstalledError:::error {
         exit_code: int
-        __init__(model: str)
-        build_message()*: tuple[str, ...]
+        \_\_init\_\_(model: str)
+        build_message(): tuple[str, ...]
     }
     ModelNotInstalledError <|-- AutoDevError
 
     %%% prompt
 
-    class PromptPathError {
+    class PromptPathError:::error {
         exit_code: int
-        __init__(prompt_path: str)
-        build_message()*: tuple[str, ...]
+        \_\_init\_\_(prompt_path: str)
+        build_message(): tuple[str, ...]
     }
     PromptPathError <|-- AutoDevError
     PromptPathError ..> os
 
-    class MissingAttributesError{
+    class MissingAttributesError:::error {
         exit_code: int
-        __init__(prompt_path: str)
-        build_message()*: tuple[str, ...]
+        \_\_init\_\_(prompt_path: str)
+        build_message(): tuple[str, ...]
     }
     MissingAttributesError <|-- AutoDevError
     MissingAttributesError ..> os
 
-    class JsonValueTypeError{
+    class JsonValueTypeError:::error {
         exit_code: int
-        __init__(prompt_path: str)
-        build_message()*: tuple[str, ...]
+        \_\_init\_\_(prompt_path: str)
+        build_message(): tuple[str, ...]
     }
     JsonValueTypeError <|-- AutoDevError
     JsonValueTypeError ..> os
 
     %% llm
 
-    class Model {
-        __init__(prompt_path: str)
+    class Model:::llm {
+        \_\_init\_\_(prompt_path: str)
     }
     Model ..> model
     Model ..> litellm
@@ -179,11 +184,11 @@ classDiagram
     Model ..> ModelTimeoutError
     Model ..> server
 
-    class model {
+    class model:::llm {
         model_names: list[str]
     }
 
-    class server {
+    class server:::llm {
         start()
         is_model_installed(model_name: str)
         install_model(model_name: str)
@@ -202,19 +207,19 @@ classDiagram
 
     %% check
 
-    class check {
+    class check:::serviceCheck {
         check_flake(flake_path: str): CheckResult
     }
     check ..> subprocess
     check ..> CheckResult
 
-    class CheckResult {
+    class CheckResult:::serviceCheck {
         outome: bool
         error: str
-        __init__(outcome: bool, error: str)
+        \_\_init\_\_(outcome: bool, error: str)
     }
 
-    class configuration {
+    class configuration:::service {
         add_config(model_name: str, project_path: str, prompt_path: str)
     }
     configuration ..> os
@@ -227,19 +232,19 @@ classDiagram
     configuration ..> FlakeExistsError
     configuration ..> ExceededAttemptsError
 
-    class direnv {
+    class direnv:::service {
         add_direnv(project_path: str)
     }
     direnv ..> file
     direnv ..> EnvrcExistError
 
-    class generator {
+    class generator:::service {
         generate_config(model: str, project_path: str, prompt_path: str): str
     }
     generator ..> Model
     generator ..> prompt
 
-    class install {
+    class install:::service {
         install(model_name: str)
     }
     install ..> server
@@ -247,7 +252,7 @@ classDiagram
     install ..> ModelAlreadyInstalledError
     install ..> ModelNameError
 
-    class list {
+    class list:::service {
         list()
     }
     list ..> console
@@ -255,7 +260,7 @@ classDiagram
     list ..> server
     list ..> Table
 
-    class prompt {
+    class prompt:::service {
         get_prompt(prompt_path: str, project_path: str): str
     }
     prompt ..> os
@@ -266,7 +271,7 @@ classDiagram
     prompt ..> file_system
     prompt ..> tree
 
-    class uninstall {
+    class uninstall:::service {
         uninstall(model_name: str)
     }
     uninstall ..> model
@@ -276,7 +281,7 @@ classDiagram
 
     %%% output
 
-    class console {
+    class console:::serviceOutput {
         PrintType(Enum)
 
         init(quiet: bool = False)
@@ -289,7 +294,7 @@ classDiagram
     console ..> contextlib
     console ..> rich
 
-    class file {
+    class file:::serviceOutput {
         file_exists(path: str): bool
         create_file(name: str, contents: str, path: str)
         write_file(name: str, contents: str, path: str)
@@ -298,49 +303,72 @@ classDiagram
 
     %% utils
 
-    class Table {
-        __init__(headers: list[str], rows: list[list[str]] = []):
+    class Table:::util {
+        \_\_init\_\_(headers: list[str], rows: list[list[str]] = []):
         add_row(row: list[str])
     }
 
-    class tree {
+    class tree:::util {
         generate_project_tree(project_path: str, depth: int) DisplayTree
     }
     tree ..> display_tree
 
     %% builtins
-    class os
+    class os:::builtin
     <<builtin>> os
-    class sys
+    class sys:::builtin
     <<builtin>> sys
-    class Enum
+    class Enum:::builtin
     <<builtin>> Enum
-    class contextlib
+    class contextlib:::builtin
     <<builtin>> contextlib
-    class Exception
+    class Exception:::builtin
     <<builtin>> Exception
-    class abc
+    class abc:::builtin
     <<builtin>> abc
-    class requests
+    class requests:::builtin
     <<builtin>> requests
-    class time
+    class time:::builtin
     <<builtin>> time
-    class subprocess
+    class subprocess:::builtin
     <<builtin>> subprocess
-    class atexit
+    class atexit:::builtin
     <<builtin>> atexit
-    class Optional
+    class Optional:::builtin
     <<builtin>> Optional
-    class json
+    class json:::builtin
     <<builtin>> json
 
     %% external dependencies
-    class docopt
+    class docopt:::extern
     <<extern>> docopt
-    class rich
+    class rich:::extern
     <<extern>> rich
-    class display_tree
+    class display_tree:::extern
     <<extern>> display_tree
-    class litellm
+    class litellm:::extern
     <<extern>> litellm
 
+    %% legend
+
+    class Builtin:::builtin
+    class Extern:::extern
+    class Service:::service
+    class Output:::serviceOutput
+    class Check:::serviceCheck
+    class Error:::error
+    class LLM:::llm
+    class Utils:::utils
+    class FileSystem:::file_system
+
+    %% style
+
+    classDef builtin fill:#1565C0,stroke:#90CAF9,stroke-width:1px
+    classDef extern fill:#2E7D32,stroke:#A5D6A7,stroke-width:1px
+    classDef service fill:#EF6C00,stroke:#FFCC80,stroke-width:1px
+    classDef serviceOutput fill:#FF9800,stroke:#FFCC80,stroke-width:1px
+    classDef serviceCheck fill:#FFB74D,stroke:#FFCC80,stroke-width:1px
+    classDef error fill:#C62828,stroke:#EF9A9A,stroke-width:1px
+    classDef llm fill:#6A1B9A,stroke:#CE93D8,stroke-width:1px
+    classDef utils fill:#424242,stroke:#BDBDBD,stroke-width:1px
+    classDef file_system fill:#00796B,stroke:#4DB6AC,stroke-width:1px
