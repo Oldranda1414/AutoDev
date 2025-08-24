@@ -1,0 +1,112 @@
+[2025-08-23 11:51:41] stdout:
+[2025-08-23 11:51:41]  Model qwen3 was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-23 13:54:11] stdout:
+[2025-08-23 13:54:11]  Model qwen3 was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-23 14:54:16] stdout:
+[2025-08-23 14:54:16] 
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+ Model qwen3 was unable to generate a response in 3600 seconds. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 52. Skipping nix develop.
+[2025-08-23 14:58:03] stdout:
+[2025-08-23 14:58:03]  Model smollm2 was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-23 15:25:27] stdout:
+[2025-08-23 15:25:27]  Model smollm2 was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-23 15:26:19] stdout:
+[2025-08-23 15:26:19]  Model smollm2 was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-23 15:52:54] stdout:
+[2025-08-23 15:52:54]  Model smollm2 was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-23 17:01:24] stdout:
+[2025-08-23 17:01:24] 
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+ Model smollm2 was unable to generate a response in 3600 seconds. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 52. Skipping nix develop.
+[2025-08-23 17:33:30] stdout:
+[2025-08-23 17:33:30]  Model smollm2 was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-23 18:01:22] stdout:
+[2025-08-23 18:01:22]  Model smollm2 was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-23 18:30:51] stdout:
+[2025-08-23 18:30:51]  Model smollm2 was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-23 18:42:33] stdout:
+[2025-08-23 18:42:33]  Model phi4-mini was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-23 20:04:22] stdout:
+[2025-08-23 20:04:22]  Model phi4-mini was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-23 20:18:09] stdout:
+[2025-08-23 20:18:09]  Model phi4-mini was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-23 21:09:57] stdout:
+[2025-08-23 21:09:57]  Model phi4-mini was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-23 22:13:25] stdout:
+[2025-08-23 22:13:25]  Model phi4-mini was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-23 23:54:38] stdout:
+[2025-08-23 23:54:38] 
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+ Model phi4-mini was unable to generate a response in 3600 seconds. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 52. Skipping nix develop.
+[2025-08-24 00:47:11] stdout:
+[2025-08-24 00:47:11]  Model phi4-mini was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-24 01:39:40] stdout:
+[2025-08-24 01:39:40]  Model phi4-mini was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-24 02:39:43] stdout:
+[2025-08-24 02:39:43] 
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+ Model deepseek-r1 was unable to generate a response in 3600 seconds. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 52. Skipping nix develop.
+[2025-08-24 04:15:11] stdout:
+[2025-08-24 04:15:11] 
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+ Model deepseek-r1 was unable to generate a response in 3600 seconds. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 52. Skipping nix develop.
+[2025-08-24 05:15:15] stdout:
+[2025-08-24 05:15:15] 
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+ Model deepseek-r1 was unable to generate a response in 3600 seconds. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 52. Skipping nix develop.
