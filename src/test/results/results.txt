@@ -105,3 +105,20 @@ TESTS STARTED AT 2025-08-23 09:56:17
 
 TESTS INTERRUPTED BY USER AT 2025-08-24 05:31:21
 ---------------------------------------------
+---------------------------------------------
+TESTS STARTED AT 2025-08-24 12:33:15
+
+--2025-08-24 13:33:20-- category file_contents_deep model deepseek-r1 space integration_testing : False
+--2025-08-24 14:33:23-- category file_contents_deep model deepseek-r1 space llm_advanced : False
+--2025-08-24 15:33:27-- category file_contents_deep model deepseek-r1 space llm_intro : False
+--2025-08-24 16:33:31-- category file_contents_deep model deepseek-r1 space models : False
+--2025-08-24 17:33:35-- category file_contents_deep model deepseek-r1 space scafi : False
+--2025-08-24 17:51:52-- category file_contents_deep model mistral space acceptance_testing : False
+--2025-08-24 19:13:21-- category file_contents_deep model mistral space advanced_programming : False
+--2025-08-24 19:17:00-- category file_contents_deep model mistral space basic : False
+--2025-08-24 20:36:49-- category file_contents_deep model mistral space integration_testing : False
+--2025-08-24 21:54:45-- category file_contents_deep model mistral space llm_advanced : False
+--2025-08-24 23:15:28-- category file_contents_deep model mistral space llm_intro : False
+
+TESTS INTERRUPTED BY USER AT 2025-08-24 23:31:37
+---------------------------------------------
