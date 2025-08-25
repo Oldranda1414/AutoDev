@@ -1,0 +1,1 @@
+{ flake = self FlakeUtils.buildFlakeFromDir ./ }
