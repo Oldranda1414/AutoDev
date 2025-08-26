@@ -141,3 +141,23 @@ TESTS STARTED AT 2025-08-25 08:29:08
 
 TESTS INTERRUPTED BY USER AT 2025-08-26 00:35:02
 ---------------------------------------------
+---------------------------------------------
+TESTS STARTED AT 2025-08-26 09:33:19
+
+--2025-08-26 11:24:37-- category 1_shot_deep model qwen3 space integration_testing : False
+--2025-08-26 13:34:00-- category 1_shot_deep model qwen3 space llm_advanced : False
+--2025-08-26 14:34:04-- category 1_shot_deep model qwen3 space llm_intro : False
+--2025-08-26 16:29:53-- category 1_shot_deep model qwen3 space models : False
+--2025-08-26 18:28:03-- category 1_shot_deep model qwen3 space scafi : False
+--2025-08-26 18:53:54-- category 1_shot_deep model smollm2 space acceptance_testing : False
+--2025-08-26 19:20:49-- category 1_shot_deep model smollm2 space advanced_programming : False
+--2025-08-26 19:22:24-- category 1_shot_deep model smollm2 space basic : False
+--2025-08-26 19:50:38-- category 1_shot_deep model smollm2 space integration_testing : False
+--2025-08-26 20:16:50-- category 1_shot_deep model smollm2 space llm_advanced : False
+--2025-08-26 20:44:41-- category 1_shot_deep model smollm2 space llm_intro : False
+--2025-08-26 21:13:08-- category 1_shot_deep model smollm2 space models : False
+--2025-08-26 21:45:03-- category 1_shot_deep model smollm2 space scafi : False
+--2025-08-26 22:36:27-- category 1_shot_deep model phi4-mini space acceptance_testing : False
+
+TESTS INTERRUPTED BY USER AT 2025-08-26 23:30:20
+---------------------------------------------

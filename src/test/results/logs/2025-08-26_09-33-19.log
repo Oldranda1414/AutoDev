@@ -1,0 +1,70 @@
+[2025-08-26 11:24:37] stdout:
+[2025-08-26 11:24:37]  Model qwen3 was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-26 13:34:00] stdout:
+[2025-08-26 13:34:00]  Model qwen3 was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-26 14:34:04] stdout:
+[2025-08-26 14:34:04] 
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+ Model qwen3 was unable to generate a response in 3600 seconds. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 52. Skipping nix develop.
+[2025-08-26 16:29:53] stdout:
+[2025-08-26 16:29:53]  Model qwen3 was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-26 18:28:03] stdout:
+[2025-08-26 18:28:03]  Model qwen3 was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-26 18:53:54] stdout:
+[2025-08-26 18:53:54]  Model smollm2 was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-26 19:20:49] stdout:
+[2025-08-26 19:20:49]  Model smollm2 was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-26 19:22:24] stderr:
+[2025-08-26 19:22:24] warning: Git tree '/home/randa/AutoDev/src/test/space/basic' is dirty
+copying path '/nix/store/lb887s3xdyzddfizsxk50mqpjj7wxkka-just-1.40.0' from 'https://cache.nixos.org'...
+copying path '/nix/store/39f9js7n9jsv52yqwp2q18cl1r6315yf-ollama-0.11.4' from 'https://cache.nixos.org'...
+copying path '/nix/store/dhymc7gdzwfwwhxlbnzmpg7ih1a7p0bk-uv-0.7.22' from 'https://cache.nixos.org'...
+copying path '/nix/store/7a8xqvn5j11kdh1l4p9b2i2xgpf4pxml-chromium-unwrapped-139.0.7258.138-sandbox' from 'https://cache.nixos.org'...
+copying path '/nix/store/0ci5f2dd9ldrqv3h83vq91kr11ix0d63-libpng-1.6.46' from 'https://cache.nixos.org'...
+copying path '/nix/store/9rmh6ix1w7krdkjclpfil4818m65hxf3-chromium-unwrapped-139.0.7258.138' from 'https://cache.nixos.org'...
+copying path '/nix/store/iykx9kisgl6bl46176sid07lsnmw40rw-chromium-139.0.7258.138-sandbox' from 'https://cache.nixos.org'...
+copying path '/nix/store/dgrq0wfgy49qxj4n731l587m0962gj6f-chromium-139.0.7258.138' from 'https://cache.nixos.org'...
+copying path '/nix/store/fpx6b6x2c1hjrxgqfcs21zj2728wcgja-mermaid-cli-11.4.2' from 'https://cache.nixos.org'...
+building '/nix/store/vfcplg4l1mclc2sbbn81k700n4afhk26-nix-shell-env.drv'...
+/home/randa/AutoDev/src/test/space/basic/test.sh: line 5: julia: command not found
+/home/randa/AutoDev/src/test/space/basic/test.sh: line 7: julia: command not found
+[2025-08-26 19:50:38] stdout:
+[2025-08-26 19:50:38]  Model smollm2 was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-26 20:16:50] stdout:
+[2025-08-26 20:16:50]  Model smollm2 was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-26 20:44:41] stdout:
+[2025-08-26 20:44:41]  Model smollm2 was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-26 21:13:08] stdout:
+[2025-08-26 21:13:08]  Model smollm2 was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-26 21:45:03] stdout:
+[2025-08-26 21:45:03]  Model smollm2 was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-26 22:36:27] stdout:
+[2025-08-26 22:36:27]  Model phi4-mini was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
