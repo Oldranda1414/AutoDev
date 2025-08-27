@@ -94,7 +94,6 @@ All spaces are taken from the __Advanced Software Modelling and Design__ course 
 
 The following are the test spaces' names, with links to the publicly availabe github repo they where copied from.
 
-
 - [acceptance_testing](https://github.com/mviroli/asmd23-public-01-atdd)
 - [advanced_programming](https://github.com/mviroli/asmd24-public-04-advanced-programming)
 - basic (no link provided)

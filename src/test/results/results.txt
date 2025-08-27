@@ -161,3 +161,20 @@ TESTS STARTED AT 2025-08-26 09:33:19
 
 TESTS INTERRUPTED BY USER AT 2025-08-26 23:30:20
 ---------------------------------------------
+---------------------------------------------
+TESTS STARTED AT 2025-08-27 08:10:03
+
+--2025-08-27 09:44:20-- category 1_shot_deep model phi4-mini space advanced_programming : False
+--2025-08-27 09:47:26-- category 1_shot_deep model phi4-mini space basic : False
+--2025-08-27 11:18:17-- category 1_shot_deep model phi4-mini space integration_testing : False
+--2025-08-27 12:57:08-- category 1_shot_deep model phi4-mini space llm_advanced : False
+--2025-08-27 14:35:46-- category 1_shot_deep model phi4-mini space llm_intro : False
+--2025-08-27 16:16:45-- category 1_shot_deep model phi4-mini space models : False
+--2025-08-27 17:57:35-- category 1_shot_deep model phi4-mini space scafi : False
+--2025-08-27 18:57:39-- category 1_shot_deep model deepseek-r1 space acceptance_testing : False
+--2025-08-27 19:57:43-- category 1_shot_deep model deepseek-r1 space advanced_programming : False
+--2025-08-27 21:12:54-- category 1_shot_deep model deepseek-r1 space basic : False
+--2025-08-27 22:12:58-- category 1_shot_deep model deepseek-r1 space integration_testing : False
+
+TESTS INTERRUPTED BY USER AT 2025-08-27 22:34:10
+---------------------------------------------
