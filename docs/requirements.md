@@ -34,12 +34,9 @@ During project analysis the following requirements have been identified.
         1. AutoDev should use an LLM model to generate the `flake.nix` file.
         1. AutoDev should define a base prompt engeneering approach applicable to all LLMs.
 1. **Non-Functional Requirements**
-    1. AutoDev should respond within 5 seconds for typical-sized projects.
     1. AutoDev should not alter any files in the user’s environment.
 1. **Implementation Requirements**
-    1. AutoDev should be implemneted as a CLI tool that can be invoked from the terminal.
-
-Placeholder for requirements
+    1. AutoDev should be implemented as a CLI tool that can be invoked from the terminal.
 
 [Back to index](./index.md) |
 [Previous Chapter](./introduction.md) |
