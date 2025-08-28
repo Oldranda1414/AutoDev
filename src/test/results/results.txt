@@ -178,3 +178,20 @@ TESTS STARTED AT 2025-08-27 08:10:03
 
 TESTS INTERRUPTED BY USER AT 2025-08-27 22:34:10
 ---------------------------------------------
+---------------------------------------------
+TESTS STARTED AT 2025-08-28 09:28:00
+
+--2025-08-28 10:28:04-- category 1_shot_deep model deepseek-r1 space llm_advanced : False
+--2025-08-28 11:28:08-- category 1_shot_deep model deepseek-r1 space llm_intro : False
+--2025-08-28 12:28:12-- category 1_shot_deep model deepseek-r1 space models : False
+--2025-08-28 14:16:06-- category 1_shot_deep model deepseek-r1 space scafi : False
+--2025-08-28 15:38:12-- category 1_shot_deep model mistral space acceptance_testing : False
+--2025-08-28 17:09:24-- category 1_shot_deep model mistral space advanced_programming : False
+--2025-08-28 17:18:46-- category 1_shot_deep model mistral space basic : False
+--2025-08-28 18:37:27-- category 1_shot_deep model mistral space integration_testing : False
+--2025-08-28 19:58:05-- category 1_shot_deep model mistral space llm_advanced : False
+--2025-08-28 21:17:13-- category 1_shot_deep model mistral space llm_intro : False
+--2025-08-28 22:39:57-- category 1_shot_deep model mistral space models : False
+
+TESTS INTERRUPTED BY USER AT 2025-08-28 23:49:25
+---------------------------------------------

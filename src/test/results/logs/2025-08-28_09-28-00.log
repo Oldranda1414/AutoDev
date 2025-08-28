@@ -1,0 +1,60 @@
+[2025-08-28 10:28:04] stdout:
+[2025-08-28 10:28:04] 
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+ Model deepseek-r1 was unable to generate a response in 3600 seconds. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 52. Skipping nix develop.
+[2025-08-28 11:28:08] stdout:
+[2025-08-28 11:28:08] 
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+ Model deepseek-r1 was unable to generate a response in 3600 seconds. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 52. Skipping nix develop.
+[2025-08-28 12:28:12] stdout:
+[2025-08-28 12:28:12] 
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+ Model deepseek-r1 was unable to generate a response in 3600 seconds. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 52. Skipping nix develop.
+[2025-08-28 14:16:06] stdout:
+[2025-08-28 14:16:06] 
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+ Model deepseek-r1 was unable to generate a response in 3600 seconds. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 52. Skipping nix develop.
+[2025-08-28 15:38:12] stdout:
+[2025-08-28 15:38:12]  Model mistral was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-28 17:09:24] stdout:
+[2025-08-28 17:09:24]  Model mistral was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-28 17:18:46] stdout:
+[2025-08-28 17:18:46]  Model mistral was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-28 18:37:27] stdout:
+[2025-08-28 18:37:27]  Model mistral was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-28 19:58:05] stdout:
+[2025-08-28 19:58:05]  Model mistral was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-28 21:17:13] stdout:
+[2025-08-28 21:17:13]  Model mistral was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-08-28 22:39:57] stdout:
+[2025-08-28 22:39:57]  Model mistral was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
