@@ -1,0 +1,1 @@
+nix develop --project-name "advanced_programming" -A scala=2.13.8 --git gitRepository="https://github.com/huggingface/examples" --branch master

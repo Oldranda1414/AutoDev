@@ -195,3 +195,47 @@ TESTS STARTED AT 2025-08-28 09:28:00
 
 TESTS INTERRUPTED BY USER AT 2025-08-28 23:49:25
 ---------------------------------------------
+---------------------------------------------
+TESTS STARTED AT 2025-08-29 08:27:38
+
+--2025-08-29 09:47:00-- category 1_shot_deep model mistral space scafi : False
+--2025-08-29 09:51:09-- category directory_structure_shallow model llama3 space acceptance_testing : False
+--2025-08-29 09:54:39-- category directory_structure_shallow model llama3 space advanced_programming : False
+--2025-08-29 09:57:17-- category directory_structure_shallow model llama3 space basic : False
+--2025-08-29 10:01:10-- category directory_structure_shallow model llama3 space integration_testing : False
+--2025-08-29 10:05:42-- category directory_structure_shallow model llama3 space llm_advanced : False
+--2025-08-29 10:09:02-- category directory_structure_shallow model llama3 space llm_intro : False
+--2025-08-29 10:12:13-- category directory_structure_shallow model llama3 space models : False
+--2025-08-29 10:15:52-- category directory_structure_shallow model llama3 space scafi : False
+--2025-08-29 10:54:30-- category directory_structure_shallow model qwen3 space acceptance_testing : False
+--2025-08-29 11:11:56-- category directory_structure_shallow model qwen3 space advanced_programming : False
+--2025-08-29 11:36:14-- category directory_structure_shallow model qwen3 space basic : False
+--2025-08-29 12:07:09-- category directory_structure_shallow model qwen3 space integration_testing : False
+--2025-08-29 13:07:13-- category directory_structure_shallow model qwen3 space llm_advanced : False
+--2025-08-29 13:36:35-- category directory_structure_shallow model qwen3 space llm_intro : False
+--2025-08-29 14:53:30-- category directory_structure_shallow model qwen3 space models : False
+--2025-08-29 15:11:50-- category directory_structure_shallow model qwen3 space scafi : False
+--2025-08-29 15:14:05-- category directory_structure_shallow model smollm2 space acceptance_testing : False
+--2025-08-29 15:15:22-- category directory_structure_shallow model smollm2 space advanced_programming : False
+--2025-08-29 15:16:28-- category directory_structure_shallow model smollm2 space basic : False
+--2025-08-29 15:18:27-- category directory_structure_shallow model smollm2 space integration_testing : False
+--2025-08-29 15:22:20-- category directory_structure_shallow model smollm2 space llm_advanced : False
+--2025-08-29 15:24:05-- category directory_structure_shallow model smollm2 space llm_intro : False
+--2025-08-29 15:27:13-- category directory_structure_shallow model smollm2 space models : False
+--2025-08-29 15:29:12-- category directory_structure_shallow model smollm2 space scafi : False
+--2025-08-29 15:59:56-- category directory_structure_shallow model phi4-mini space acceptance_testing : False
+--2025-08-29 16:05:59-- category directory_structure_shallow model phi4-mini space advanced_programming : False
+--2025-08-29 16:09:58-- category directory_structure_shallow model phi4-mini space basic : False
+--2025-08-29 16:50:33-- category directory_structure_shallow model phi4-mini space integration_testing : False
+--2025-08-29 16:55:05-- category directory_structure_shallow model phi4-mini space llm_advanced : False
+--2025-08-29 17:00:08-- category directory_structure_shallow model phi4-mini space llm_intro : False
+--2025-08-29 17:04:15-- category directory_structure_shallow model phi4-mini space models : False
+--2025-08-29 17:07:06-- category directory_structure_shallow model phi4-mini space scafi : False
+--2025-08-29 18:07:10-- category directory_structure_shallow model deepseek-r1 space acceptance_testing : False
+--2025-08-29 19:07:14-- category directory_structure_shallow model deepseek-r1 space advanced_programming : False
+--2025-08-29 20:36:12-- category directory_structure_shallow model deepseek-r1 space basic : False
+--2025-08-29 21:36:16-- category directory_structure_shallow model deepseek-r1 space integration_testing : False
+--2025-08-29 22:36:20-- category directory_structure_shallow model deepseek-r1 space llm_advanced : False
+
+TESTS INTERRUPTED BY USER AT 2025-08-29 23:32:29
+---------------------------------------------
