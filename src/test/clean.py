@@ -12,4 +12,5 @@ def clean_test_dir():
             stderr=DEVNULL
         )
         remove_file(f"{SPACES_PATH}/{space}/flake.nix")
+        remove_file(f"{SPACES_PATH}/{space}/flake.lock")
     remove_file(f"{SPACES_PATH}/test.sh")
