@@ -271,3 +271,28 @@ TESTS STARTED AT 2025-08-30 10:35:00
 
 TESTS INTERRUPTED BY USER AT 2025-08-30 22:58:59
 ---------------------------------------------
+---------------------------------------------
+TESTS STARTED AT 2025-08-31 14:12:12
+
+--2025-08-31 15:08:05-- category file_contents_shallow model qwen3 space scafi : False
+--2025-08-31 15:10:53-- category file_contents_shallow model smollm2 space acceptance_testing : False
+--2025-08-31 15:13:17-- category file_contents_shallow model smollm2 space advanced_programming : False
+--2025-08-31 15:14:14-- category file_contents_shallow model smollm2 space basic : False
+--2025-08-31 15:41:24-- category file_contents_shallow model smollm2 space integration_testing : False
+--2025-08-31 15:46:52-- category file_contents_shallow model smollm2 space llm_advanced : False
+--2025-08-31 15:49:41-- category file_contents_shallow model smollm2 space llm_intro : False
+--2025-08-31 15:53:49-- category file_contents_shallow model smollm2 space models : False
+--2025-08-31 15:56:56-- category file_contents_shallow model smollm2 space scafi : False
+--2025-08-31 17:36:43-- category file_contents_shallow model phi4-mini space acceptance_testing : False
+--2025-08-31 17:44:17-- category file_contents_shallow model phi4-mini space advanced_programming : False
+--2025-08-31 18:04:11-- category file_contents_shallow model phi4-mini space basic : False
+--2025-08-31 19:37:01-- category file_contents_shallow model phi4-mini space integration_testing : False
+--2025-08-31 19:47:32-- category file_contents_shallow model phi4-mini space llm_advanced : False
+--2025-08-31 19:55:20-- category file_contents_shallow model phi4-mini space llm_intro : False
+--2025-08-31 20:00:24-- category file_contents_shallow model phi4-mini space models : False
+--2025-08-31 20:06:49-- category file_contents_shallow model phi4-mini space scafi : False
+--2025-08-31 21:06:53-- category file_contents_shallow model deepseek-r1 space acceptance_testing : False
+--2025-08-31 22:06:56-- category file_contents_shallow model deepseek-r1 space advanced_programming : False
+
+TESTS INTERRUPTED BY USER AT 2025-08-31 22:44:23
+---------------------------------------------
