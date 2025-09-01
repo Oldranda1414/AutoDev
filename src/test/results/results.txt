@@ -296,3 +296,35 @@ TESTS STARTED AT 2025-08-31 14:12:12
 
 TESTS INTERRUPTED BY USER AT 2025-08-31 22:44:23
 ---------------------------------------------
+---------------------------------------------
+TESTS STARTED AT 2025-09-01 07:05:58
+
+--2025-09-01 08:06:03-- category file_contents_shallow model deepseek-r1 space basic : False
+--2025-09-01 09:06:07-- category file_contents_shallow model deepseek-r1 space integration_testing : False
+--2025-09-01 10:06:11-- category file_contents_shallow model deepseek-r1 space llm_advanced : False
+--2025-09-01 11:06:14-- category file_contents_shallow model deepseek-r1 space llm_intro : False
+--2025-09-01 12:06:18-- category file_contents_shallow model deepseek-r1 space models : False
+--2025-09-01 13:06:22-- category file_contents_shallow model deepseek-r1 space scafi : False
+--2025-09-01 13:17:16-- category file_contents_shallow model mistral space acceptance_testing : False
+--2025-09-01 13:24:11-- category file_contents_shallow model mistral space advanced_programming : False
+--2025-09-01 13:28:04-- category file_contents_shallow model mistral space basic : False
+--2025-09-01 14:51:04-- category file_contents_shallow model mistral space integration_testing : False
+--2025-09-01 15:10:03-- category file_contents_shallow model mistral space llm_advanced : False
+--2025-09-01 15:22:24-- category file_contents_shallow model mistral space llm_intro : False
+--2025-09-01 15:29:56-- category file_contents_shallow model mistral space models : False
+--2025-09-01 15:36:57-- category file_contents_shallow model mistral space scafi : False
+--2025-09-01 15:43:01-- category 1_shot_shallow model llama3 space acceptance_testing : False
+--2025-09-01 15:46:17-- category 1_shot_shallow model llama3 space advanced_programming : False
+--2025-09-01 15:50:53-- category 1_shot_shallow model llama3 space basic : False
+--2025-09-01 17:11:37-- category 1_shot_shallow model llama3 space integration_testing : False
+--2025-09-01 17:19:51-- category 1_shot_shallow model llama3 space llm_advanced : True
+--2025-09-01 17:25:21-- category 1_shot_shallow model llama3 space llm_intro : True
+--2025-09-01 17:28:50-- category 1_shot_shallow model llama3 space models : False
+--2025-09-01 17:34:15-- category 1_shot_shallow model llama3 space scafi : True
+--2025-09-01 18:37:09-- category 1_shot_shallow model qwen3 space acceptance_testing : False
+--2025-09-01 19:42:43-- category 1_shot_shallow model qwen3 space advanced_programming : False
+--2025-09-01 19:52:07-- category 1_shot_shallow model qwen3 space basic : True
+--2025-09-01 22:19:14-- category 1_shot_shallow model qwen3 space integration_testing : False
+
+TESTS INTERRUPTED BY USER AT 2025-09-01 23:07:35
+---------------------------------------------

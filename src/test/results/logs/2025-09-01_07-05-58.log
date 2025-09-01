@@ -1,0 +1,171 @@
+[2025-09-01 08:06:03] stdout:
+[2025-09-01 08:06:03] 
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+ Model deepseek-r1 was unable to generate a response in 3600 seconds. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 52. Skipping nix develop.
+[2025-09-01 09:06:07] stdout:
+[2025-09-01 09:06:07] 
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+ Model deepseek-r1 was unable to generate a response in 3600 seconds. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 52. Skipping nix develop.
+[2025-09-01 10:06:11] stdout:
+[2025-09-01 10:06:11] 
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+ Model deepseek-r1 was unable to generate a response in 3600 seconds. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 52. Skipping nix develop.
+[2025-09-01 11:06:14] stdout:
+[2025-09-01 11:06:14] 
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+ Model deepseek-r1 was unable to generate a response in 3600 seconds. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 52. Skipping nix develop.
+[2025-09-01 12:06:18] stdout:
+[2025-09-01 12:06:18] 
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+ Model deepseek-r1 was unable to generate a response in 3600 seconds. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 52. Skipping nix develop.
+[2025-09-01 13:06:22] stdout:
+[2025-09-01 13:06:22] 
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+ Model deepseek-r1 was unable to generate a response in 3600 seconds. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 52. Skipping nix develop.
+[2025-09-01 13:17:16] stdout:
+[2025-09-01 13:17:16]  Model mistral was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-09-01 13:24:11] stdout:
+[2025-09-01 13:24:11]  Model mistral was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-09-01 13:28:04] stdout:
+[2025-09-01 13:28:04]  Model mistral was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-09-01 14:51:04] stdout:
+[2025-09-01 14:51:04]  Model mistral was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-09-01 15:10:03] stdout:
+[2025-09-01 15:10:03]  Model mistral was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-09-01 15:22:24] stdout:
+[2025-09-01 15:22:24]  Model mistral was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-09-01 15:29:56] stdout:
+[2025-09-01 15:29:56]  Model mistral was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-09-01 15:36:57] stdout:
+[2025-09-01 15:36:57]  Model mistral was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-09-01 15:43:01] stderr:
+[2025-09-01 15:43:01] warning: Git tree '/home/randa/AutoDev/src/test/space/acceptance_testing' is dirty
+copying path '/nix/store/s4dz622a304zmbi96d3mbjy70wg793s6-just-1.40.0' from 'https://cache.nixos.org'...
+copying path '/nix/store/fmaj2ikmyxvffjss8icix4qz8b9al5p4-ollama-0.11.4' from 'https://cache.nixos.org'...
+copying path '/nix/store/p2mnji2cdxgf6h27hlqzqf7g8f9bqfsi-stdenv-linux' from 'https://cache.nixos.org'...
+copying path '/nix/store/61icg2jr1m967vx16xsd2nzmhzag1gyx-uv-0.7.22' from 'https://cache.nixos.org'...
+copying path '/nix/store/vrqcpwq576gar2i430lj91v37b7k8jw2-nodejs-22.18.0' from 'https://cache.nixos.org'...
+copying path '/nix/store/ib9v72q9gd77s7805g9l1slrkfjzii3p-chromium-unwrapped-139.0.7258.154-sandbox' from 'https://cache.nixos.org'...
+copying path '/nix/store/0ci5f2dd9ldrqv3h83vq91kr11ix0d63-libpng-1.6.46' from 'https://cache.nixos.org'...
+copying path '/nix/store/ymh7hvp2ba77vc212n8cabwa4vlb2jbc-chromium-139.0.7258.154-sandbox' from 'https://cache.nixos.org'...
+copying path '/nix/store/wgzcr33g9skcpw0d3rxm57aj91hr2nn6-chromium-unwrapped-139.0.7258.154' from 'https://cache.nixos.org'...
+copying path '/nix/store/2q1x9sk4pb60jz2qwrbds1ndp7yjk3q4-chromium-139.0.7258.154' from 'https://cache.nixos.org'...
+copying path '/nix/store/z7c2hbp34h6lvj57j1m6qdbjlifq7ix4-mermaid-cli-11.4.2' from 'https://cache.nixos.org'...
+building '/nix/store/gqpbsqjcygnyr2dqvpz8pa2pr5i2kdm1-nix-shell-env.drv'...
+/home/randa/AutoDev/src/test/space/acceptance_testing/test.sh: line 7: sbt: command not found
+[2025-09-01 15:46:17] stderr:
+[2025-09-01 15:46:17] warning: Git tree '/home/randa/AutoDev/src/test/space/advanced_programming' is dirty
+/home/randa/AutoDev/src/test/space/advanced_programming/test.sh: line 7: sbt: command not found
+[2025-09-01 15:50:53] stdout:
+[2025-09-01 15:50:53]  Model llama3 was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-09-01 17:11:37] stdout:
+[2025-09-01 17:11:37]  Model llama3 was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-09-01 17:19:51] stderr:
+[2025-09-01 17:19:51] warning: Git tree '/home/randa/AutoDev/src/test/space/llm_advanced' is dirty
+Error: ollama server not responding - could not connect to ollama server, run 'ollama serve' to start it
+time=2025-09-01T17:19:51.426+02:00 level=INFO source=routes.go:1304 msg="server config" env="map[CUDA_VISIBLE_DEVICES: GPU_DEVICE_ORDINAL: HIP_VISIBLE_DEVICES: HSA_OVERRIDE_GFX_VERSION: HTTPS_PROXY: HTTP_PROXY: NO_PROXY: OLLAMA_CONTEXT_LENGTH:4096 OLLAMA_DEBUG:INFO OLLAMA_FLASH_ATTENTION:false OLLAMA_GPU_OVERHEAD:0 OLLAMA_HOST:http://127.0.0.1:11434 OLLAMA_INTEL_GPU:false OLLAMA_KEEP_ALIVE:5m0s OLLAMA_KV_CACHE_TYPE: OLLAMA_LLM_LIBRARY: OLLAMA_LOAD_TIMEOUT:5m0s OLLAMA_MAX_LOADED_MODELS:0 OLLAMA_MAX_QUEUE:512 OLLAMA_MODELS:/home/randa/.ollama/models OLLAMA_MULTIUSER_CACHE:false OLLAMA_NEW_ENGINE:false OLLAMA_NOHISTORY:false OLLAMA_NOPRUNE:false OLLAMA_NUM_PARALLEL:1 OLLAMA_ORIGINS:[http://localhost https://localhost http://localhost:* https://localhost:* http://127.0.0.1 https://127.0.0.1 http://127.0.0.1:* https://127.0.0.1:* http://0.0.0.0 https://0.0.0.0 http://0.0.0.0:* https://0.0.0.0:* app://* file://* tauri://* vscode-webview://* vscode-file://*] OLLAMA_SCHED_SPREAD:false ROCR_VISIBLE_DEVICES: http_proxy: https_proxy: no_proxy:]"
+/home/randa/AutoDev/src/test/space/llm_advanced/test.sh: line 11: sbt: command not found
+time=2025-09-01T17:19:51.428+02:00 level=INFO source=images.go:477 msg="total blobs: 30"
+time=2025-09-01T17:19:51.429+02:00 level=INFO source=images.go:484 msg="total unused blobs removed: 0"
+time=2025-09-01T17:19:51.429+02:00 level=INFO source=routes.go:1357 msg="Listening on 127.0.0.1:11434 (version 0.11.4)"
+time=2025-09-01T17:19:51.429+02:00 level=INFO source=gpu.go:217 msg="looking for compatible GPUs"
+time=2025-09-01T17:19:51.431+02:00 level=INFO source=gpu.go:377 msg="no compatible GPUs were discovered"
+time=2025-09-01T17:19:51.431+02:00 level=INFO source=types.go:130 msg="inference compute" id=0 library=cpu variant="" compute="" driver=0.0 name="" total="15.6 GiB" available="14.5 GiB"
+time=2025-09-01T17:19:51.431+02:00 level=INFO source=routes.go:1398 msg="entering low vram mode" "total vram"="15.6 GiB" threshold="20.0 GiB"
+[2025-09-01 17:25:21] stderr:
+[2025-09-01 17:25:21] warning: Git tree '/home/randa/AutoDev/src/test/space/llm_intro' is dirty
+Error: ollama server not responding - could not connect to ollama server, run 'ollama serve' to start it
+time=2025-09-01T17:25:21.919+02:00 level=INFO source=routes.go:1304 msg="server config" env="map[CUDA_VISIBLE_DEVICES: GPU_DEVICE_ORDINAL: HIP_VISIBLE_DEVICES: HSA_OVERRIDE_GFX_VERSION: HTTPS_PROXY: HTTP_PROXY: NO_PROXY: OLLAMA_CONTEXT_LENGTH:4096 OLLAMA_DEBUG:INFO OLLAMA_FLASH_ATTENTION:false OLLAMA_GPU_OVERHEAD:0 OLLAMA_HOST:http://127.0.0.1:11434 OLLAMA_INTEL_GPU:false OLLAMA_KEEP_ALIVE:5m0s OLLAMA_KV_CACHE_TYPE: OLLAMA_LLM_LIBRARY: OLLAMA_LOAD_TIMEOUT:5m0s OLLAMA_MAX_LOADED_MODELS:0 OLLAMA_MAX_QUEUE:512 OLLAMA_MODELS:/home/randa/.ollama/models OLLAMA_MULTIUSER_CACHE:false OLLAMA_NEW_ENGINE:false OLLAMA_NOHISTORY:false OLLAMA_NOPRUNE:false OLLAMA_NUM_PARALLEL:1 OLLAMA_ORIGINS:[http://localhost https://localhost http://localhost:* https://localhost:* http://127.0.0.1 https://127.0.0.1 http://127.0.0.1:* https://127.0.0.1:* http://0.0.0.0 https://0.0.0.0 http://0.0.0.0:* https://0.0.0.0:* app://* file://* tauri://* vscode-webview://* vscode-file://*] OLLAMA_SCHED_SPREAD:false ROCR_VISIBLE_DEVICES: http_proxy: https_proxy: no_proxy:]"
+/home/randa/AutoDev/src/test/space/llm_intro/test.sh: line 11: sbt: command not found
+time=2025-09-01T17:25:21.921+02:00 level=INFO source=images.go:477 msg="total blobs: 30"
+time=2025-09-01T17:25:21.921+02:00 level=INFO source=images.go:484 msg="total unused blobs removed: 0"
+time=2025-09-01T17:25:21.922+02:00 level=INFO source=routes.go:1357 msg="Listening on 127.0.0.1:11434 (version 0.11.4)"
+time=2025-09-01T17:25:21.922+02:00 level=INFO source=gpu.go:217 msg="looking for compatible GPUs"
+time=2025-09-01T17:25:21.923+02:00 level=INFO source=gpu.go:377 msg="no compatible GPUs were discovered"
+time=2025-09-01T17:25:21.923+02:00 level=INFO source=types.go:130 msg="inference compute" id=0 library=cpu variant="" compute="" driver=0.0 name="" total="15.6 GiB" available="14.5 GiB"
+time=2025-09-01T17:25:21.923+02:00 level=INFO source=routes.go:1398 msg="entering low vram mode" "total vram"="15.6 GiB" threshold="20.0 GiB"
+[2025-09-01 17:28:50] stderr:
+[2025-09-01 17:28:50] warning: Git tree '/home/randa/AutoDev/src/test/space/models' is dirty
+/home/randa/AutoDev/src/test/space/models/test.sh: line 7: sbt: command not found
+[2025-09-01 17:34:15] stdout:
+[2025-09-01 17:34:15] copying runtime jar...
+[info] welcome to sbt 1.9.9 (N/A Java 21.0.8)
+[info] loading project definition from /home/randa/AutoDev/src/test/space/scafi/project
+[info] loading settings for project scafi from build.sbt ...
+[info] set current project to scafi-experiment (in build file:/home/randa/AutoDev/src/test/space/scafi/)
+[info] compiling 2 Scala sources to /home/randa/AutoDev/src/test/space/scafi/target/scala-3.3.3/classes ...
+[info] done compiling
+[success] Total time: 42 s, completed Sep 1, 2025, 5:34:14 PM
+[2025-09-01 17:34:15] stderr:
+[2025-09-01 17:34:15] warning: Git tree '/home/randa/AutoDev/src/test/space/scafi' is dirty
+copying path '/nix/store/vw9q72w35rf5vjrlmfaz299pvbgnj2hh-set-java-classpath-hook' from 'https://cache.nixos.org'...
+copying path '/nix/store/2z7y59s752xhh0idilw7vf8qd1k9zfyw-openjdk-21.0.8+9' from 'https://cache.nixos.org'...
+copying path '/nix/store/530cxv70mqxz51zcfxlss0xs5vcx3kwn-sbt-1.10.11' from 'https://cache.nixos.org'...
+building '/nix/store/kwdnq0kdkc9r264796dfkaavjm8mwg18-nix-shell-env.drv'...
+[info] [launcher] getting org.scala-sbt sbt 1.9.9  (this may take some time)...
+[2025-09-01 18:37:09] stdout:
+[2025-09-01 18:37:09]  Model qwen3 was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-09-01 19:42:43] stdout:
+[2025-09-01 19:42:43]  Model qwen3 was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-09-01 19:52:07] stdout:
+[2025-09-01 19:52:07] Hello, world!
+Hello, world!
+[2025-09-01 19:52:07] stderr:
+[2025-09-01 19:52:07] warning: Git tree '/home/randa/AutoDev/src/test/space/basic' is dirty
+copying path '/nix/store/2hgccnj5yp6fa95d5wbpcwljr8i1i82l-gfortran-14.3.0-libgcc' from 'https://cache.nixos.org'...
+copying path '/nix/store/ngicazcm5c1qd7saak58jx9wkq4vg8vk-gfortran-14.3.0-lib' from 'https://cache.nixos.org'...
+copying path '/nix/store/k988bzx3sjr6ilqz67vxgm2sl96n0iw2-gfortran-14.3.0' from 'https://cache.nixos.org'...
+copying path '/nix/store/4hmq980dbcx1x3dfrbbzksbc4jqc9rl9-julia-1.11.6' from 'https://cache.nixos.org'...
+building '/nix/store/v5zdj1wyn8hi76pllffq76jph05vynpm-nix-shell-env.drv'...
+[2025-09-01 22:19:14] stdout:
+[2025-09-01 22:19:14]  Model qwen3 was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
