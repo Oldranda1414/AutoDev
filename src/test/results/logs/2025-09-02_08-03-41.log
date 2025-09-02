@@ -1,0 +1,151 @@
+[2025-09-02 09:56:46] stdout:
+[2025-09-02 09:56:46]  Model qwen3 was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-09-02 11:24:12] stdout:
+[2025-09-02 11:24:12]  Model qwen3 was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-09-02 12:31:57] stdout:
+[2025-09-02 12:31:57]  Model qwen3 was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-09-02 13:45:07] stdout:
+[2025-09-02 13:45:07]  Model qwen3 was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-09-02 13:48:59] stderr:
+[2025-09-02 13:48:59] warning: Git tree '/home/randa/AutoDev/src/test/space/acceptance_testing' is dirty
+copying path '/nix/store/khmqxw6b9q7rgkv6hf3gcqf2igk03z1g-gnu-config-2024-01-01' from 'https://cache.nixos.org'...
+copying path '/nix/store/fmaj2ikmyxvffjss8icix4qz8b9al5p4-ollama-0.11.4' from 'https://cache.nixos.org'...
+copying path '/nix/store/61icg2jr1m967vx16xsd2nzmhzag1gyx-uv-0.7.22' from 'https://cache.nixos.org'...
+copying path '/nix/store/s4dz622a304zmbi96d3mbjy70wg793s6-just-1.40.0' from 'https://cache.nixos.org'...
+copying path '/nix/store/xlmpcglsq8l09qh03rf0virz0331pjdc-file-5.45' from 'https://cache.nixos.org'...
+copying path '/nix/store/xk0d14zpm0njxzdm182dd722aqhav2cc-gnumake-4.4.1' from 'https://cache.nixos.org'...
+copying path '/nix/store/g7i75czfbw9sy5f8v7rjbama6lr3ya3s-patchelf-0.15.0' from 'https://cache.nixos.org'...
+copying path '/nix/store/gi6g289i9ydm3z896x67q210y0qq29zg-update-autotools-gnu-config-scripts-hook' from 'https://cache.nixos.org'...
+copying path '/nix/store/p2mnji2cdxgf6h27hlqzqf7g8f9bqfsi-stdenv-linux' from 'https://cache.nixos.org'...
+building '/nix/store/mnfhmkdd6z6rmnvlvk77cd3dxqj81d64-nix-shell-env.drv'...
+/home/randa/AutoDev/src/test/space/acceptance_testing/test.sh: line 7: sbt: command not found
+[2025-09-02 13:50:55] stderr:
+[2025-09-02 13:50:55] warning: Git tree '/home/randa/AutoDev/src/test/space/advanced_programming' is dirty
+copying path '/nix/store/vrqcpwq576gar2i430lj91v37b7k8jw2-nodejs-22.18.0' from 'https://cache.nixos.org'...
+copying path '/nix/store/ib9v72q9gd77s7805g9l1slrkfjzii3p-chromium-unwrapped-139.0.7258.154-sandbox' from 'https://cache.nixos.org'...
+copying path '/nix/store/0ci5f2dd9ldrqv3h83vq91kr11ix0d63-libpng-1.6.46' from 'https://cache.nixos.org'...
+copying path '/nix/store/ymh7hvp2ba77vc212n8cabwa4vlb2jbc-chromium-139.0.7258.154-sandbox' from 'https://cache.nixos.org'...
+copying path '/nix/store/wgzcr33g9skcpw0d3rxm57aj91hr2nn6-chromium-unwrapped-139.0.7258.154' from 'https://cache.nixos.org'...
+copying path '/nix/store/2q1x9sk4pb60jz2qwrbds1ndp7yjk3q4-chromium-139.0.7258.154' from 'https://cache.nixos.org'...
+copying path '/nix/store/z7c2hbp34h6lvj57j1m6qdbjlifq7ix4-mermaid-cli-11.4.2' from 'https://cache.nixos.org'...
+building '/nix/store/gqpbsqjcygnyr2dqvpz8pa2pr5i2kdm1-nix-shell-env.drv'...
+/home/randa/AutoDev/src/test/space/advanced_programming/test.sh: line 7: sbt: command not found
+[2025-09-02 13:52:52] stdout:
+[2025-09-02 13:52:52]  Model smollm2 was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-09-02 14:23:16] stdout:
+[2025-09-02 14:23:16]  Model smollm2 was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-09-02 14:27:37] stderr:
+[2025-09-02 14:27:37] warning: Git tree '/home/randa/AutoDev/src/test/space/llm_advanced' is dirty
+Error: ollama server not responding - could not connect to ollama server, run 'ollama serve' to start it
+time=2025-09-02T14:27:37.643+02:00 level=INFO source=routes.go:1304 msg="server config" env="map[CUDA_VISIBLE_DEVICES: GPU_DEVICE_ORDINAL: HIP_VISIBLE_DEVICES: HSA_OVERRIDE_GFX_VERSION: HTTPS_PROXY: HTTP_PROXY: NO_PROXY: OLLAMA_CONTEXT_LENGTH:4096 OLLAMA_DEBUG:INFO OLLAMA_FLASH_ATTENTION:false OLLAMA_GPU_OVERHEAD:0 OLLAMA_HOST:http://127.0.0.1:11434 OLLAMA_INTEL_GPU:false OLLAMA_KEEP_ALIVE:5m0s OLLAMA_KV_CACHE_TYPE: OLLAMA_LLM_LIBRARY: OLLAMA_LOAD_TIMEOUT:5m0s OLLAMA_MAX_LOADED_MODELS:0 OLLAMA_MAX_QUEUE:512 OLLAMA_MODELS:/home/randa/.ollama/models OLLAMA_MULTIUSER_CACHE:false OLLAMA_NEW_ENGINE:false OLLAMA_NOHISTORY:false OLLAMA_NOPRUNE:false OLLAMA_NUM_PARALLEL:1 OLLAMA_ORIGINS:[http://localhost https://localhost http://localhost:* https://localhost:* http://127.0.0.1 https://127.0.0.1 http://127.0.0.1:* https://127.0.0.1:* http://0.0.0.0 https://0.0.0.0 http://0.0.0.0:* https://0.0.0.0:* app://* file://* tauri://* vscode-webview://* vscode-file://*] OLLAMA_SCHED_SPREAD:false ROCR_VISIBLE_DEVICES: http_proxy: https_proxy: no_proxy:]"
+/home/randa/AutoDev/src/test/space/llm_advanced/test.sh: line 11: sbt: command not found
+time=2025-09-02T14:27:37.645+02:00 level=INFO source=images.go:477 msg="total blobs: 30"
+time=2025-09-02T14:27:37.646+02:00 level=INFO source=images.go:484 msg="total unused blobs removed: 0"
+time=2025-09-02T14:27:37.646+02:00 level=INFO source=routes.go:1357 msg="Listening on 127.0.0.1:11434 (version 0.11.4)"
+time=2025-09-02T14:27:37.646+02:00 level=INFO source=gpu.go:217 msg="looking for compatible GPUs"
+time=2025-09-02T14:27:37.647+02:00 level=INFO source=gpu.go:377 msg="no compatible GPUs were discovered"
+time=2025-09-02T14:27:37.647+02:00 level=INFO source=types.go:130 msg="inference compute" id=0 library=cpu variant="" compute="" driver=0.0 name="" total="15.6 GiB" available="14.5 GiB"
+time=2025-09-02T14:27:37.647+02:00 level=INFO source=routes.go:1398 msg="entering low vram mode" "total vram"="15.6 GiB" threshold="20.0 GiB"
+[2025-09-02 14:31:59] stdout:
+[2025-09-02 14:31:59]  Model smollm2 was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-09-02 14:33:22] stderr:
+[2025-09-02 14:33:22] warning: Git tree '/home/randa/AutoDev/src/test/space/models' is dirty
+/home/randa/AutoDev/src/test/space/models/test.sh: line 7: sbt: command not found
+[2025-09-02 14:38:38] stdout:
+[2025-09-02 14:38:38]  Model smollm2 was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-09-02 14:43:58] stdout:
+[2025-09-02 14:43:58]  Model phi4-mini was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-09-02 14:48:21] stdout:
+[2025-09-02 14:48:21]  Model phi4-mini was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-09-02 14:51:49] stdout:
+[2025-09-02 14:51:49]  Model phi4-mini was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-09-02 15:46:37] stdout:
+[2025-09-02 15:46:37]  Model phi4-mini was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-09-02 15:54:37] stdout:
+[2025-09-02 15:54:37]  Model phi4-mini was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-09-02 16:01:05] stdout:
+[2025-09-02 16:01:05]  Model phi4-mini was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-09-02 16:06:28] stdout:
+[2025-09-02 16:06:28]  Model phi4-mini was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-09-02 16:11:12] stdout:
+[2025-09-02 16:11:12]  Model phi4-mini was unable to generate correct nix code in 3 attempts. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 51. Skipping nix develop.
+[2025-09-02 17:11:16] stdout:
+[2025-09-02 17:11:16] 
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+ Model deepseek-r1 was unable to generate a response in 3600 seconds. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 52. Skipping nix develop.
+[2025-09-02 18:11:20] stdout:
+[2025-09-02 18:11:20] 
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+ Model deepseek-r1 was unable to generate a response in 3600 seconds. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 52. Skipping nix develop.
+[2025-09-02 19:23:28] stdout:
+[2025-09-02 19:23:28] 
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+ Model deepseek-r1 was unable to generate a response in 3600 seconds. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 52. Skipping nix develop.
+[2025-09-02 20:23:31] stdout:
+[2025-09-02 20:23:31] 
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+ Model deepseek-r1 was unable to generate a response in 3600 seconds. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 52. Skipping nix develop.
+[2025-09-02 21:23:35] stdout:
+[2025-09-02 21:23:35] 
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+ Model deepseek-r1 was unable to generate a response in 3600 seconds. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 52. Skipping nix develop.
+[2025-09-02 22:23:39] stdout:
+[2025-09-02 22:23:39] 
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+ Model deepseek-r1 was unable to generate a response in 3600 seconds. 
+ Select another model or improve the provided prompt. 
+AutoDev failed with exit code 52. Skipping nix develop.

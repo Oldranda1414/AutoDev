@@ -328,3 +328,35 @@ TESTS STARTED AT 2025-09-01 07:05:58
 
 TESTS INTERRUPTED BY USER AT 2025-09-01 23:07:35
 ---------------------------------------------
+---------------------------------------------
+TESTS STARTED AT 2025-09-02 08:03:41
+
+--2025-09-02 09:56:46-- category 1_shot_shallow model qwen3 space llm_advanced : False
+--2025-09-02 11:24:12-- category 1_shot_shallow model qwen3 space llm_intro : False
+--2025-09-02 12:31:57-- category 1_shot_shallow model qwen3 space models : False
+--2025-09-02 13:45:07-- category 1_shot_shallow model qwen3 space scafi : False
+--2025-09-02 13:48:59-- category 1_shot_shallow model smollm2 space acceptance_testing : False
+--2025-09-02 13:50:55-- category 1_shot_shallow model smollm2 space advanced_programming : False
+--2025-09-02 13:52:52-- category 1_shot_shallow model smollm2 space basic : False
+--2025-09-02 14:23:16-- category 1_shot_shallow model smollm2 space integration_testing : False
+--2025-09-02 14:27:37-- category 1_shot_shallow model smollm2 space llm_advanced : True
+--2025-09-02 14:31:59-- category 1_shot_shallow model smollm2 space llm_intro : False
+--2025-09-02 14:33:22-- category 1_shot_shallow model smollm2 space models : False
+--2025-09-02 14:38:38-- category 1_shot_shallow model smollm2 space scafi : False
+--2025-09-02 14:43:58-- category 1_shot_shallow model phi4-mini space acceptance_testing : False
+--2025-09-02 14:48:21-- category 1_shot_shallow model phi4-mini space advanced_programming : False
+--2025-09-02 14:51:49-- category 1_shot_shallow model phi4-mini space basic : False
+--2025-09-02 15:46:37-- category 1_shot_shallow model phi4-mini space integration_testing : False
+--2025-09-02 15:54:37-- category 1_shot_shallow model phi4-mini space llm_advanced : False
+--2025-09-02 16:01:05-- category 1_shot_shallow model phi4-mini space llm_intro : False
+--2025-09-02 16:06:28-- category 1_shot_shallow model phi4-mini space models : False
+--2025-09-02 16:11:12-- category 1_shot_shallow model phi4-mini space scafi : False
+--2025-09-02 17:11:16-- category 1_shot_shallow model deepseek-r1 space acceptance_testing : False
+--2025-09-02 18:11:20-- category 1_shot_shallow model deepseek-r1 space advanced_programming : False
+--2025-09-02 19:23:28-- category 1_shot_shallow model deepseek-r1 space basic : False
+--2025-09-02 20:23:31-- category 1_shot_shallow model deepseek-r1 space integration_testing : False
+--2025-09-02 21:23:35-- category 1_shot_shallow model deepseek-r1 space llm_advanced : False
+--2025-09-02 22:23:39-- category 1_shot_shallow model deepseek-r1 space llm_intro : False
+
+TESTS INTERRUPTED BY USER AT 2025-09-02 23:21:48
+---------------------------------------------
