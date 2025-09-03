@@ -125,6 +125,12 @@ After the nix code is generated, it is parsed and validated using the `nix flake
 
 A total of 3 attempts are done, by providing the error messate to the model and asking it to fix the errors, before giving up on generating the dev env config and notifing the user.
 
+### Test file removal
+
+In initial tests runs the precence of the `test.sh` file seemd to unnaturally boost model performance. Although in real projects some test's might be present, they are usually less telling of cli the tools necessary for the project than a bash script with details on how the project would be run.
+
+Even considering many projects have instructions on how to deploy or run the software, providing the `test.sh` file was deemed too good of a hint to really test the capabilities of the LLMs, so in the final test set the `test.sh` file was temporarily removed from the project to better simulate a real case scenario.
+
 ## Results
 
 TODO put the results here

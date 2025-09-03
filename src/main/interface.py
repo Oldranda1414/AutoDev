@@ -6,13 +6,13 @@ from dispatcher import dispatch
 doc = """AutoDev
 
 Usage:
-  autodev [PATH-TO-PROJECT] [-q | --quiet] [-d | --direnv] [-m MODEL-NAME] [-p PROMPT-FILE-PATH]
-  autodev -i MODEL-NAME | --install MODEL-NAME [-q | --quiet]
-  autodev -u MODEL-NAME | --uninstall MODEL-NAME [-q | --quiet]
-  autodev -l | --list
+  AutoDev [PATH-TO-PROJECT] [-q | --quiet] [-d | --direnv] [-m MODEL-NAME] [-p PROMPT-FILE-PATH]
+  AutoDev -i MODEL-NAME | --install MODEL-NAME [-q | --quiet]
+  AutoDev -u MODEL-NAME | --uninstall MODEL-NAME [-q | --quiet]
+  AutoDev -l | --list
 
-Replace autodev with your preferred method to run AutoDev.
-If you are in AutoDev's dev env, you can replace 'autodev' with 'just run' 
+Replace 'AutoDev' with your preferred method to run AutoDev.
+If you are in AutoDev's development environment, you can replace 'AutoDev' with 'just run' 
 
 Generates development environment configuration for a project.
 

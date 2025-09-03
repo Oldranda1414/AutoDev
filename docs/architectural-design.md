@@ -40,27 +40,35 @@ Default values for arguments can be defined with the following form: `[default: 
 ### AutoDev usage definiton
 
 The usage of AutoDev's command `autodev` is defined as follows, using [docopt](https://github.com/jazzband/docopt-ng) command definition language:
-<!-- TODO remember to update this with final usage -->
 
 ```py
+# Taken from src/main/interface.py
+
 """AutoDev
 
 Usage:
-  just run [PATH-TO-PROJECT] [-q | --quiet] [-d | --direnv] [-m MODEL-NAME] [-p PROMPT-FILE-PATH]
-  just run -l | --list
+  AutoDev [PATH-TO-PROJECT] [-q | --quiet] [-d | --direnv] [-m MODEL-NAME] [-p PROMPT-FILE-PATH]
+  AutoDev -i MODEL-NAME | --install MODEL-NAME [-q | --quiet]
+  AutoDev -u MODEL-NAME | --uninstall MODEL-NAME [-q | --quiet]
+  AutoDev -l | --list
+
+Replace 'AutoDev' with your preferred method to run AutoDev.
+If you are in AutoDev's development environment, you can replace 'AutoDev' with 'just run' 
 
 Generates development environment configuration for a project.
 
-Use `nix develop` to start development environment.
+Use `nix develop` to start the generated development environment.
 
 Options:
   PATH-TO-PROJECT                                 Path to the project the dev env is for. [default: ./]
   -h, --help                                      Display help message.
   -q, --quiet                                     Disable prints.
   -d, --direnv                                    Generate .envrc file also.
-  -m MODEL-NAME, --model MODEL-NAME               Model to use to generate the config. [default: llama3]
-  -l, --list                                      List available and installed models.
   -p PROMPT-FILE-PATH, --prompt PROMPT-FILE-PATH  Custom prompt file path.
+  -m MODEL-NAME, --model MODEL-NAME               Model to use to generate the config. [default: llama3] 
+  -i MODEL-NAME, --install MODEL-NAME             Locally install a model.
+  -u MODEL-NAME, --uninstall MODEL-NAME           Uninstall a model.
+  -l, --list                                      List available and installed models.
 
 """
 ```
@@ -80,11 +88,6 @@ To see available commands:
 ```sh
 just
 ```
-
-## Custom Prompt
-
-<!-- TODO add here the structure of the custom prompt -->
-<!-- probably json I guess -->
 
 ## Generation Halting
 

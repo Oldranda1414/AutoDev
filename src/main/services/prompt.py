@@ -5,13 +5,12 @@ from error.prompt import PromptPathError, MissingAttributesError, JsonValueTypeE
 from file_system import generate_fso_list
 from utils.tree import generate_project_tree
 
-DEFAULT_DEPTH = 1
 # Tags
 PROJECT_TREE_TAG = "<project_tree>"
 FSO_NAME_TAG = "<fso_name>"
 FSO_CONTENTS_TAG = "<fso_contents>"
-# TODO replace this with real default prompt
 # Default prompt
+DEFAULT_DEPTH = 3
 DEFAULT_PREFIX_PROMPT = f"""
 Generate the contents of a flake.nix file that defines the development environment for the following project.
 The development enviroment should be started with 'nix develop'.

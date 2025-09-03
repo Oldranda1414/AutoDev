@@ -49,7 +49,7 @@ AutoDev looks to solve this problem by leveraging the capacity of LLMs to unders
 
 ## Models
 
-The core part of the project is in testing the capabilities of various LLMs to perform as dev env configuration generators.
+Part of the project has the goal of testing the capabilities of various LLMs to perform as dev env configuration generators.
 
 The following models have been tested during the projects development:
 

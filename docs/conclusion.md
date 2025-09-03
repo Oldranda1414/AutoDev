@@ -9,9 +9,9 @@ title: Conclusion
 
 Although the projects used are a good sample of non trivial projects, as a dataset they do lack in variety, being mainly centered on sbt (scala/java) projects. Other projects could be added to the dataset to test for other languages and tech stacks.
 
-The idea of providing the models multiple attempts to generate working code was implemented late in development. For this reason data about how many attempts where necessary to for every test conditions to generate correct code was not recorded. It might be interesting to repeat the test and collecting data on attempt numbers as this could be a good insight in model performances.
+The idea of providing the models multiple attempts to generate working code was implemented late in development. For this reason data about how many attempts where necessary for every test conditions to generate correct code was not recorded. It might be interesting to repeat the test and collect data on attempt numbers as this could be a good insight in model performances, or at the minimum on the ability of LLMs to generate correct Nix code.
 
-TODO say that you wanted to do simulations but couldn't
+The simulations executed where in total 288 in the span of 15 days. Unfurtunatly a powerfull machine with modern GPU's was not available during the projects development. For this reason the number of tests prompts, models and total simulations was kept low to ensure the project could be finished within a sane timeframe. If a more suited machine could be used for further testing the number of variables considered for the simulations and, consequently, the number of tests executed could rise considerably gaining further insights.
 
 ### Improve prompt customization
 
@@ -49,7 +49,9 @@ In this project in particolar the choice of the python language seemd foregone b
 
 During the tail end of the project the design decisions started to feel a bit restrictive as many assumptions made at design time proved to be slightly incorrect. If the project had been far from finished, when these problems had arisen, a redesign would have been considered. Alas since the project was deemed to be close to completion and since the self imposed soft deadline was approaching the necessary redesign has not been executed. This approach proved to be origin of minor frustrations when the mistakes in the design where made obvious, but I believe it to have been a good example of unideal software development occurrences that happen way too often in real projects.
 
-TODO talk about scope creep
+Many times in the project I have found myself thinking of improvements or features that would be nice, before noticing that my new idea went outside of the stated requirements. Being the project a sort of exploration/experiment it was often tempting to use knowledge gained during development to steer the project in more productive directions. I quickly noticed that surrendering to these desires would have the project suffer from scope creep, as in the requirements and expected features keep growing with no project conclusion in sight. Noticing this and understanding that the initial testing scope was unachievable due to hardware limitations prompted me to append ideas to the 'Future work' chapter instead of to the 'Requirements'. Still I managed to implement some improvements over the initial design and functionalities, striking what I think has been a good balance.
+
+I believe the project has correctly reached it's goals of testing the idea of a tool to automatically generate custom development enviroments and the capabilities of local LLMs to power this tool.
 
 [Back to index](./index.md) |
 [Previous Chapter](./testing.md) |
