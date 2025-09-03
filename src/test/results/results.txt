@@ -360,3 +360,18 @@ TESTS STARTED AT 2025-09-02 08:03:41
 
 TESTS INTERRUPTED BY USER AT 2025-09-02 23:21:48
 ---------------------------------------------
+---------------------------------------------
+TESTS STARTED AT 2025-09-03 08:08:36
+
+--2025-09-03 09:37:38-- category 1_shot_shallow model deepseek-r1 space models : False
+--2025-09-03 10:37:42-- category 1_shot_shallow model deepseek-r1 space scafi : False
+--2025-09-03 10:49:59-- category 1_shot_shallow model mistral space acceptance_testing : False
+--2025-09-03 11:00:19-- category 1_shot_shallow model mistral space advanced_programming : False
+--2025-09-03 11:08:23-- category 1_shot_shallow model mistral space basic : False
+--2025-09-03 12:30:58-- category 1_shot_shallow model mistral space integration_testing : False
+--2025-09-03 12:54:11-- category 1_shot_shallow model mistral space llm_advanced : False
+--2025-09-03 13:08:40-- category 1_shot_shallow model mistral space llm_intro : False
+--2025-09-03 13:21:07-- category 1_shot_shallow model mistral space models : False
+--2025-09-03 13:34:09-- category 1_shot_shallow model mistral space scafi : False
+TESTS FINISHED AT 2025-09-03 13:34:09
+---------------------------------------------
