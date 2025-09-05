@@ -133,7 +133,34 @@ Even considering many projects have instructions on how to deploy or run the sof
 
 ## Results
 
-TODO put the results here
+Only 8 tests ended with a positive result:
+
+- 3 with 1_shot_deep (2 for llama3, 1 for qwen3)
+- 5 with 1_shot_shallow (3 for llama3, 1 for qwen3, 1 for smallm2)
+
+For the 1_shot_shallow prompt style the positively ended tests do not comprehend the 'basic' test space, which should be the easieast, suggesting that more simulations should be done to ensure the models are not able to complete the tests if given multiple attempts.
+
+Of the 280 failing tests:
+
+- For 209 tests the model was unable to generate correct nix code in 3 attempts <!-- in `src/test/results/logs/` executed the command `rg -o "code 51" | wc -l`, with ripgrep installed -->
+- For 62 tests the model was unable to generate a response within the time limit of 3600 seconds (1 hour) <!-- in `src/test/results/logs/` executed the command `rg -o "code 51" | wc -l`, with ripgrep installed -->
+- For 9 tests an unexpected error occurred
+
+deepseek-r1 was always unable to generate a response within the time limit, which means that the avalable hardware was unable to use the model
+
+Other models where sometimes unable to generate a response in time, especially when the prompt was particularly large.
+
+Considering this and the fact that shallow prompt provided better results overall, with deep prompts probably suffering from recency bias, it seems that for large project a low depth value should be choosen.
+
+Since all models failed to generate correct nix code when not prompted with an example it seems that models are still not able to generate '[nix flake](https://nixos.wiki/wiki/Flakes)' code at the moment. This is not unexpected as flakes are still considered an experimental feature of nix and they have been introduced recently, being introduced in 2021.
+
+### Storage
+
+Test results have been saved in various formats:
+
+- `test/results/results.txt` contains every single run with the boolean result and timestamp
+- `test/results/logs` contains the log files for every day of testing, showing why failed tests failed by saving stdout and stderr from the simulations
+- `test/results/flakes` contains the generated flakes for every simulation, even for cases when incorrect nix code was generated, providing insight in the type of nix code errors made by the LLMs
 
 [Back to index](./index.md) |
 [Previous Chapter](./implementation.md) |

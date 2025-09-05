@@ -33,6 +33,10 @@ Also the dev env config generation is done locally so it can take a lot of time.
 
 A feature could be implemented to enable users to actually use remote models instead of local models for the dev env config generation.
 
+### Nix shell
+
+This project used the '[nix develop](https://nix.dev/manual/nix/2.26/command-ref/new-cli/nix3-develop)' approach, which uses the [nix flakes](http://nixos.wiki/wiki/Flakes) feature. An older command could be used to generate an temporary shell configured with nix, [`nix-shell`](https://nix.dev/manual/nix/2.18/command-ref/nix-shell). This older command is considered obsolete but has existed for more time and maybe LLMs would be able to generate nix code more frequently if prompted to use an older, more documented method. This could be tested by modifying the internal workings and prompts of AutoDev to use the `nix-shell` command feature.
+
 ### Packaging
 
 As of now the project is run using the uv python build system and it is intended to be used through the just tool.
